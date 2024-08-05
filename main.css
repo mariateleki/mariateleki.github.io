@@ -88,7 +88,7 @@ body.sticky-bottom-footer {
 }
 
 .profile img {
-  width: 90%;
+  width: 100%;
 }
 
 /******************************************************************************
@@ -183,7 +183,7 @@ blockquote {
 }
 
 .profile {
-  margin-left: 1rem;
+  margin-right: 1rem;
   margin-bottom: 1rem;
   width: 100%;
 }
@@ -199,7 +199,7 @@ blockquote {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 25.5%;
   }
   .profile .address p {
     display: block;
