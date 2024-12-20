@@ -173,7 +173,7 @@ blockquote {
   box-shadow: none;
   /* border-bottom: 1px solid var(--global-divider-color); */
   background-color: var(--global-hover-color-light);
-  opacity: 1.0;
+  opacity: 0.95;
 }
 
 .navbar .dropdown-menu {
@@ -260,7 +260,7 @@ blockquote {
 }
 .navbar-toggler.collapsed .bottom-bar {
   transform: rotate(0);
-}
+} 
 
 #light-toggle {
   padding: 0;
