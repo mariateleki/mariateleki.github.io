@@ -295,7 +295,7 @@
           </tr>
         <!-- End Quantifying Paper-->
 
-        <!-- DACL Paper-->
+        <!-- DACL Paper
         <tr>
           <td style="width: 35%; vertical-align: top;">
             <img class="preview rounded z-depth-0" width="95%" src="./img/DACL.png"></div>
@@ -348,9 +348,65 @@
             </div>
           </td>
           </tr>
-        <!-- End DACL Paper-->
-
+        End DACL Paper-->
     </table>
+
+    <!--- start bullet points --->
+    <ul>
+          <li><div>
+            <!--- start DACL --->
+            <td style="font-size: large;">DACL: Disfluency Augmented Curriculum Learning for Fluent Text Generation<br>
+            <b style="font-size: medium;">Rohan Chaudhury, <b><u>Maria Teleki</u></b>, Xiangjue Dong, and James Caverlee</div></b>
+            <a href="https://lrec-coling-2024.org/">LREC-COLING 2024<br></a>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://aclanthology.org/2024.lrec-main.385.pdf" role="button">Paper</a> 
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-3" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-3" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/Rohan-Chaudhury/Generating-Fluent-Text-through-Curriculum-Learning-And-Disfluency-Augmentation" role="button">Code</a> 
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/DACL LREC-COLING Poster.pdf" role="button">Poster</a> 
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://youtu.be/8VIDlocdaco?si=35wXmBLOMNbrYz1X" role="button">Video</a>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/DACL Presentation.pdf" role="button">Slides</a>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://aclanthology.org/2024.lrec-main.385/" role="button">ACL Anthology Link</a>
+          
+            <div class="collapse" id="abstract-text-3">
+              <div class="card card-body z-depth-0" style="font-size: small;">
+                Voice-driven software systems are in abundance. However, language models that power these systems are traditionally trained on fluent, written text corpora. Hence there can be a misalignment between the inherent disfluency of transcribed spoken content and the fluency of the written training data. Furthermore, gold-standard disfluency annotations of various complexities for incremental training can be expensive to collect. So, we propose in this paper a Disfluency Augmented Curriculum Learning (DACL) approach to tackle the complex structure of disfluent sentences and generate fluent texts from them, by using Curriculum Learning (CL) coupled with our synthetically augmented disfluent texts of various levels. DACL harnesses the tiered structure of our generated synthetic disfluent data using CL, by training the model on basic samples (i.e. more fluent) first before training it on more complex samples (i.e. more disfluent). In contrast to the random data exposure paradigm, DACL focuses on a simple-to-complex learning process. We comprehensively evaluate DACL on Switchboard Penn Treebank-3 and compare it to the state-of-the-art disfluency removal models. Our model surpasses existing techniques in word-based precision (by up to 1%) and has shown favorable recall and F1 scores.
+              </div>
+            </div>
+          
+            <div class="collapse" id="bib-text-3">
+              <div class="card card-body z-depth-0">
+                <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                  @inproceedings{chaudhury-etal-2024-dacl-disfluency,<br>
+                    title = "{DACL}: Disfluency Augmented Curriculum Learning for Fluent Text Generation",<br>
+                    author = "Chaudhury, Rohan  and<br>
+                      Teleki, Maria  and<br>
+                      Dong, Xiangjue  and<br>
+                      Caverlee, James",<br>
+                    editor = "Calzolari, Nicoletta  and<br>
+                      Kan, Min-Yen  and<br>
+                      Hoste, Veronique  and<br>
+                      Lenci, Alessandro  and<br>
+                      Sakti, Sakriani  and<br>
+                      Xue, Nianwen",<br>
+                    booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",<br>
+                    month = may,<br>
+                    year = "2024",<br>
+                    address = "Torino, Italia",<br>
+                    publisher = "ELRA and ICCL",<br>
+                    url = "https://aclanthology.org/2024.lrec-main.385",<br>
+                    pages = "4311--4321",<br>
+                    abstract = "Voice-driven software systems are in abundance. However, language models that power these systems are traditionally trained on fluent, written text corpora. Hence there can be a misalignment between the inherent disfluency of transcribed spoken content and the fluency of the written training data. Furthermore, gold-standard disfluency annotations of various complexities for incremental training can be expensive to collect. So, we propose in this paper a Disfluency Augmented Curriculum Learning (DACL) approach to tackle the complex structure of disfluent sentences and generate fluent texts from them, by using Curriculum Learning (CL) coupled with our synthetically augmented disfluent texts of various levels. DACL harnesses the tiered structure of our generated synthetic disfluent data using CL, by training the model on basic samples (i.e. more fluent) first before training it on more complex samples (i.e. more disfluent). In contrast to the random data exposure paradigm, DACL focuses on a simple-to-complex learning process. We comprehensively evaluate DACL on Switchboard Penn Treebank-3 and compare it to the state-of-the-art disfluency removal models. Our model surpasses existing techniques in word-based precision (by up to 1{\%}) and has shown favorable recall and F1 scores.",<br>
+                }        
+                </code>
+              </div>
+            </div>
+          </td>
+          <!--- End DACL --->
+        </div></li>
+
+
+    </ul>
+
   </div>
 </div>
 
