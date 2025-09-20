@@ -433,103 +433,6 @@
   </div>
 </div>
 
-<!-- Research Thrust 2 -->
-<div class="pub-thrust thrust-2">
-  <h3>Conversational AI under Real-World Conditions</h3>
-  Conversational systems power recommendation, summarization, and interactive assistants -- but most research assumes well-formed, text-based input. I design <strong>models and evaluation strategies</strong> for conversational AI that must handle <strong>spoken, noisy, and context-rich interactions</strong>, bridging speech and information retrieval.
-  <div class="pub-list">
-    <table class="table table-borderless table-sm">
-      <!-- Publications -->
-
-      <!-- ConvRec Paper-->
-      <tr>
-        <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="95%" src="./img/ConvRec2.png">
-        </td>
-        
-        <td style="font-size: large;">I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance<br>
-          <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Lingfeng Shi, Chengkai Liu, and James Caverlee</div></b><br>
-          <a href="https://www.interspeech2025.org/home">INTERSPEECH 2025</a><br>
-
-          <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/HorrorComedy.pdf" role="button">Paper</a>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-7" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-7" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/mariateleki/Syn-WSSE" role="button">GitHub</a>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Interspeech25Poster.pdf" role="button">Poster</a>
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video</a>  -->
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Slides</a> -->
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">AAAI Archive Link</a> -->
-          </div>
-        
-          <div class="collapse" id="abstract-text-7">
-            <div class="card card-body z-depth-0" style="font-size: small;">
-              Disfluencies are a characteristic of speech. We focus on the impact of a specific class of disfluency -- whole-word speech substitution errors (WSSE) -- on LLM-based conversational recommender system performance. We develop Syn-WSSE, a psycholinguistically-grounded framework for synthetically creating genre-based WSSE at varying ratios to study their impact on conversational recommender system performance. We find that LLMs are impacted differently: llama and mixtral have improved performance in the presence of these errors, while gemini, gpt-4o, and gpt-4o-mini have deteriorated performance. We hypothesize that this difference in model resiliency is due to differences in the pre- and post-training methods and data, and that the increased performance is due to the introduced genre diversity. Our findings indicate the importance of a careful choice of LLM for these systems, and more broadly, that disfluencies must be carefully designed for as they can have unforeseen impacts. 
-          </div>
-          </div>
-        
-          <div class="collapse" id="bib-text-7">
-            <div class="card card-body z-depth-0">
-              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                @inproceedings{teleki25_horror,<br>
-                  title     = {{I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance}},<br>
-                  author    = {Maria Teleki and Lingfeng Shi and Chengkai Liu and James Caverlee},<br>
-                  year      = {2025},<br>
-                  booktitle = {INTERSPEECH}<br>
-                }
-              </code>
-            </div>
-          </div>
-        </td>
-        </tr>
-      <!-- End ConvRec Paper-->
-
-      <!-- Alexa Prize Paper-->
-      <tr>
-        <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="95%" src="./img/taskbot.png"></div>
-        </td>
-        
-        <td style="font-size: large;">Howdy Y’all: An Alexa TaskBot<br>
-          <b style="font-size: medium;">Majid Alfifi, Xiangjue Dong, Timo Feldman, Allen Lin, Karthic Madanagopal, Aditya Pethe, <b><u>Maria Teleki</u></b>, Zhuoer Wang, Ziwei Zhu, James Caverlee</div></b><br>
-          <a href="https://www.amazon.science/alexa-prize/proceedings/howdy-yall-an-alexa-taskbot">Alexa Prize TaskBot Challenge Proceedings 2022</a><br>
-
-          <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/howdy-yall-paper.pdf" role="button">Paper</a>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-1" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-1" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://www.amazon.science/academic-engagements/ten-university-teams-selected-to-participate-in-alexa-prize-taskbot-challenge" role="button">Amazon Science Link</a>
-          </div>
-
-          <div class="collapse" id="abstract-text-1">
-            <div class="card card-body z-depth-0" style="font-size: small;">
-              In this paper, we present Howdy Y’all, a multi-modal task-oriented dialogue agent developed for the 2021-2022 Alexa Prize TaskBot competition. Our design principles guiding Howdy Y’all aim for high user satisfaction through friendly and trustworthy encounters, minimization of negative conversation edge cases, and wide coverage over many tasks. Hence, Howdy Y’all is built upon a rapid prototyping platform to enable fast experimentation and powered by four key innovations to enable this vision: (i) First, it combines a rules, phonetic matching, and a transformer-based approach for robust intent understanding. (ii) Second, to accurately elicit user preferences and guide users to the right task, Howdy Y’all is powered by a contrastive learning search framework over sentence embeddings and a conversational recommender for eliciting preferences. (iii) Third, to support a variety of user question types, it introduces a new data augmentation method for question generation and a self-supervised answer selection approach for improving question answering. (iv) Finally, to help motivate our users and keep them engaged, we design an emotional conversation tracker that provides empathetic responses to keep users engaged and a monitor of conversation quality.
-            </div>
-          </div>
-        
-          <div class="collapse" id="bib-text-1">
-            <div class="card card-body z-depth-0">
-              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                @inproceedings{University2022,<br>
-                  author={Alfifi, Majid and Dong, Xiangjue and Feldman, Timo and Lin, Allen and Madanagopal, Karthic and Pethe, Aditya and Teleki, Maria and Wang, Zhuoer and Zhu, Ziwei and Caverlee, James},<br>
-                  title = {Howdy Y’all: An Alexa TaskBot},<br>
-                  year = {2022},<br>
-                  url = {https://www.amazon.science/alexa-prize/proceedings/howdy-yall-an-alexa-taskbot},<br>
-                  booktitle = {Alexa Prize TaskBot Challenge Proceedings},<br>
-                }
-              </code>
-            </div>
-          </div>
-        </td>
-        </tr>
-        <!-- Alexa Prize Paper-->
-
-
-
-    </table>
-  </div>
-</div>
 
 <!-- Research Thrust 3 -->
 <div class="pub-thrust thrust-3">
@@ -639,6 +542,104 @@
         </td>
         </tr>
         <!-- End Co2PT Paper-->
+
+
+    </table>
+  </div>
+</div>
+
+<!-- Research Thrust 2 -->
+<div class="pub-thrust thrust-2">
+  <h3>Conversational AI under Real-World Conditions</h3>
+  Conversational systems power recommendation, summarization, and interactive assistants -- but most research assumes well-formed, text-based input. I design <strong>models and evaluation strategies</strong> for conversational AI that must handle <strong>spoken, noisy, and context-rich interactions</strong>, bridging speech and information retrieval.
+  <div class="pub-list">
+    <table class="table table-borderless table-sm">
+      <!-- Publications -->
+
+      <!-- ConvRec Paper-->
+      <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/ConvRec2.png">
+        </td>
+        
+        <td style="font-size: large;">I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance<br>
+          <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Lingfeng Shi, Chengkai Liu, and James Caverlee</div></b><br>
+          <a href="https://www.interspeech2025.org/home">INTERSPEECH 2025</a><br>
+
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/HorrorComedy.pdf" role="button">Paper</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-7" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-7" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/mariateleki/Syn-WSSE" role="button">GitHub</a>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Interspeech25Poster.pdf" role="button">Poster</a>
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video</a>  -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Slides</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">AAAI Archive Link</a> -->
+          </div>
+        
+          <div class="collapse" id="abstract-text-7">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Disfluencies are a characteristic of speech. We focus on the impact of a specific class of disfluency -- whole-word speech substitution errors (WSSE) -- on LLM-based conversational recommender system performance. We develop Syn-WSSE, a psycholinguistically-grounded framework for synthetically creating genre-based WSSE at varying ratios to study their impact on conversational recommender system performance. We find that LLMs are impacted differently: llama and mixtral have improved performance in the presence of these errors, while gemini, gpt-4o, and gpt-4o-mini have deteriorated performance. We hypothesize that this difference in model resiliency is due to differences in the pre- and post-training methods and data, and that the increased performance is due to the introduced genre diversity. Our findings indicate the importance of a careful choice of LLM for these systems, and more broadly, that disfluencies must be carefully designed for as they can have unforeseen impacts. 
+          </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-7">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{teleki25_horror,<br>
+                  title     = {{I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance}},<br>
+                  author    = {Maria Teleki and Lingfeng Shi and Chengkai Liu and James Caverlee},<br>
+                  year      = {2025},<br>
+                  booktitle = {INTERSPEECH}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+        </tr>
+      <!-- End ConvRec Paper-->
+
+      <!-- Alexa Prize Paper-->
+      <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/taskbot.png"></div>
+        </td>
+        
+        <td style="font-size: large;">Howdy Y’all: An Alexa TaskBot<br>
+          <b style="font-size: medium;">Majid Alfifi, Xiangjue Dong, Timo Feldman, Allen Lin, Karthic Madanagopal, Aditya Pethe, <b><u>Maria Teleki</u></b>, Zhuoer Wang, Ziwei Zhu, James Caverlee</div></b><br>
+          <a href="https://www.amazon.science/alexa-prize/proceedings/howdy-yall-an-alexa-taskbot">Alexa Prize TaskBot Challenge Proceedings 2022</a><br>
+
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/howdy-yall-paper.pdf" role="button">Paper</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-1" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-1" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://www.amazon.science/academic-engagements/ten-university-teams-selected-to-participate-in-alexa-prize-taskbot-challenge" role="button">Amazon Science Link</a>
+          </div>
+
+          <div class="collapse" id="abstract-text-1">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              In this paper, we present Howdy Y’all, a multi-modal task-oriented dialogue agent developed for the 2021-2022 Alexa Prize TaskBot competition. Our design principles guiding Howdy Y’all aim for high user satisfaction through friendly and trustworthy encounters, minimization of negative conversation edge cases, and wide coverage over many tasks. Hence, Howdy Y’all is built upon a rapid prototyping platform to enable fast experimentation and powered by four key innovations to enable this vision: (i) First, it combines a rules, phonetic matching, and a transformer-based approach for robust intent understanding. (ii) Second, to accurately elicit user preferences and guide users to the right task, Howdy Y’all is powered by a contrastive learning search framework over sentence embeddings and a conversational recommender for eliciting preferences. (iii) Third, to support a variety of user question types, it introduces a new data augmentation method for question generation and a self-supervised answer selection approach for improving question answering. (iv) Finally, to help motivate our users and keep them engaged, we design an emotional conversation tracker that provides empathetic responses to keep users engaged and a monitor of conversation quality.
+            </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-1">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{University2022,<br>
+                  author={Alfifi, Majid and Dong, Xiangjue and Feldman, Timo and Lin, Allen and Madanagopal, Karthic and Pethe, Aditya and Teleki, Maria and Wang, Zhuoer and Zhu, Ziwei and Caverlee, James},<br>
+                  title = {Howdy Y’all: An Alexa TaskBot},<br>
+                  year = {2022},<br>
+                  url = {https://www.amazon.science/alexa-prize/proceedings/howdy-yall-an-alexa-taskbot},<br>
+                  booktitle = {Alexa Prize TaskBot Challenge Proceedings},<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+        </tr>
+        <!-- Alexa Prize Paper-->
+
 
 
     </table>
