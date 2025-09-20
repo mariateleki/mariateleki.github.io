@@ -233,12 +233,12 @@ blockquote {
 }
 
 .profile img {
-  width: 85%;
+  width: 90%;
 }
 
 @media (min-width: 576px) {
   .profile {
-    width: 33%;
+    width: 29%;
   }
   .profile .address p {
     display: block;
