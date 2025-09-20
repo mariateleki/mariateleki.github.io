@@ -343,6 +343,7 @@ blockquote {
   color: var(--global-theme-color);
 }
 
+/* Keep hamburger static (3 lines) */
 .navbar-toggler .icon-bar {
   display: block;
   width: 22px;
@@ -350,39 +351,8 @@ blockquote {
   background-color: var(--global-text-color);
   border-radius: 1px;
   margin-bottom: 4px;
-  transition: all 0.2s;
-}
-.navbar-toggler .top-bar {
-  transform: rotate(45deg);
-  transform-origin: 10% 10%;
-}
-.navbar-toggler .middle-bar {
-  opacity: 0;
-}
-.navbar-toggler .bottom-bar {
-  transform: rotate(-45deg);
-  transform-origin: 10% 90%;
 }
 
-.navbar-toggler.collapsed .top-bar {
-  transform: rotate(0);
-}
-.navbar-toggler.collapsed .middle-bar {
-  opacity: 1;
-}
-.navbar-toggler.collapsed .bottom-bar {
-  transform: rotate(0);
-} 
-
-#light-toggle {
-  padding: 0;
-  border: 0;
-  background-color: inherit;
-  color: var(--global-text-color);
-}
-#light-toggle:hover {
-  color: var(--global-hover-color);
-}
 
 .social {
   text-align: center;
