@@ -155,6 +155,23 @@ hr {
   font-size: 0.87em; /* scale down slightly */
 }
 
+
+/* Compact, uniform publication buttons */
+.pub-list .button-cell .btn {
+  margin: 3;
+  font-size: 0.7rem;        /* small, clean text */
+  font-weight: 385;         /* medium weight for readability */
+  padding: 2px 12px;        /* compact padding */
+  border-radius: 4px;       /* subtle rounding */
+  display: inline-flex;     
+  align-items: center;      /* vertically center text */
+  justify-content: center;  /* center horizontally */
+  height: 28px;             /* fixed uniform height */
+  line-height: 1.2;         /* keeps text snug */
+  box-sizing: border-box;
+}
+
+
 table td, table th {
   color: var(--global-text-color);
 }
