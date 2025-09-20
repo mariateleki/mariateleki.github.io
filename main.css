@@ -159,7 +159,7 @@ hr {
 /* Compact, uniform publication buttons */
 .pub-list .button-cell .btn {
   margin: 3;
-  font-size: 0.7rem;        /* small, clean text */
+  font-size: 0.65rem;        /* small, clean text */
   font-weight: 385;         /* medium weight for readability */
   padding: 2px 12px;        /* compact padding */
   border-radius: 4px;       /* subtle rounding */
