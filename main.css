@@ -147,6 +147,14 @@ hr {
   border-top: 1px solid var(--global-divider-color);
 }
 
+.fa-bluesky {
+  font-size: 0.82em; /* scale down slightly */
+}
+
+.fa-x-twitter {
+  font-size: 0.87em; /* scale down slightly */
+}
+
 table td, table th {
   color: var(--global-text-color);
 }
