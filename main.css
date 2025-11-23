@@ -21,6 +21,20 @@
   --global-card-bg-color: #ffffff;
 }
 
+/* Pastel palette for the student tags */
+.pastel-pink { color: #E27998; }     /* triangle */
+.pastel-purple {
+  color: #A76BCF;
+  font-size: 1.5em;   /* increase size */
+  line-height: 0;      /* keeps baseline aligned */
+  display: inline-block;
+  transform: translateY(1px); /* tiny vertical adjustment */
+}
+.pastel-blue { color: #6BAED6; }     /* spade (unused unless you add it) */
+.pastel-green { color: #6BC38E; }    /* club */
+.pastel-yellow { color: #F7D774; }   /* optional */
+.pastel-orange { color: #F6A45A; }   /* star */
+
 /******************************************************************************
  * Content
  ******************************************************************************/
