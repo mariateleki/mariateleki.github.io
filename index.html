@@ -113,12 +113,12 @@
     <b>My research rethinks spoken language understanding by modeling disfluency, spontaneity, and variability as fundamental features of human communication.</b> I aim to develop next-generation conversational AI that thrives under real-world conditions — systems that generalize across speakers, domains, and contexts to power scalable, speech-centric applications in information access, recommendation, and decision support.
   </p>
 
-  <a style="font-size: xx-large;" href="mailto:mariateleki@tamu.edu" title="Email"><i class="fa fa-envelope"></i></a>
+  <a style="font-size: xx-large;" href="mailto:mariateleki@tamu.edu" title="mariateleki@tamu.edu"><i class="fa fa-envelope"></i></a>
   <a style="font-size: xx-large;" href="https://scholar.google.com/citations?hl=en&user=aImLrNcAAAAJ" title="Google Scholar" rel="external nofollow noopener noopener noreferrer" target="_blank"><i class="ai ai-s ai-google-scholar"></i></a>
   <a style="font-size: xx-large;" href="https://dblp.org/pid/359/3074.html" title="DBLP" rel="external nofollow noopener noopener noreferrer" target="_blank"><i class="ai ai-s ai-dblp"></i></a>
   <a style="font-size: xx-large;" href="https://github.com/mariateleki" title="GitHub" rel="external nofollow noopener noopener noreferrer" target="_blank"><i class="fab fa-s fa-github"></i></a>
   <a style="font-size: xx-large;" href="https://orcid.org/0009-0006-7015-4015" title="ORCiD" rel="external nofollow noopener noopener noreferrer" target="_blank"><i class="ai ai-s ai-orcid"></i></a>
-  <a style="font-size: xx-large;" href="./pdf/Maria_Teleki_CV.pdf" title="CV" rel="external nofollow noopener noopener noreferrer" target="_blank"><i class="ai ai-s ai-cv-square"></i></a>
+  <!-- <a style="font-size: xx-large;" href="./pdf/Maria_Teleki_CV.pdf" title="CV" rel="external nofollow noopener noopener noreferrer" target="_blank"><i class="ai ai-s ai-cv-square"></i></a> -->
   <a style="font-size: xx-large;" href="https://www.linkedin.com/in/mariateleki" title="LinkedIn" rel="external nofollow noopener noopener noreferrer" target="_blank"><i class="fab fa-s fa-linkedin"></i></a>
   <a style="font-size: xx-large;" href="https://www.youtube.com/@MariaTelekiCS" title="YouTube" rel="external nofollow noopener noopener noreferrer" target="_blank"><i class="fab fa-s fa-youtube"></i></a>
   <a style="font-size: xx-large;" href="https://www.instagram.com/maria_teleki/" title="Instagram" rel="external nofollow noopener noopener noreferrer" target="_blank"><i class="fab fa-s fa-instagram"></i></a>
@@ -207,8 +207,8 @@
 
 <!-- Research Thrust 1 -->
 <div class="pub-thrust thrust-1">
-  <h3>Robust Speech Understanding in Natural Communication</h3>
-  Human speech is spontaneous and messy -- people pause, restart, hedge, and change course mid-sentence. These spontaneous phenomena cause significant drops in the performance. I build models and evaluation frameworks that treat these phenomena as core properties of communication, enabling speech technologies to perform reliably under these real-world conditions.
+  <h3>Disfluency-Aware Speech and Language Understanding</h3>
+  Current speech and language understanding systems are built for fluent text, not for how people actually speak. Disfluencies -- pauses, repairs, hedges, and restarts -- are treated as artifacts to be removed, despite being fundamental to spoken communication. My work challenges this assumption by modeling disfluency as meaningful linguistic structure. I develop models, benchmarks, and evaluation frameworks that operate directly on spontaneous speech, yielding more robust language understanding in real-world conversational settings.
 
   <div class="pub-list">
     <table class="table table-borderless table-sm">
@@ -305,12 +305,116 @@
       </tr>
       <!-- End Comparing ASR Paper-->
 
-      <!-- DRES Paper-->
+      <!-- Quantifying Paper-->
       <tr>
         <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="85%" src="./img/dres.png">
+          <img class="preview rounded z-depth-0" width="85%" src="./img/Quantifying.png">
         </td>
-      <td class="button-cell" style="font-size: large;">DRES: Benchmarking LLMs for Disfluency Removal<br>
+        <td style="font-size: large;">Quantifying the Impact of Disfluency on Spoken Content Summarization<br>
+          <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Xiangjue Dong, and James Caverlee</div></b><br>
+          <a href="https://lrec-coling-2024.org/">LREC-COLING 2024</a>
+
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://aclanthology.org/2024.lrec-main.1175.pdf" role="button">Paper</a> 
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-4" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-4" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/mariateleki/Quantifying-Impact-Disfluency" role="button">Code</a> 
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Quantifying LREC-COLING Poster.pdf" role="button">Poster</a> 
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://www.youtube.com/watch?v=iTlJiEHN5Rk" role="button">Video</a> 
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Quantifying LREC-COLING Slides.pdf" role="button">Slides</a> 
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://aclanthology.org/2024.lrec-main.1175/" role="button">ACL Anthology Link</a>
+          </div>
+
+          <div class="collapse" id="abstract-text-4">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Spoken content is abundant -- including podcasts, meeting transcripts, and TikTok-like short videos. And yet, many important tasks like summarization are often designed for written content rather than the looser, noiser, and more disfluent style of spoken content. Hence, we aim in this paper to quantify the impact of disfluency on spoken content summarization. Do disfluencies negatively impact the quality of summaries generated by existing approaches? And if so, to what degree? Coupled with these goals, we also investigate two methods towards improving summarization in the presence of such disfluencies. We find that summarization quality does degrade with an increase in these disfluencies and that a combination of multiple disfluency types leads to even greater degradation. Further, our experimental results show that naively removing disfluencies and augmenting with special tags can worsen the summarization when used for testing, but that removing disfluencies for fine-tuning yields the best results. We make the code available at https://github.com/mariateleki/Quantifying-Impact-Disfluency.
+            </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-4">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{teleki-etal-2024-quantifying-impact,<br>
+                  title = "Quantifying the Impact of Disfluency on Spoken Content Summarization",<br>
+                  author = "Teleki, Maria  and<br>
+                    Dong, Xiangjue  and<br>
+                    Caverlee, James",<br>
+                  editor = "Calzolari, Nicoletta  and<br>
+                    Kan, Min-Yen  and<br>
+                    Hoste, Veronique  and<br>
+                    Lenci, Alessandro  and<br>
+                    Sakti, Sakriani  and<br>
+                    Xue, Nianwen",<br>
+                  booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",<br>
+                  month = may,<br>
+                  year = "2024",<br>
+                  address = "Torino, Italia",<br>
+                  publisher = "ELRA and ICCL",<br>
+                  url = "https://aclanthology.org/2024.lrec-main.1175",<br>
+                  pages = "13419--13428",<br>
+                  abstract = "Spoken content is abundant {--} including podcasts, meeting transcripts, and TikTok-like short videos. And yet, many important tasks like summarization are often designed for written content rather than the looser, noiser, and more disfluent style of spoken content. Hence, we aim in this paper to quantify the impact of disfluency on spoken content summarization. Do disfluencies negatively impact the quality of summaries generated by existing approaches? And if so, to what degree? Coupled with these goals, we also investigate two methods towards improving summarization in the presence of such disfluencies. We find that summarization quality does degrade with an increase in these disfluencies and that a combination of multiple disfluency types leads to even greater degradation. Further, our experimental results show that naively removing disfluencies and augmenting with special tags can worsen the summarization when used for testing, but that removing disfluencies for fine-tuning yields the best results. We make the code available at https://github.com/mariateleki/Quantifying-Impact-Disfluency.",<br>
+              }        
+              </code>
+            </div>
+          </div>
+      </td></tr> 
+      <!-- End Quantifying Paper-->
+  </table>
+
+  <div class="pub-list">
+    <table class="table table-borderless table-sm">
+      <!-- Publications -->
+
+      <!-- ConvRec Paper-->
+      <tr>
+        <!-- <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/ConvRec2.png">
+        </td> -->
+        
+        <td style="font-size: large;">I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance<br>
+          <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Lingfeng Shi, Chengkai Liu, and James Caverlee</div></b><br>
+          <a href="https://www.interspeech2025.org/home">INTERSPEECH 2025</a><br>
+
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/HorrorComedy.pdf" role="button">Paper</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-7" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-7" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/mariateleki/Syn-WSSE" role="button">GitHub</a>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Interspeech25Poster.pdf" role="button">Poster</a>
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video</a>  -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Slides</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">AAAI Archive Link</a> -->
+          </div>
+        
+          <div class="collapse" id="abstract-text-7">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Disfluencies are a characteristic of speech. We focus on the impact of a specific class of disfluency -- whole-word speech substitution errors (WSSE) -- on LLM-based conversational recommender system performance. We develop Syn-WSSE, a psycholinguistically-grounded framework for synthetically creating genre-based WSSE at varying ratios to study their impact on conversational recommender system performance. We find that LLMs are impacted differently: llama and mixtral have improved performance in the presence of these errors, while gemini, gpt-4o, and gpt-4o-mini have deteriorated performance. We hypothesize that this difference in model resiliency is due to differences in the pre- and post-training methods and data, and that the increased performance is due to the introduced genre diversity. Our findings indicate the importance of a careful choice of LLM for these systems, and more broadly, that disfluencies must be carefully designed for as they can have unforeseen impacts. 
+          </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-7">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{teleki25_horror,<br>
+                  title     = {{I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance}},<br>
+                  author    = {Maria Teleki and Lingfeng Shi and Chengkai Liu and James Caverlee},<br>
+                  year      = {2025},<br>
+                  booktitle = {INTERSPEECH}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+        </tr>
+      <!-- End ConvRec Paper-->
+
+      <!-- DRES Paper-->
+      <!-- <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="85%" src="./img/dres.png">
+        </td>-->
+      <td class="button-cell" style="font-size: medium;">DRES: Benchmarking LLMs for Disfluency Removal<br>
         <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Sai Janjur, Haoran Liu, Oliver Grabner, Ketan Verma, Thomas Docog, Xiangjue Dong, Lingfeng Shi, Cong Wang, Stephanie Birkelbach, Jason Kim, Yin Zhang, James Caverlee</div></b><br>
         <a href=".">arXiv 2025</a><br>
 
@@ -349,119 +453,104 @@
       </tr>
       <!-- End DRES Paper-->
 
-        <!-- Quantifying Paper-->
-        <tr>
-          <td style="width: 35%; vertical-align: top;">
-            <img class="preview rounded z-depth-0" width="85%" src="./img/Quantifying.png">
-          </td>
-          <td style="font-size: large;">Quantifying the Impact of Disfluency on Spoken Content Summarization<br>
-            <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Xiangjue Dong, and James Caverlee</div></b><br>
-            <a href="https://lrec-coling-2024.org/">LREC-COLING 2024</a>
+      <!--- start DACL --->
+      <!-- <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="85%" src="./img/DACL.png">
+        </td>-->
+      <td style="font-size: medium;">DACL: Disfluency Augmented Curriculum Learning for Fluent Text Generation<br>
+      <b style="font-size: medium;">Rohan Chaudhury, <b><u>Maria Teleki</u></b>, Xiangjue Dong, and James Caverlee</div></b><br>
+      <a href="https://lrec-coling-2024.org/">LREC-COLING 2024</a><br>
 
-            <div class="button-cell">
-              <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://aclanthology.org/2024.lrec-main.1175.pdf" role="button">Paper</a> 
-              <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-4" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-              <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-4" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-              <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/mariateleki/Quantifying-Impact-Disfluency" role="button">Code</a> 
-              <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Quantifying LREC-COLING Poster.pdf" role="button">Poster</a> 
-              <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://www.youtube.com/watch?v=iTlJiEHN5Rk" role="button">Video</a> 
-              <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Quantifying LREC-COLING Slides.pdf" role="button">Slides</a> 
-              <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://aclanthology.org/2024.lrec-main.1175/" role="button">ACL Anthology Link</a>
+      <div class="button-cell">
+      <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://aclanthology.org/2024.lrec-main.385.pdf" role="button">Paper</a> 
+      <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-3" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+      <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-3" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+      <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/Rohan-Chaudhury/Generating-Fluent-Text-through-Curriculum-Learning-And-Disfluency-Augmentation" role="button">Code</a> 
+      <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/DACL LREC-COLING Poster.pdf" role="button">Poster</a> 
+      <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://youtu.be/8VIDlocdaco?si=35wXmBLOMNbrYz1X" role="button">Video</a>
+      <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/DACL Presentation.pdf" role="button">Slides</a>
+      <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://aclanthology.org/2024.lrec-main.385/" role="button">ACL Anthology Link</a>
+      </div>
+
+      <div class="collapse" id="abstract-text-3">
+      <div class="card card-body z-depth-0" style="font-size: small;">
+          Voice-driven software systems are in abundance. However, language models that power these systems are traditionally trained on fluent, written text corpora. Hence there can be a misalignment between the inherent disfluency of transcribed spoken content and the fluency of the written training data. Furthermore, gold-standard disfluency annotations of various complexities for incremental training can be expensive to collect. So, we propose in this paper a Disfluency Augmented Curriculum Learning (DACL) approach to tackle the complex structure of disfluent sentences and generate fluent texts from them, by using Curriculum Learning (CL) coupled with our synthetically augmented disfluent texts of various levels. DACL harnesses the tiered structure of our generated synthetic disfluent data using CL, by training the model on basic samples (i.e. more fluent) first before training it on more complex samples (i.e. more disfluent). In contrast to the random data exposure paradigm, DACL focuses on a simple-to-complex learning process. We comprehensively evaluate DACL on Switchboard Penn Treebank-3 and compare it to the state-of-the-art disfluency removal models. Our model surpasses existing techniques in word-based precision (by up to 1%) and has shown favorable recall and F1 scores.
+      </div>
+      </div>
+
+      <div class="collapse" id="bib-text-3">
+      <div class="card card-body z-depth-0">
+          <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+          @inproceedings{chaudhury-etal-2024-dacl-disfluency,<br>
+              title = "{DACL}: Disfluency Augmented Curriculum Learning for Fluent Text Generation",<br>
+              author = "Chaudhury, Rohan  and<br>
+              Teleki, Maria  and<br>
+              Dong, Xiangjue  and<br>
+              Caverlee, James",<br>
+              editor = "Calzolari, Nicoletta  and<br>
+              Kan, Min-Yen  and<br>
+              Hoste, Veronique  and<br>
+              Lenci, Alessandro  and<br>
+              Sakti, Sakriani  and<br>
+              Xue, Nianwen",<br>
+              booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",<br>
+              month = may,<br>
+              year = "2024",<br>
+              address = "Torino, Italia",<br>
+              publisher = "ELRA and ICCL",<br>
+              url = "https://aclanthology.org/2024.lrec-main.385",<br>
+              pages = "4311--4321",<br>
+              abstract = "Voice-driven software systems are in abundance. However, language models that power these systems are traditionally trained on fluent, written text corpora. Hence there can be a misalignment between the inherent disfluency of transcribed spoken content and the fluency of the written training data. Furthermore, gold-standard disfluency annotations of various complexities for incremental training can be expensive to collect. So, we propose in this paper a Disfluency Augmented Curriculum Learning (DACL) approach to tackle the complex structure of disfluent sentences and generate fluent texts from them, by using Curriculum Learning (CL) coupled with our synthetically augmented disfluent texts of various levels. DACL harnesses the tiered structure of our generated synthetic disfluent data using CL, by training the model on basic samples (i.e. more fluent) first before training it on more complex samples (i.e. more disfluent). In contrast to the random data exposure paradigm, DACL focuses on a simple-to-complex learning process. We comprehensively evaluate DACL on Switchboard Penn Treebank-3 and compare it to the state-of-the-art disfluency removal models. Our model surpasses existing techniques in word-based precision (by up to 1{\%}) and has shown favorable recall and F1 scores.",<br>
+          }        
+          </code>
+      </div>
+      </div>
+      </td></tr>
+  <!--- End DACL --->
+
+  <!-- Alexa Prize Paper-->
+      <!-- <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/taskbot.png"></div>
+        </td>-->
+        
+        <td style="font-size: medium;">Howdy Y’all: An Alexa TaskBot<br>
+          <b style="font-size: medium;">Majid Alfifi, Xiangjue Dong, Timo Feldman, Allen Lin, Karthic Madanagopal, Aditya Pethe, <b><u>Maria Teleki</u></b>, Zhuoer Wang, Ziwei Zhu, James Caverlee</div></b><br>
+          <a href="https://www.amazon.science/alexa-prize/proceedings/howdy-yall-an-alexa-taskbot">Alexa Prize TaskBot Challenge Proceedings 2022</a><br>
+
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/howdy-yall-paper.pdf" role="button">Paper</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-1" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-1" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://www.amazon.science/academic-engagements/ten-university-teams-selected-to-participate-in-alexa-prize-taskbot-challenge" role="button">Amazon Science Link</a>
+          </div>
+
+          <div class="collapse" id="abstract-text-1">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              In this paper, we present Howdy Y’all, a multi-modal task-oriented dialogue agent developed for the 2021-2022 Alexa Prize TaskBot competition. Our design principles guiding Howdy Y’all aim for high user satisfaction through friendly and trustworthy encounters, minimization of negative conversation edge cases, and wide coverage over many tasks. Hence, Howdy Y’all is built upon a rapid prototyping platform to enable fast experimentation and powered by four key innovations to enable this vision: (i) First, it combines a rules, phonetic matching, and a transformer-based approach for robust intent understanding. (ii) Second, to accurately elicit user preferences and guide users to the right task, Howdy Y’all is powered by a contrastive learning search framework over sentence embeddings and a conversational recommender for eliciting preferences. (iii) Third, to support a variety of user question types, it introduces a new data augmentation method for question generation and a self-supervised answer selection approach for improving question answering. (iv) Finally, to help motivate our users and keep them engaged, we design an emotional conversation tracker that provides empathetic responses to keep users engaged and a monitor of conversation quality.
             </div>
-
-            <div class="collapse" id="abstract-text-4">
-              <div class="card card-body z-depth-0" style="font-size: small;">
-                Spoken content is abundant -- including podcasts, meeting transcripts, and TikTok-like short videos. And yet, many important tasks like summarization are often designed for written content rather than the looser, noiser, and more disfluent style of spoken content. Hence, we aim in this paper to quantify the impact of disfluency on spoken content summarization. Do disfluencies negatively impact the quality of summaries generated by existing approaches? And if so, to what degree? Coupled with these goals, we also investigate two methods towards improving summarization in the presence of such disfluencies. We find that summarization quality does degrade with an increase in these disfluencies and that a combination of multiple disfluency types leads to even greater degradation. Further, our experimental results show that naively removing disfluencies and augmenting with special tags can worsen the summarization when used for testing, but that removing disfluencies for fine-tuning yields the best results. We make the code available at https://github.com/mariateleki/Quantifying-Impact-Disfluency.
-              </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-1">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{University2022,<br>
+                  author={Alfifi, Majid and Dong, Xiangjue and Feldman, Timo and Lin, Allen and Madanagopal, Karthic and Pethe, Aditya and Teleki, Maria and Wang, Zhuoer and Zhu, Ziwei and Caverlee, James},<br>
+                  title = {Howdy Y’all: An Alexa TaskBot},<br>
+                  year = {2022},<br>
+                  url = {https://www.amazon.science/alexa-prize/proceedings/howdy-yall-an-alexa-taskbot},<br>
+                  booktitle = {Alexa Prize TaskBot Challenge Proceedings},<br>
+                }
+              </code>
             </div>
-          
-            <div class="collapse" id="bib-text-4">
-              <div class="card card-body z-depth-0">
-                <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                  @inproceedings{teleki-etal-2024-quantifying-impact,<br>
-                    title = "Quantifying the Impact of Disfluency on Spoken Content Summarization",<br>
-                    author = "Teleki, Maria  and<br>
-                      Dong, Xiangjue  and<br>
-                      Caverlee, James",<br>
-                    editor = "Calzolari, Nicoletta  and<br>
-                      Kan, Min-Yen  and<br>
-                      Hoste, Veronique  and<br>
-                      Lenci, Alessandro  and<br>
-                      Sakti, Sakriani  and<br>
-                      Xue, Nianwen",<br>
-                    booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",<br>
-                    month = may,<br>
-                    year = "2024",<br>
-                    address = "Torino, Italia",<br>
-                    publisher = "ELRA and ICCL",<br>
-                    url = "https://aclanthology.org/2024.lrec-main.1175",<br>
-                    pages = "13419--13428",<br>
-                    abstract = "Spoken content is abundant {--} including podcasts, meeting transcripts, and TikTok-like short videos. And yet, many important tasks like summarization are often designed for written content rather than the looser, noiser, and more disfluent style of spoken content. Hence, we aim in this paper to quantify the impact of disfluency on spoken content summarization. Do disfluencies negatively impact the quality of summaries generated by existing approaches? And if so, to what degree? Coupled with these goals, we also investigate two methods towards improving summarization in the presence of such disfluencies. We find that summarization quality does degrade with an increase in these disfluencies and that a combination of multiple disfluency types leads to even greater degradation. Further, our experimental results show that naively removing disfluencies and augmenting with special tags can worsen the summarization when used for testing, but that removing disfluencies for fine-tuning yields the best results. We make the code available at https://github.com/mariateleki/Quantifying-Impact-Disfluency.",<br>
-                }        
-                </code>
-              </div>
-            </div>
-        </td></tr> 
-        <!-- End Quantifying Paper-->
+          </div>
+        </td>
+        </tr>
+        <!-- Alexa Prize Paper-->
 
-        <!--- start DACL --->
-        <tr>
-          <td style="width: 35%; vertical-align: top;">
-            <img class="preview rounded z-depth-0" width="85%" src="./img/DACL.png">
-          </td>
-        <td style="font-size: large;">DACL: Disfluency Augmented Curriculum Learning for Fluent Text Generation<br>
-        <b style="font-size: medium;">Rohan Chaudhury, <b><u>Maria Teleki</u></b>, Xiangjue Dong, and James Caverlee</div></b><br>
-        <a href="https://lrec-coling-2024.org/">LREC-COLING 2024</a><br>
-
-        <div class="button-cell">
-        <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://aclanthology.org/2024.lrec-main.385.pdf" role="button">Paper</a> 
-        <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-3" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-        <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-3" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-        <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/Rohan-Chaudhury/Generating-Fluent-Text-through-Curriculum-Learning-And-Disfluency-Augmentation" role="button">Code</a> 
-        <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/DACL LREC-COLING Poster.pdf" role="button">Poster</a> 
-        <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://youtu.be/8VIDlocdaco?si=35wXmBLOMNbrYz1X" role="button">Video</a>
-        <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/DACL Presentation.pdf" role="button">Slides</a>
-        <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://aclanthology.org/2024.lrec-main.385/" role="button">ACL Anthology Link</a>
-        </div>
-
-        <div class="collapse" id="abstract-text-3">
-        <div class="card card-body z-depth-0" style="font-size: small;">
-            Voice-driven software systems are in abundance. However, language models that power these systems are traditionally trained on fluent, written text corpora. Hence there can be a misalignment between the inherent disfluency of transcribed spoken content and the fluency of the written training data. Furthermore, gold-standard disfluency annotations of various complexities for incremental training can be expensive to collect. So, we propose in this paper a Disfluency Augmented Curriculum Learning (DACL) approach to tackle the complex structure of disfluent sentences and generate fluent texts from them, by using Curriculum Learning (CL) coupled with our synthetically augmented disfluent texts of various levels. DACL harnesses the tiered structure of our generated synthetic disfluent data using CL, by training the model on basic samples (i.e. more fluent) first before training it on more complex samples (i.e. more disfluent). In contrast to the random data exposure paradigm, DACL focuses on a simple-to-complex learning process. We comprehensively evaluate DACL on Switchboard Penn Treebank-3 and compare it to the state-of-the-art disfluency removal models. Our model surpasses existing techniques in word-based precision (by up to 1%) and has shown favorable recall and F1 scores.
-        </div>
-        </div>
-
-        <div class="collapse" id="bib-text-3">
-        <div class="card card-body z-depth-0">
-            <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-            @inproceedings{chaudhury-etal-2024-dacl-disfluency,<br>
-                title = "{DACL}: Disfluency Augmented Curriculum Learning for Fluent Text Generation",<br>
-                author = "Chaudhury, Rohan  and<br>
-                Teleki, Maria  and<br>
-                Dong, Xiangjue  and<br>
-                Caverlee, James",<br>
-                editor = "Calzolari, Nicoletta  and<br>
-                Kan, Min-Yen  and<br>
-                Hoste, Veronique  and<br>
-                Lenci, Alessandro  and<br>
-                Sakti, Sakriani  and<br>
-                Xue, Nianwen",<br>
-                booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",<br>
-                month = may,<br>
-                year = "2024",<br>
-                address = "Torino, Italia",<br>
-                publisher = "ELRA and ICCL",<br>
-                url = "https://aclanthology.org/2024.lrec-main.385",<br>
-                pages = "4311--4321",<br>
-                abstract = "Voice-driven software systems are in abundance. However, language models that power these systems are traditionally trained on fluent, written text corpora. Hence there can be a misalignment between the inherent disfluency of transcribed spoken content and the fluency of the written training data. Furthermore, gold-standard disfluency annotations of various complexities for incremental training can be expensive to collect. So, we propose in this paper a Disfluency Augmented Curriculum Learning (DACL) approach to tackle the complex structure of disfluent sentences and generate fluent texts from them, by using Curriculum Learning (CL) coupled with our synthetically augmented disfluent texts of various levels. DACL harnesses the tiered structure of our generated synthetic disfluent data using CL, by training the model on basic samples (i.e. more fluent) first before training it on more complex samples (i.e. more disfluent). In contrast to the random data exposure paradigm, DACL focuses on a simple-to-complex learning process. We comprehensively evaluate DACL on Switchboard Penn Treebank-3 and compare it to the state-of-the-art disfluency removal models. Our model surpasses existing techniques in word-based precision (by up to 1{\%}) and has shown favorable recall and F1 scores.",<br>
-            }        
-            </code>
-        </div>
-        </div>
-        </td></tr>
-    <!--- End DACL --->
-
-    
     </table>
+  </div>
 
 
   </div>
@@ -471,8 +560,8 @@
 
 <!-- Research Thrust 3 -->
 <div class="pub-thrust thrust-3">
-  <h3>Modeling Variability in Spoken Language Technologies</h3>
-  Speech AI must work across <strong>contexts, domains, and communication styles</strong> -- from different speakers and linguistic backgrounds to podcasts, casual dialogue, and specialized settings. I study how models behave under this variability and design methods that improve generalization across settings.
+  <h3>Generalization Across Speakers and Communication Styles</h3>
+  Speech and language systems must generalize across speakers, domains, and communicative contexts, including variation in linguistic background, discourse setting, and interactional goals. In practice, models often overfit to narrow training distributions and fail under this variability. My research studies how speech and language models break down across speakers and communication styles and develops methods that improve robustness and generalization across real-world settings.
 
   <div class="pub-list">
     <table class="table table-borderless table-sm">
@@ -486,8 +575,7 @@
         
         <td style="font-size: large;">Masculine Defaults via Gendered Discourse in Podcasts and Large Language Models<br>
           <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Xiangjue Dong, Haoran Liu, and James Caverlee</div></b><br>
-          <a href="https://www.icwsm.org/2025/index.html">ICWSM 2025<br></a>
-          <i>Presented at: <a href="https://www.ic2s2-2025.org">IC2S2 2025</a></i>, <i><a href="https://sites.google.com/view/sicon2025?pli=1">SICon@ACL 2025</a></i><br>
+          <a href="https://www.icwsm.org/2025/index.html">ICWSM 2025</a>; <i>Presented at: <a href="https://www.ic2s2-2025.org">IC2S2 2025</a></i>, <i><a href="https://sites.google.com/view/sicon2025?pli=1">SICon@ACL 2025</a></i><br>
 
           <div class="button-cell">
             <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2504.11431" role="button">Paper (arXiv)</a>
@@ -524,58 +612,60 @@
         </tr>
         <!-- End Gendered Discourse Paper-->
 
-        <!-- CHOIR Paper-->
+    <!-- vicarious iui short Paper-->
       <tr>
         <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="85%" src="./img/CHOIR.png">
+          <img class="preview rounded z-depth-0" width="85%" src="./img/vicarious-iui.png">
         </td>
         
-        <td style="font-size: large;">CHOIR: Collaborative Harmonization fOr Inference Robustness<br>
-          <b style="font-size: medium;">Xiangjue Dong, Cong Wang, <b><u>Maria Teleki</u></b>, Millenium Bismay, and James Caverlee</div></b><br>
-          <a>arXiv 2025<br></a>
+        <td style="font-size: large;">"Walk a Mile in My Voice": Voice Conversion Shapes Trust, Attribution, and Empathy in Human–AI Speech Interactions<br>
+          <b style="font-size: medium;">Shree Harsha Bokkahalli Satish, <b><u>Maria Teleki</u></b>, Christoph Minixhofer, Ondrej Klejch, Peter Bell, Éva Székely</div></b><br>
+          <i style="font-size: medium;">Collaboration w/ KTH Royal Institute of Technology, University of Edinburgh</i><br>
+          <a href="https://iui.acm.org/2026/">IUI (Short) 2026<br></a>
 
           <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2510.22475" role="button">Paper (arXiv)</a>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-choir" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-choir" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-            <!--<a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/mariateleki/masculine-defaults"" role="button">GitHub</a>
-             <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://www.gendered-discourse.net" role="button">Project Website</a>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/IC2S22025Presentation.pdf" role="button">Slides</a>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/ICWSM25Poster.pdf" role="button">Poster</a> 
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video</a>  -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Paper</a> -->
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-ID-asck" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-ID-asck" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://shreeharsha-bs.github.io/interactive/" role="button">Project Website</a>
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/IC2S22025Presentation.pdf" role="button">Slides</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/ICWSM25Poster.pdf" role="button">Poster</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video</a>  -->
             <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
           </div>
         
-          <div class="collapse" id="abstract-text-choir">
+          <div class="collapse" id="abstract-text-ID-asck">
             <div class="card card-body z-depth-0" style="font-size: small;">
-              Persona-assigned Large Language Models (LLMs) can adopt diverse roles, enabling personalized and context-aware reasoning. However, even minor demographic perturbations in personas, such as simple pronoun changes, can alter reasoning trajectories, leading to divergent sets of correct answers. Instead of treating these variations as biases to be mitigated, we explore their potential as a constructive resource to improve reasoning robustness. We propose CHOIR (Collaborative Harmonization fOr Inference Robustness), a test-time framework that harmonizes multiple persona-conditioned reasoning signals into a unified prediction. CHOIR orchestrates a collaborative decoding process among counterfactual personas, dynamically balancing agreement and divergence in their reasoning paths. Experiments on various reasoning benchmarks demonstrate that CHOIR consistently enhances performance across demographics, model architectures, scales, and tasks - without additional training. Improvements reach up to 26.4% for individual demographic groups and 19.2% on average across five demographics. It remains effective even when base personas are suboptimal. By reframing persona variation as a constructive signal, CHOIR provides a scalable and generalizable approach to more reliable LLM reasoning.
+              Speech Large Language Models (SpeechLLMs) represent a new generation of conversational AI that processes spoken language directly from audio. This enables sensitivity to prosodic cues while also inheriting voice-based demographic information that has been shown to lead to biased system behaviour. Studying how people react and reflect on AI responses to different gender and accent presentation can contribute to understanding the potential societal impact. In this study, we examine how vocal identity factors of accent and perceived gender shape user evaluations of AI responses while the underlying linguistic content remains constant. Through two complementary studies (Interactive Study, N=24; Observational Study, N=19), we investigate whether experiencing interactions through voice converted identities versus observing pre-recorded conversations affects perceived harm, acceptability, trust, and responsibility attribution. We find that participants who experienced voice conversion rated benign AI responses as significantly more acceptable and reported significantly higher trust compared to those observing identical interactions, while perceived harm remained low across conditions. Qualitative feedback reveals that participants attributed different AI behaviours to voice characteristics, noting perceived differences in tone, helpfulness, and respect based on accent and gender presentation. Our findings suggest that vocal identity functions as a design variable, with systematic effects on user perception even when lexical content is held constant. 
             </div>
           </div>
         
-          <div class="collapse" id="bib-text-choir">
+          <div class="collapse" id="bib-text-ID-asck">
             <div class="card card-body z-depth-0">
               <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                @inproceedings{dong25_choir,<br>
-                  title     = {CHOIR: Collaborative Harmonization fOr Inference Robustness},<br>
-                  author    = {Xiangjue Dong and Cong Wang and Maria Teleki and Millennium Bismay and James Caverlee},<br>
-                  year      = {2025},<br>
-                  booktitle = {arXiv 2025}<br>
+                title = {\textbf{Walk a Mile in My Voice: Voice Conversion Shapes Trust, Attribution, and Empathy in Human–AI Speech Interactions}},<br>
+                author = {Shree Harsha Bokkahalli Satish and \underline{Maria Teleki} and Christoph Minixhofer and Ondrej Klejch and Peter Bell and Éva Székely},<br>
+                year = {2026},<br>
+                booktitle = {IUI (Short)}<br>
                 }
               </code>
             </div>
           </div>
         </td>
         </tr>
-        <!-- End CHOIR -->
+        <!-- End vicarious iui-->
 
         <!-- Co2PT Paper-->
         <tr>
+
+        <tr>
         <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="95%" src="./img/diagram3.png"></div>
+          <img class="preview rounded z-depth-0" width="85%" src="./img/co2pt.png">
         </td>
 
         <td style="font-size: large;">Co2PT: Mitigating Bias in Pre-trained Language Models through Counterfactual Contrastive Prompt Tuning<br>
           <b style="font-size: medium;">Xiangjue Dong, Ziwei Zhu, Zhuoer Wang, <b><u>Maria Teleki</u></b>, and James Caverlee</div></b><br>
+          <i style="font-size: medium;">Collaboration w/ George Mason University</i><br>
           <a href="https://2023.emnlp.org/program/">EMNLP Findings 2023</a><br>
 
           <div class="button-cell">
@@ -623,113 +713,23 @@
         </tr>
         <!-- End Co2PT Paper-->
 
+        </table>
+      </div>
 
+    <!--<div class="pub-list">
+    <table class="table table-borderless table-sm">
+       
+
+        
     </table>
-  </div>
+    </div> -->
+
 </div>
 
 <!-- Research Thrust 2 -->
 <div class="pub-thrust thrust-2">
-  <h3>Conversational AI in Noisy, Real-World Settings</h3>
-  Most conversational AI is built for idealized, text-based input -- far from how people actually interact. I design models and evaluation approaches that handle spoken, noisy, and context-rich dialogue, advancing conversational systems that bridge speech and language in practical applications.
-  <div class="pub-list">
-    <table class="table table-borderless table-sm">
-      <!-- Publications -->
-
-      <!-- ConvRec Paper-->
-      <tr>
-        <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="95%" src="./img/ConvRec2.png">
-        </td>
-        
-        <td style="font-size: large;">I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance<br>
-          <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Lingfeng Shi, Chengkai Liu, and James Caverlee</div></b><br>
-          <a href="https://www.interspeech2025.org/home">INTERSPEECH 2025</a><br>
-
-          <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/HorrorComedy.pdf" role="button">Paper</a>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-7" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-7" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/mariateleki/Syn-WSSE" role="button">GitHub</a>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Interspeech25Poster.pdf" role="button">Poster</a>
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video</a>  -->
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Slides</a> -->
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">AAAI Archive Link</a> -->
-          </div>
-        
-          <div class="collapse" id="abstract-text-7">
-            <div class="card card-body z-depth-0" style="font-size: small;">
-              Disfluencies are a characteristic of speech. We focus on the impact of a specific class of disfluency -- whole-word speech substitution errors (WSSE) -- on LLM-based conversational recommender system performance. We develop Syn-WSSE, a psycholinguistically-grounded framework for synthetically creating genre-based WSSE at varying ratios to study their impact on conversational recommender system performance. We find that LLMs are impacted differently: llama and mixtral have improved performance in the presence of these errors, while gemini, gpt-4o, and gpt-4o-mini have deteriorated performance. We hypothesize that this difference in model resiliency is due to differences in the pre- and post-training methods and data, and that the increased performance is due to the introduced genre diversity. Our findings indicate the importance of a careful choice of LLM for these systems, and more broadly, that disfluencies must be carefully designed for as they can have unforeseen impacts. 
-          </div>
-          </div>
-        
-          <div class="collapse" id="bib-text-7">
-            <div class="card card-body z-depth-0">
-              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                @inproceedings{teleki25_horror,<br>
-                  title     = {{I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance}},<br>
-                  author    = {Maria Teleki and Lingfeng Shi and Chengkai Liu and James Caverlee},<br>
-                  year      = {2025},<br>
-                  booktitle = {INTERSPEECH}<br>
-                }
-              </code>
-            </div>
-          </div>
-        </td>
-        </tr>
-      <!-- End ConvRec Paper-->
-
-      <!-- Alexa Prize Paper-->
-      <tr>
-        <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="95%" src="./img/taskbot.png"></div>
-        </td>
-        
-        <td style="font-size: large;">Howdy Y’all: An Alexa TaskBot<br>
-          <b style="font-size: medium;">Majid Alfifi, Xiangjue Dong, Timo Feldman, Allen Lin, Karthic Madanagopal, Aditya Pethe, <b><u>Maria Teleki</u></b>, Zhuoer Wang, Ziwei Zhu, James Caverlee</div></b><br>
-          <a href="https://www.amazon.science/alexa-prize/proceedings/howdy-yall-an-alexa-taskbot">Alexa Prize TaskBot Challenge Proceedings 2022</a><br>
-
-          <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/howdy-yall-paper.pdf" role="button">Paper</a>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-1" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-1" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://www.amazon.science/academic-engagements/ten-university-teams-selected-to-participate-in-alexa-prize-taskbot-challenge" role="button">Amazon Science Link</a>
-          </div>
-
-          <div class="collapse" id="abstract-text-1">
-            <div class="card card-body z-depth-0" style="font-size: small;">
-              In this paper, we present Howdy Y’all, a multi-modal task-oriented dialogue agent developed for the 2021-2022 Alexa Prize TaskBot competition. Our design principles guiding Howdy Y’all aim for high user satisfaction through friendly and trustworthy encounters, minimization of negative conversation edge cases, and wide coverage over many tasks. Hence, Howdy Y’all is built upon a rapid prototyping platform to enable fast experimentation and powered by four key innovations to enable this vision: (i) First, it combines a rules, phonetic matching, and a transformer-based approach for robust intent understanding. (ii) Second, to accurately elicit user preferences and guide users to the right task, Howdy Y’all is powered by a contrastive learning search framework over sentence embeddings and a conversational recommender for eliciting preferences. (iii) Third, to support a variety of user question types, it introduces a new data augmentation method for question generation and a self-supervised answer selection approach for improving question answering. (iv) Finally, to help motivate our users and keep them engaged, we design an emotional conversation tracker that provides empathetic responses to keep users engaged and a monitor of conversation quality.
-            </div>
-          </div>
-        
-          <div class="collapse" id="bib-text-1">
-            <div class="card card-body z-depth-0">
-              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                @inproceedings{University2022,<br>
-                  author={Alfifi, Majid and Dong, Xiangjue and Feldman, Timo and Lin, Allen and Madanagopal, Karthic and Pethe, Aditya and Teleki, Maria and Wang, Zhuoer and Zhu, Ziwei and Caverlee, James},<br>
-                  title = {Howdy Y’all: An Alexa TaskBot},<br>
-                  year = {2022},<br>
-                  url = {https://www.amazon.science/alexa-prize/proceedings/howdy-yall-an-alexa-taskbot},<br>
-                  booktitle = {Alexa Prize TaskBot Challenge Proceedings},<br>
-                }
-              </code>
-            </div>
-          </div>
-        </td>
-        </tr>
-        <!-- Alexa Prize Paper-->
-
-
-
-    </table>
-  </div>
-</div>
-
-<!-- Research Thrust 4 -->
-<div class="pub-thrust thrust-4">
-  <h3><b>Synthesis Contributions</b></h3>
-  I also contribute conceptual and survey work that maps emerging trends in language technology. These efforts synthesize fast-moving developments and provide frameworks that guide future research on speech, conversation, and language understanding.
+  <h3>Social Computing & Cultural AI Systems</h3>
+  Language technologies increasingly mediate how people communicate, create, and interpret information at scale. In this line of work, I study and build AI systems that operate within social, cultural, and platform-level contexts, where meaning is shaped by communities, norms, and narratives. My research examines how these contextual forces influence model behavior and system outcomes, with the goal of designing language technologies that better align with the social dynamics in which they are deployed.
   <div class="pub-list">
     <table class="table table-borderless table-sm">
       <!-- Publications -->
@@ -777,6 +777,163 @@
         </tr>
       <!-- End StorySurvey Paper-->
 
+      <!-- PromptHelper Paper-->
+      <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/prompthelper2.png">
+        </td>
+        
+        <td style="font-size: large;">PromptHelper: A Prompt Recommender System for Encouraging Creativity in AI Chatbot Interactions<br>
+          <b style="font-size: medium;">Jason Kim, <b><u>Maria Teleki</u></b>, James Caverlee</div></b><br>
+          <i style="font-size: medium;">(undergraduate first author)</i><br>
+          <a href=".">arXiv (Short) 2026</a><br>
+
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="pdf/A_Survey_on_LLMs_for_Story_Generation.pdf" role="button">Paper</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-ID-013k" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-ID-013k" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://anonymous.4open.science/r/Prompt_Recommender-6B80/README.md" role="button">GitHub</a>
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Poster</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video</a>  -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Slides</a> -->
+          </div>
+
+          <div class="collapse" id="abstract-text-ID-013k">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Prompting is central to interaction with AI systems, yet many users struggle to explore alternative directions, articulate creative intent, or understand how variations in prompts shape model outputs. We introduce prompt recommender systems (PRS) as an interaction approach that supports exploration, suggesting contextually relevant follow-up prompts. We present PromptHelper, a PRS prototype integrated into an AI chatbot that surfaces semantically diverse prompt suggestions while users work on real writing tasks. We evaluate PromptHelper in a 2x2 fully within-subjects study (N=32) across creative and academic writing tasks. Results show that PromptHelper significantly increases users' perceived exploration and expressiveness without increasing cognitive workload. Qualitative findings illustrate how prompt recommendations help users branch into new directions, overcome uncertainty about what to ask next, and better articulate their intent. We discuss implications for designing AI interfaces that scaffold exploratory interaction while preserving user agency, and release open-source resources to support research on prompt recommendation.
+          </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-ID-013k">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{kim26_prompthelper,<br>
+                  title     = {{PromptHelper: A Prompt Recommender System for Encouraging Creativity in AI Chatbot Interactions}},<br>
+                  author    = {Jason Kim and Maria Teleki and James Caverlee},<br>
+                  year      = {2026},<br>
+                  booktitle = {arXiv}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+        </tr>
+      <!-- End PromptHelper Paper-->
+
+      <!-- SocialPulse Paper-->
+      <tr>
+
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/socialpulse.png">
+        </td>
+        
+        <td style="font-size: large;">SocialPulse: An Open-Source Subreddit Sensemaking Toolkit<br>
+          <b style="font-size: medium;">Stephanie Birkelbach, <b><u>Maria Teleki</u></b>, Peter Carragher, Xiangjue Dong, Nehul Bhatnagar, James Caverlee</div></b><br>
+          <i style="font-size: medium;">Collaboration w/ Carnegie Mellon University, Revionics</i><br>
+          <i style="font-size: medium;">(undergraduate first author)</i><br>
+          <a href=".">arXiv (Demo) 2026</a><br>
+
+          <div class="button-cell">
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Paper</a>-->
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-ID-alwerj" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-ID-alwerj" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/birkelbachs/SocialPulse" role="button">GitHub</a>
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Poster</a> -->
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://youtu.be/zRprjXwFwQ0" role="button">Video</a> 
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Slides</a> -->
+          </div>
+
+          <div class="collapse" id="abstract-text-ID-alwerj">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Understanding how online communities discuss and make sense of complex social issues is a central challenge in social media research, yet existing tools for large-scale discourse analysis are often closed-source, difficult to adapt, or limited to single analytical views. We present SocialPulse, an open-source subreddit sensemaking toolkit that unifies multiple complementary analyses -- topic modeling, sentiment analysis, user activity characterization, and bot detection -- within a single interactive system. SocialPulse enables users to fluidly move between aggregate trends and fine-grained content, compare highly active and long-tail contributors, and examine temporal shifts in discourse across subreddits. The demo showcases end-to-end exploratory workflows that allow researchers and practitioners to rapidly surface themes, participation patterns, and emerging dynamics in large Reddit datasets. By offering an extensible and openly available platform, SocialPulse provides a practical and reusable foundation for transparent, reproducible sensemaking of online community discourse.
+          </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-ID-alwerj">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{birkelbach26_socialpulse,<br>
+                  title     = {{SocialPulse: An Open-Source Subreddit Sensemaking Toolkit}},<br>
+                  author    = {Stephanie Birkelbach and Maria Teleki and Peter Carragher and Xiangjue Dong and Nehul Bhatnagar and James Caverlee<br>
+                  year      = {2026},<br>
+                  booktitle = {arXiv}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+        </tr>
+      <!-- End SocialPulse Paper-->
+
+
+      <!-- PodChecker Paper-->
+      <tr>
+
+         <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/podchecker.png">
+        </td>
+        
+        <td style="font-size: large;">PodChecker: An Interpretable Fact-Checking Companion for Podcasts<br>
+          <b style="font-size: medium;">Anna Irmetova, Haoran Liu, <b><u>Maria Teleki</u></b>, Peter Carragher, Xiangjue Dong, Julie Zhang, James Caverlee</div></b><br>
+          <i style="font-size: medium;">Collaboration w/ Carnegie Mellon University</i><br>
+          <i style="font-size: medium;">(undergraduate first author)</i><br>
+          <a href=".">arXiv (Demo) 2026</a><br>
+
+          <div class="button-cell">
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Paper</a>-->
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-ID-aweoir" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-ID-aweoir" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/annatastic/PodChecker" role="button">GitHub</a>
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Poster</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://youtu.be/zRprjXwFwQ0" role="button">Video</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Slides</a> -->
+          </div>
+
+          <div class="collapse" id="abstract-text-ID-aweoir">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              We present PodChecker, a user-facing system for automated, claim-level fact-checking of podcast content. PodChecker processes podcast audio or RSS feeds by transcribing episodes, extracting atomic factual claims, and assigning each claim one of four fine-grained labels -- \textit{true, false, misleading/partially true, or unverifiable} -- using retrieval-augmented verification. The system presents fact-checking results at the level of individual claims, accompanied by simple visual indicators and links to supporting/conflicting sources. This design, implemented via an interactive web-based interface, enables users to inspect fact-checking outputs and underlying evidence directly, supporting interpretable and critical engagement with long-form audio content. By presenting claim-level evidence and labels, PodChecker assists both general listeners and professional fact-checkers in assessing podcast factuality.
+          </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-ID-aweoir">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{irmetova26_podchecker,<br>
+                  title     = {{PodChecker: An Interpretable Fact-Checking Companion for Podcasts}},<br>
+                  author    = {Anna Irmetova, Haoran Liu, Maria Teleki, Peter Carragher, Xiangjue Dong, Julie Zhang, James Caverlee<br>
+                  year      = {2026},<br>
+                  booktitle = {arXiv}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+        </tr>
+      <!-- End PodChecker Paper-->
+      
+
+    </table>
+  </div>
+
+    <!-- <div class="pub-list">
+    <table class="table table-borderless table-sm">
+      Publications NO IMG
+
+    </table>
+  </div> -->
+</div>
+
+<!-- Research Thrust 4 -->
+<div class="pub-thrust thrust-4">
+  <h3><b>Model Behavior & Inference-Time Adaptation</b></h3>
+  I study how language models behave internally, with a focus on inference-time adaptation, coordination, and robustness. Rather than relying on additional training, this work investigates model-centric mechanisms that enable systems to improve performance, adapt to uncertainty, and recover from errors at inference time. The goal is to better understand and control model behavior in dynamic, real-world conditions.
+  <div class="pub-list">
+    <table class="table table-borderless table-sm">
+      <!-- Publications -->
+
       <!-- ITSI Survey Paper-->
       <tr>
         <td style="width: 35%; vertical-align: top;">
@@ -821,11 +978,52 @@
         </tr>
       <!-- End ITSI Survey Paper-->
 
+      </table>
+  </div>
+
+    <div class="pub-list">
+    <table class="table table-borderless table-sm">
+      <!-- Publications no img -->
+
+      <!-- CHOIR Paper-->
+      <tr>
+        <td style="font-size: medium;">CHOIR: Collaborative Harmonization fOr Inference Robustness<br>
+          <b style="font-size: medium;">Xiangjue Dong, Cong Wang, <b><u>Maria Teleki</u></b>, Millenium Bismay, and James Caverlee</div></b><br>
+          <a>arXiv 2025<br></a>
+
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2510.22475" role="button">Paper (arXiv)</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-choir" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-choir" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+          </div>
+        
+          <div class="collapse" id="abstract-text-choir">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Persona-assigned Large Language Models (LLMs) can adopt diverse roles, enabling personalized and context-aware reasoning. However, even minor demographic perturbations in personas, such as simple pronoun changes, can alter reasoning trajectories, leading to divergent sets of correct answers. Instead of treating these variations as biases to be mitigated, we explore their potential as a constructive resource to improve reasoning robustness. We propose CHOIR (Collaborative Harmonization fOr Inference Robustness), a test-time framework that harmonizes multiple persona-conditioned reasoning signals into a unified prediction. CHOIR orchestrates a collaborative decoding process among counterfactual personas, dynamically balancing agreement and divergence in their reasoning paths. Experiments on various reasoning benchmarks demonstrate that CHOIR consistently enhances performance across demographics, model architectures, scales, and tasks - without additional training. Improvements reach up to 26.4% for individual demographic groups and 19.2% on average across five demographics. It remains effective even when base personas are suboptimal. By reframing persona variation as a constructive signal, CHOIR provides a scalable and generalizable approach to more reliable LLM reasoning.
+            </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-choir">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{dong25_choir,<br>
+                  title     = {CHOIR: Collaborative Harmonization fOr Inference Robustness},<br>
+                  author    = {Xiangjue Dong and Cong Wang and Maria Teleki and Millennium Bismay and James Caverlee},<br>
+                  year      = {2025},<br>
+                  booktitle = {arXiv 2025}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+        </tr>
+        <!-- End CHOIR -->
+
     </table>
   </div>
 </div>
 
-<!-- Future Vision -->
+<!-- Future Vision
 <div class="future-vision">
 <h3>Future Vision</h3>
   <p>
@@ -842,7 +1040,7 @@
   <p>
     By centering variability as a core research challenge, my work lays the <strong>scientific and methodological foundation</strong> for <strong>next-generation conversational systems</strong> -- systems that perform reliably outside the lab, adapt across settings, and power applications ranging from information access to decision support.
   </p>
-</div>
+</div> -->
 
 <div class="education">
 <h2 id="education_id">Education</h2>
@@ -1000,7 +1198,7 @@
       <span class="pastel-green">&#9827;</span>
     ]
     – <i>Presented at <a href="https://srw.tamu.edu/awards/">Student Research Week</a> 
-      [🏅1st Place Category Award]</i>
+      [🏅1st Place Category Award]; First Employment: NVIDIA</i>
 
     <br>
     <a>Cong Wang</a>
@@ -1031,7 +1229,7 @@
       <span class="pastel-blue">&#9824;</span>
       <span class="pastel-green">&#9827;</span>
     ]
-    – <i>Presented at <a href="https://srw.tamu.edu/awards/">Student Research Week</a>, Intern @ Samsung, Intern @ Google</i>
+    – <i>Presented at <a href="https://srw.tamu.edu/awards/">Student Research Week</a>; Intern @ Samsung, Google</i>
 
     <br>
     <a href="https://www.linkedin.com/in/thomas-docog-789236280/">Thomas Docog</a>
@@ -1055,12 +1253,14 @@
     [
       <span class="pastel-orange">&#9733;</span>
       <span class="pastel-blue">&#9824;</span>
+      <span class="pastel-purple diamond">&#9670;</span>
       <span class="pastel-green">&#9827;</span>
     ]
 
     <br>
     <a href="https://www.linkedin.com/in/jason-kim-b8a82832b">Jason Kim</a>
     [
+      <span class="pastel-orange">&#9733;</span>
       <span class="pastel-blue">&#9824;</span>
       <span class="pastel-green">&#9827;</span>
     ]
@@ -1189,12 +1389,12 @@
 <tr>
 <td style="width: 35%; vertical-align: top;">
     <b style="font-size: large;">Google DeepMind</b><br>
-    <b style="font-size: large;">Student Researcher (Incoming)</b><br>
+    <b style="font-size: large;">Student Researcher</b><br>
     Cambridge, MA<br>
     June 2026 - September 2026
 </td>
 
-<td style="white-space: pre-wrap; vertical-align: top; font-size: small;">Stay tuned! :)</td>
+<td style="white-space: pre-wrap; vertical-align: top; font-size: small;">Starting in June!</td>
 </tr> 
 
 <tr>
