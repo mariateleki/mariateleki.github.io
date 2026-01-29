@@ -169,6 +169,32 @@ hr {
   font-size: 0.87em; /* scale down slightly */
 }
 
+.vision-icon {
+    color: #500000; /* Texas A&M Maroon */
+    background: #fdf2f2; /* Very light pink/maroon tint */
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    border: 1px solid #e0d4d4;
+}
+
+.vision-icon:hover {
+    transform: translateY(-5px);
+    background: #500000;
+    color: white;
+}
+
+.vision-callout {
+    border-left: 5px solid #500000;
+    padding: 15px 25px;
+    background: #fffafa;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
 
 /* Compact, uniform publication buttons */
 .pub-list .button-cell .btn {
