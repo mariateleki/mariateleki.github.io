@@ -188,11 +188,11 @@ hr {
 }
 
 .vision-callout {
-    border-left: 5px solid #500000;
+    border-left: 5px solid #6C5B7B;
     padding: 15px 25px;
-    background: #fffafa;
-    font-style: italic;
-    margin-bottom: 30px;
+    background: #6c5b7b19;
+    margin-bottom: -20px;
+    margin-top: 10px;
 }
 
 
