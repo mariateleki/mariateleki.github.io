@@ -92,6 +92,9 @@
 
 <!-- Content -->
 <div class="container mt-5">
+<!-- =========================
+     About
+========================= -->
 <!-- about.html -->
 <div class="post">
 <header class="post-header">
@@ -174,7 +177,7 @@
   <tr>
   <tr>
     <th scope="row">Dec 19, 2024</th>
-    <td>Our survey on <a href="https://arxiv.org/pdf/2412.14352"><i>LLM Inference-Time Self-Improvement</i></a> is up on arXiv! <img alt=":arxiv:" src="./img/arxiv.png" height="20" width="20"></td>
+    <td>Our survey on <a href="https://arxiv.org/pdf/2412.14352"><i>LLM Inference-Time Self-Improvement</i></a> is up on Preprint! <img alt=":arxiv:" src="./img/arxiv.png" height="20" width="20"></td>
   </tr>
   <tr>
     <th scope="row">Nov 18, 2024</th>
@@ -210,6 +213,9 @@
 </div>
 
 
+<!-- =========================
+     Publications
+========================= -->
 <h2 id="publications_id"><!--Publications & Preprints-->
 </h2>
 <div class="table-responsive-sm">
@@ -219,16 +225,16 @@
 </table>
 </div>
 
-<!-- Research Thrust 1 -->
+<!-- ----- Publications: Thrust 1 (Disfluency-Aware Speech and Language Understanding) ----- -->
 <div class="pub-thrust thrust-1">
-  <h3>Disfluency-Aware Speech and Language Understanding</h3>
+  <h3>Robust Speech and Language Understanding</h3>
   Current speech and language understanding systems are built for fluent text, not for how people actually speak. Disfluencies -- pauses, repairs, hedges, and restarts -- are treated as artifacts to be removed, despite being fundamental to spoken communication. My work challenges this assumption by modeling disfluency as meaningful linguistic structure. I develop models, benchmarks, and evaluation frameworks that operate directly on spontaneous speech, yielding more robust language understanding in real-world conversational settings.
 
-  <div class="pub-list">
+  <div class="pub-list pub-list-lg">
     <table class="table table-borderless table-sm">
       <!-- Publications -->
 
-      <!-- Zscore Paper-->
+      <!-- Paper: Z-Scores -->
       <tr>
       <td style="width: 35%; vertical-align: top;">
         <img class="preview rounded z-depth-0" width="95%" src="./img/zscores.png">
@@ -270,9 +276,9 @@
         </div>
       </td>
       </tr>
-      <!-- End ZScore Paper-->
+      <!-- End Paper: Z-Scores -->
 
-      <!-- Comparing ASR Paper-->
+      <!-- Paper: Comparing ASR Systems -->
       <tr>
       <td style="width: 35%; vertical-align: top;">
         <img class="preview rounded z-depth-0" width="95%" src="./img/interspeech_diagram.png">
@@ -317,12 +323,101 @@
         </div>
       </td>
       </tr>
-      <!-- End Comparing ASR Paper-->
+      <!-- End Paper: Comparing ASR Systems -->
 
-      <!-- Quantifying Paper-->
+      <!-- Paper: ConvRec (Horror-Comedy WSSE) -->
       <tr>
         <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="85%" src="./img/Quantifying.png">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/ConvRec2.png">
+        </td>
+        
+        <td style="font-size: large;">I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance<br>
+          <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Lingfeng Shi, Chengkai Liu, and James Caverlee</div></b><br>
+          <a href="https://www.interspeech2025.org/home">INTERSPEECH 2025</a><br>
+
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/HorrorComedy.pdf" role="button">Paper</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-7" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-7" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/mariateleki/Syn-WSSE" role="button">GitHub</a>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Interspeech25Poster.pdf" role="button">Poster</a>
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video</a>  -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Slides</a> -->
+            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">AAAI Archive Link</a> -->
+          </div>
+        
+          <div class="collapse" id="abstract-text-7">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Disfluencies are a characteristic of speech. We focus on the impact of a specific class of disfluency -- whole-word speech substitution errors (WSSE) -- on LLM-based conversational recommender system performance. We develop Syn-WSSE, a psycholinguistically-grounded framework for synthetically creating genre-based WSSE at varying ratios to study their impact on conversational recommender system performance. We find that LLMs are impacted differently: llama and mixtral have improved performance in the presence of these errors, while gemini, gpt-4o, and gpt-4o-mini have deteriorated performance. We hypothesize that this difference in model resiliency is due to differences in the pre- and post-training methods and data, and that the increased performance is due to the introduced genre diversity. Our findings indicate the importance of a careful choice of LLM for these systems, and more broadly, that disfluencies must be carefully designed for as they can have unforeseen impacts. 
+          </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-7">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{teleki25_horror,<br>
+                  title     = {{I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance}},<br>
+                  author    = {Maria Teleki and Lingfeng Shi and Chengkai Liu and James Caverlee},<br>
+                  year      = {2025},<br>
+                  booktitle = {INTERSPEECH}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+        </tr>
+      <!-- End Paper: ConvRec (Horror-Comedy WSSE) -->
+
+      <!-- Paper: ITSI Survey -->
+      <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/survey2.png">
+        </td>
+        
+        <td style="font-size: large;">A Survey on LLM Inference-Time Self-Improvement<br>
+          <b style="font-size: medium;">Xiangjue Dong,* <b><u>Maria Teleki</u></b>,* and James Caverlee</div></b><br>
+          <a href="https://arxiv.org">Preprint 2024</a><br>
+
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2412.14352" role="button">Paper</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-7" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-7" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/dongxiangjue/Awesome-LLM-Self-Improvement"" role="button">GitHub</a>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/ITSI-Poster.pdf" role="button">Poster</a>
+          </div>
+          
+          <div class="collapse" id="abstract-text-7">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Techniques that enhance inference through increased computation at test-time have recently gained attention. In this survey, we investigate the current state of LLM Inference-Time Self-Improvement from three different perspectives: Independent Self-improvement, focusing on enhancements via decoding or sampling methods; Context-Aware Self-Improvement, leveraging additional context or datastore; and Model-Aided Self-Improvement, achieving improvement through model collaboration. We provide a comprehensive review of recent relevant studies, contribute an in-depth taxonomy, and discuss challenges and limitations, offering insights for future research. 
+          </div>
+          </div>
+        
+          <div class="collapse" id="bib-text-7">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{dong24_survey,<br>
+                  title     = {A Survey on LLM Inference-Time Self-Improvement},<br>
+                  author    = {Xiangjue Dong and Maria Teleki and James Caverlee},<br>
+                  year      = {2024},<br>
+                  booktitle = {arXiv}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+        </tr>
+      <!-- End Paper: ITSI Survey -->
+  </table>
+
+  <div class="pub-list">
+    <table class="table table-borderless table-sm">
+      <!-- Publications -->
+
+      <!-- Paper: Quantifying Disfluency Impact -->
+      <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="10%" src="./img/Quantifying.png">
         </td>
         <td style="font-size: large;">Quantifying the Impact of Disfluency on Spoken Content Summarization<br>
           <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Xiangjue Dong, and James Caverlee</div></b><br>
@@ -372,65 +467,16 @@
             </div>
           </div>
       </td></tr> 
-      <!-- End Quantifying Paper-->
-  </table>
+      <!-- End Paper: Quantifying Disfluency Impact -->
 
-  <div class="pub-list">
-    <table class="table table-borderless table-sm">
-      <!-- Publications -->
-
-      <!-- ConvRec Paper-->
-      <tr>
-        <!-- <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="95%" src="./img/ConvRec2.png">
-        </td> -->
-        
-        <td style="font-size: medium;">I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance<br>
-          <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Lingfeng Shi, Chengkai Liu, and James Caverlee</div></b><br>
-          <a href="https://www.interspeech2025.org/home">INTERSPEECH 2025</a><br>
-
-          <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/HorrorComedy.pdf" role="button">Paper</a>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-7" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-7" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/mariateleki/Syn-WSSE" role="button">GitHub</a>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Interspeech25Poster.pdf" role="button">Poster</a>
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video</a>  -->
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Video Transcript</a> -->
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Slides</a> -->
-            <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">AAAI Archive Link</a> -->
-          </div>
-        
-          <div class="collapse" id="abstract-text-7">
-            <div class="card card-body z-depth-0" style="font-size: small;">
-              Disfluencies are a characteristic of speech. We focus on the impact of a specific class of disfluency -- whole-word speech substitution errors (WSSE) -- on LLM-based conversational recommender system performance. We develop Syn-WSSE, a psycholinguistically-grounded framework for synthetically creating genre-based WSSE at varying ratios to study their impact on conversational recommender system performance. We find that LLMs are impacted differently: llama and mixtral have improved performance in the presence of these errors, while gemini, gpt-4o, and gpt-4o-mini have deteriorated performance. We hypothesize that this difference in model resiliency is due to differences in the pre- and post-training methods and data, and that the increased performance is due to the introduced genre diversity. Our findings indicate the importance of a careful choice of LLM for these systems, and more broadly, that disfluencies must be carefully designed for as they can have unforeseen impacts. 
-          </div>
-          </div>
-        
-          <div class="collapse" id="bib-text-7">
-            <div class="card card-body z-depth-0">
-              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                @inproceedings{teleki25_horror,<br>
-                  title     = {{I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance}},<br>
-                  author    = {Maria Teleki and Lingfeng Shi and Chengkai Liu and James Caverlee},<br>
-                  year      = {2025},<br>
-                  booktitle = {INTERSPEECH}<br>
-                }
-              </code>
-            </div>
-          </div>
-        </td>
-        </tr>
-      <!-- End ConvRec Paper-->
-
-      <!-- DRES Paper-->
+      <!-- Paper: DRES -->
       <!-- <tr>
         <td style="width: 35%; vertical-align: top;">
           <img class="preview rounded z-depth-0" width="85%" src="./img/dres.png">
         </td>-->
-      <td class="button-cell" style="font-size: medium;">DRES: Benchmarking LLMs for Disfluency Removal<br>
+      <td colspan="2" class="button-cell" style="font-size: medium;">DRES: Benchmarking LLMs for Disfluency Removal<br>
         <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Sai Janjur, Haoran Liu, Oliver Grabner, Ketan Verma, Thomas Docog, Xiangjue Dong, Lingfeng Shi, Cong Wang, Stephanie Birkelbach, Jason Kim, Yin Zhang, James Caverlee</div></b><br>
-        <a href=".">arXiv 2025</a><br>
+        <a href=".">Preprint 2025</a><br>
 
         <div class="button-cell">
           <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2509.20321" role="button">Paper</a>
@@ -465,14 +511,14 @@
         </div>
       </td>
       </tr>
-      <!-- End DRES Paper-->
+      <!-- End Paper: DRES -->
 
-      <!--- start DACL --->
+      <!-- Paper (commented out): DACL -->
       <!-- <tr>
         <td style="width: 35%; vertical-align: top;">
           <img class="preview rounded z-depth-0" width="85%" src="./img/DACL.png">
         </td>-->
-      <td style="font-size: medium;">DACL: Disfluency Augmented Curriculum Learning for Fluent Text Generation<br>
+      <td colspan="2" style="font-size: medium;">DACL: Disfluency Augmented Curriculum Learning for Fluent Text Generation<br>
       <b style="font-size: medium;">Rohan Chaudhury, <b><u>Maria Teleki</u></b>, Xiangjue Dong, and James Caverlee</div></b><br>
       <a href="https://lrec-coling-2024.org/">LREC-COLING 2024</a><br>
 
@@ -523,13 +569,13 @@
       </td></tr>
   <!--- End DACL --->
 
-  <!-- Alexa Prize Paper-->
+  <!-- Paper (commented out): Alexa Prize -->
       <!-- <tr>
         <td style="width: 35%; vertical-align: top;">
           <img class="preview rounded z-depth-0" width="95%" src="./img/taskbot.png"></div>
         </td>-->
         
-        <td style="font-size: medium;">Howdy Y’all: An Alexa TaskBot<br>
+        <td colspan="2" style="font-size: medium;"><span class="short-tag">SYSTEM</span>Howdy Y’all: An Alexa TaskBot<br>
           <b style="font-size: medium;">Majid Alfifi, Xiangjue Dong, Timo Feldman, Allen Lin, Karthic Madanagopal, Aditya Pethe, <b><u>Maria Teleki</u></b>, Zhuoer Wang, Ziwei Zhu, James Caverlee</div></b><br>
           <a href="https://www.amazon.science/alexa-prize/proceedings/howdy-yall-an-alexa-taskbot">Alexa Prize TaskBot Challenge Proceedings 2022</a><br>
 
@@ -561,7 +607,7 @@
           </div>
         </td>
         </tr>
-        <!-- Alexa Prize Paper-->
+        <!-- End Paper (commented out): Alexa Prize -->
 
     </table>
   </div>
@@ -572,7 +618,7 @@
 
 
 
-<!-- Research Thrust 3 -->
+<!-- ----- Publications: Thrust 3 (Bias, Inclusion, and Sociotechnical NLP) ----- -->
 <div class="pub-thrust thrust-3">
   <h3>Generalization Across Speakers and Communication Styles</h3>
   Speech and language systems must generalize across speakers, domains, and communicative contexts, including variation in linguistic background, discourse setting, and interactional goals. In practice, models often overfit to narrow training distributions and fail under this variability. My research studies how speech and language models break down across speakers and communication styles and develops methods that improve robustness and generalization across real-world settings.
@@ -581,7 +627,7 @@
     <table class="table table-borderless table-sm">
       <!-- Publications -->
 
-      <!-- Gendered Discourse Paper-->
+      <!-- Paper: Gendered Discourse -->
       <tr>
         <td style="width: 35%; vertical-align: top;">
           <img class="preview rounded z-depth-0" width="85%" src="./img/icwsm25_diagram.png">
@@ -589,10 +635,10 @@
         
         <td style="font-size: large;">Masculine Defaults via Gendered Discourse in Podcasts and Large Language Models<br>
           <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Xiangjue Dong, Haoran Liu, and James Caverlee</div></b><br>
-          <a href="https://www.icwsm.org/2025/index.html">ICWSM 2025</a>; <i>Presented at: <a href="https://www.ic2s2-2025.org">IC2S2 2025</a></i>, <i><a href="https://sites.google.com/view/sicon2025?pli=1">SICon@ACL 2025</a></i><br>
+          <a href="https://www.icwsm.org/2025/index.html">ICWSM 2025</a>; <i>Presented at: <a href="https://www.ic2s2-2025.org">IC2S2</a></i>, <i><a href="https://sites.google.com/view/sicon2025?pli=1">SICon@ACL</a></i><br>
 
           <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2504.11431" role="button">Paper (arXiv)</a>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2504.11431" role="button">Paper (Preprint)</a>
             <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://ojs.aaai.org/index.php/ICWSM/article/view/35908/38062" role="button">Paper (AAAI)</a>
             <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-6" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
             <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-6" aria-expanded="false" aria-controls="collapseExample">Bib</button>
@@ -624,18 +670,18 @@
           </div>
         </td>
         </tr>
-        <!-- End Gendered Discourse Paper-->
+        <!-- End Paper: Gendered Discourse -->
 
-    <!-- vicarious iui short Paper-->
+    <!-- Paper: Vicarious (IUI Short) -->
       <tr>
         <td style="width: 35%; vertical-align: top;">
           <img class="preview rounded z-depth-0" width="85%" src="./img/vicarious-iui.png">
         </td>
         
-        <td style="font-size: large;">"Walk a Mile in My Voice": Voice Conversion Shapes Trust, Attribution, and Empathy in Human–AI Speech Interactions<br>
+        <td style="font-size: large;"><span class="short-tag">SHORT</span>"Walk a Mile in My Voice": Voice Conversion Shapes Trust, Attribution, and Empathy in Human–AI Speech Interactions<br>
           <b style="font-size: medium;">Shree Harsha Bokkahalli Satish, <b><u>Maria Teleki</u></b>, Christoph Minixhofer, Ondrej Klejch, Peter Bell, Éva Székely</div></b><br>
-          <i style="font-size: medium;">Collaboration w/ KTH Royal Institute of Technology, University of Edinburgh</i><br>
-          <a href="https://iui.acm.org/2026/">IUI (Short) 2026</a>; <i>Presented at: <a href="https://chi2026.acm.org/">CHI (Poster) 2026</a></i><br>
+          <i class="collab-line" style="font-size: medium;">Collaboration w/ KTH Royal Institute of Technology, University of Edinburgh</i><br>
+          <a href="https://iui.acm.org/2026/">IUI 2026</a>; <i>Presented at <a href="https://chi2026.acm.org/">CHI</a></i><br>
 
           <div class="button-cell">
             <!-- <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="." role="button">Paper</a> -->
@@ -667,9 +713,9 @@
           </div>
         </td>
         </tr>
-        <!-- End vicarious iui-->
+        <!-- End Paper: Vicarious (IUI Short) -->
 
-        <!-- Co2PT Paper-->
+        <!-- Paper: Co2PT -->
         <tr>
 
         <tr>
@@ -679,7 +725,7 @@
 
         <td style="font-size: large;">Co2PT: Mitigating Bias in Pre-trained Language Models through Counterfactual Contrastive Prompt Tuning<br>
           <b style="font-size: medium;">Xiangjue Dong, Ziwei Zhu, Zhuoer Wang, <b><u>Maria Teleki</u></b>, and James Caverlee</div></b><br>
-          <i style="font-size: medium;">Collaboration w/ George Mason University</i><br>
+          <i class="collab-line" style="font-size: medium;">Collaboration w/ George Mason University</i><br>
           <a href="https://2023.emnlp.org/program/">EMNLP Findings 2023</a><br>
 
           <div class="button-cell">
@@ -725,7 +771,73 @@
           </div>
         </td>
         </tr>
-        <!-- End Co2PT Paper-->
+        <!-- End Paper: Co2PT -->
+
+        </table>
+      </div>
+
+      <div class="pub-list pub-list-sm">
+        <table class="table table-borderless table-sm">
+          <!-- Publications no img -->
+
+          <!-- Paper: CHOIR -->
+          <tr>
+            <td style="font-size: medium;"><span class="pub-title-sm">CHOIR: Collaborative Harmonization fOr Inference Robustness</span><br>
+              <b style="font-size: medium;">Xiangjue Dong, Cong Wang, <b><u>Maria Teleki</u></b>, Millenium Bismay, and James Caverlee</div></b><br>
+              <a>Preprint 2025<br></a>
+
+              <div class="button-cell">
+                <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2510.22475" role="button">Paper (Preprint)</a>
+                <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-choir" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+                <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-choir" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+              </div>
+            
+              <div class="collapse" id="abstract-text-choir">
+                <div class="card card-body z-depth-0" style="font-size: small;">
+                  Persona-assigned Large Language Models (LLMs) can adopt diverse roles, enabling personalized and context-aware reasoning. However, even minor demographic perturbations in personas, such as simple pronoun changes, can alter reasoning trajectories, leading to divergent sets of correct answers. Instead of treating these variations as biases to be mitigated, we explore their potential as a constructive resource to improve reasoning robustness. We propose CHOIR (Collaborative Harmonization fOr Inference Robustness), a test-time framework that harmonizes multiple persona-conditioned reasoning signals into a unified prediction. CHOIR orchestrates a collaborative decoding process among counterfactual personas, dynamically balancing agreement and divergence in their reasoning paths. Experiments on various reasoning benchmarks demonstrate that CHOIR consistently enhances performance across demographics, model architectures, scales, and tasks - without additional training. Improvements reach up to 26.4% for individual demographic groups and 19.2% on average across five demographics. It remains effective even when base personas are suboptimal. By reframing persona variation as a constructive signal, CHOIR provides a scalable and generalizable approach to more reliable LLM reasoning.
+                </div>
+              </div>
+            
+              <div class="collapse" id="bib-text-choir">
+                <div class="card card-body z-depth-0">
+                  <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                    @inproceedings{dong25_choir,<br>
+                      title     = {CHOIR: Collaborative Harmonization fOr Inference Robustness},<br>
+                      author    = {Xiangjue Dong and Cong Wang and Maria Teleki and Millennium Bismay and James Caverlee},<br>
+                      year      = {2025},<br>
+                      booktitle = {arXiv 2025}<br>
+                    }
+                  </code>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!-- End Paper: CHOIR -->
+
+          <!-- Paper: Resume Bias Evaluation (Short) -->
+          <tr>
+            <td style="font-size: medium;"><span class="short-tag">SHORT</span><span class="ug-first-author-tag">UG 1ST AUTHOR</span><span class="pub-title-sm">Detecting and Mitigating Demographic Bias in LLM-Based Resume Evaluation</span><br>
+              <b style="font-size: medium;">Oluwadayo Bamgbelu, <b><u>Maria Teleki</u></b>*, Xiangjue Dong*, James Caverlee</div></b><br>
+              <a>Preprint 2026<br></a>
+
+              <div class="button-cell">
+                <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-resumebias" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+              </div>
+
+              <div class="collapse" id="bib-text-resumebias">
+                <div class="card card-body z-depth-0">
+                  <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                    @misc{bamgbelu_resume_bias_llm,<br>
+                      title  = {Detecting and Mitigating Demographic Bias in LLM-Based Resume Evaluation},<br>
+                      author = {Oluwadayo Bamgbelu and Maria Teleki and Xiangjue Dong and James Caverlee},<br>
+                      note   = {Short paper / work in progress}<br>
+                    }
+                  </code>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!-- End Paper: Resume Bias Evaluation (Short) -->
 
         </table>
       </div>
@@ -740,7 +852,7 @@
 
 </div>
 
-<!-- Research Thrust 2 -->
+<!-- ----- Publications: Thrust 2 (Social Computing & Cultural AI Systems) ----- -->
 <div class="pub-thrust thrust-2">
   <h3>Social Computing & Cultural AI Systems</h3>
   Language technologies increasingly mediate how people communicate, create, and interpret information at scale. In this line of work, I study and build AI systems that operate within social, cultural, and platform-level contexts, where meaning is shaped by communities, norms, and narratives. My research examines how these contextual forces influence model behavior and system outcomes, with the goal of designing language technologies that better align with the social dynamics in which they are deployed.
@@ -748,7 +860,7 @@
     <table class="table table-borderless table-sm">
       <!-- Publications -->
 
-      <!-- StorySurvey Paper-->
+      <!-- Paper: Story Generation Survey -->
       <tr>
         <td style="width: 35%; vertical-align: top;">
           <img class="preview rounded z-depth-0" width="95%" src="./img/story-survey.png">
@@ -789,18 +901,17 @@
           </div>
         </td>
         </tr>
-      <!-- End StorySurvey Paper-->
+      <!-- End Paper: Story Generation Survey -->
 
-      <!-- PromptHelper Paper-->
+      <!-- Paper: PromptHelper -->
       <tr>
         <td style="width: 35%; vertical-align: top;">
           <img class="preview rounded z-depth-0" width="95%" src="./img/prompthelper2.png">
         </td>
         
-        <td style="font-size: large;">PromptHelper: A Prompt Recommender System for Encouraging Creativity in AI Chatbot Interactions<br>
+        <td style="font-size: large;"><span class="poster-tag">POSTER</span><span class="ug-first-author-tag">UG 1ST AUTHOR</span>PromptHelper: A Prompt Recommender System for Encouraging Creativity in AI Chatbot Interactions<br>
           <b style="font-size: medium;">Jason Kim, <b><u>Maria Teleki</u></b>, James Caverlee</div></b><br>
-          <i style="font-size: medium;">(undergraduate first author)</i><br>
-          <a href="https://chi2026.acm.org/">CHI Poster 2026</a><br>
+          <a href="https://chi2026.acm.org/">CHI 2026</a><br>
 
           <div class="button-cell">
             <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2601.15575" role="button">Paper</a>
@@ -833,20 +944,19 @@
           </div>
         </td>
         </tr>
-      <!-- End PromptHelper Paper-->
+      <!-- End Paper: PromptHelper -->
 
-      <!-- SocialPulse Paper-->
+      <!-- Paper: SocialPulse -->
       <tr>
 
         <td style="width: 35%; vertical-align: top;">
           <img class="preview rounded z-depth-0" width="95%" src="./img/socialpulse.png">
         </td>
         
-        <td style="font-size: large;">SocialPulse: An Open-Source Subreddit Sensemaking Toolkit<br>
+        <td style="font-size: large;"><span class="demo-tag">DEMO</span><span class="ug-first-author-tag">UG 1ST AUTHOR</span>SocialPulse: An Open-Source Subreddit Sensemaking Toolkit<br>
           <b style="font-size: medium;">Stephanie Birkelbach, <b><u>Maria Teleki</u></b>, Peter Carragher, Xiangjue Dong, Nehul Bhatnagar, James Caverlee</div></b><br>
-          <i style="font-size: medium;">Collaboration w/ Carnegie Mellon University, Revionics</i><br>
-          <i style="font-size: medium;">(undergraduate first author)</i><br>
-          <a href=".">arXiv (Demo) 2026</a><br>
+          <i class="collab-line" style="font-size: medium;">Collaboration w/ Carnegie Mellon University, Revionics</i><br>
+          <a href=".">Preprint 2026</a><br>
 
           <div class="button-cell">
             <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2602.07248" role="button">Paper</a>
@@ -876,21 +986,20 @@
           </div>
         </td>
         </tr>
-      <!-- End SocialPulse Paper-->
+      <!-- End Paper: SocialPulse -->
 
 
-      <!-- PodChecker Paper-->
+      <!-- Paper: PodChecker -->
       <tr>
 
          <td style="width: 35%; vertical-align: top;">
           <img class="preview rounded z-depth-0" width="95%" src="./img/podchecker.png">
         </td>
         
-        <td style="font-size: large;">PodChecker: An Interpretable Fact-Checking Companion for Podcasts<br>
+        <td style="font-size: large;"><span class="demo-tag">DEMO</span><span class="ug-first-author-tag">UG 1ST AUTHOR</span>PodChecker: An Interpretable Fact-Checking Companion for Podcasts<br>
           <b style="font-size: medium;">Anna Irmetova, Haoran Liu, <b><u>Maria Teleki</u></b>, Peter Carragher, Julie Zhang, James Caverlee</div></b><br>
-          <i style="font-size: medium;">Collaboration w/ Carnegie Mellon University</i><br>
-          <i style="font-size: medium;">(undergraduate first author)</i><br>
-          <a href=".">(Demo) 2026</a><br>
+          <i class="collab-line" style="font-size: medium;">Collaboration w/ Carnegie Mellon University</i><br>
+          <a href=".">Preprint 2026</a><br>
 
           <div class="button-cell">
             <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/PodChecker.pdf" role="button">Paper</a>
@@ -918,7 +1027,7 @@
           </div>
         </td>
         </tr>
-      <!-- End PodChecker Paper-->
+      <!-- End Paper: PodChecker -->
       
 
     </table>
@@ -930,99 +1039,6 @@
 
     </table>
   </div> -->
-</div>
-
-<!-- Research Thrust 4 -->
-<div class="pub-thrust thrust-4">
-  <h3><b>Model Behavior & Inference-Time Adaptation</b></h3>
-  I study how language models behave internally, with a focus on inference-time adaptation, coordination, and robustness. Rather than relying on additional training, this work investigates model-centric mechanisms that enable systems to improve performance, adapt to uncertainty, and recover from errors at inference time. The goal is to better understand and control model behavior in dynamic, real-world conditions.
-  <div class="pub-list">
-    <table class="table table-borderless table-sm">
-      <!-- Publications -->
-
-      <!-- ITSI Survey Paper-->
-      <tr>
-        <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="95%" src="./img/survey2.png">
-        </td>
-        
-        <td style="font-size: large;">A Survey on LLM Inference-Time Self-Improvement<br>
-          <b style="font-size: medium;">Xiangjue Dong,* <b><u>Maria Teleki</u></b>,* and James Caverlee</div></b><br>
-          <a href="https://arxiv.org">arXiv 2024</a><br>
-
-          <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2412.14352" role="button">Paper</a>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-7" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-7" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/dongxiangjue/Awesome-LLM-Self-Improvement"" role="button">GitHub</a>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/ITSI-Poster.pdf" role="button">Poster</a>
-          </div>
-          
-          <div class="collapse" id="abstract-text-7">
-            <div class="card card-body z-depth-0" style="font-size: small;">
-              Techniques that enhance inference through increased computation at test-time have recently gained attention. In this survey, we investigate the current state of LLM Inference-Time Self-Improvement from three different perspectives: Independent Self-improvement, focusing on enhancements via decoding or sampling methods; Context-Aware Self-Improvement, leveraging additional context or datastore; and Model-Aided Self-Improvement, achieving improvement through model collaboration. We provide a comprehensive review of recent relevant studies, contribute an in-depth taxonomy, and discuss challenges and limitations, offering insights for future research. 
-          </div>
-          </div>
-        
-          <div class="collapse" id="bib-text-7">
-            <div class="card card-body z-depth-0">
-              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                @inproceedings{dong24_survey,<br>
-                  title     = {A Survey on LLM Inference-Time Self-Improvement},<br>
-                  author    = {Xiangjue Dong and Maria Teleki and James Caverlee},<br>
-                  year      = {2024},<br>
-                  booktitle = {arXiv}<br>
-                }
-              </code>
-            </div>
-          </div>
-        </td>
-        </tr>
-      <!-- End ITSI Survey Paper-->
-
-      </table>
-  </div>
-
-    <div class="pub-list">
-    <table class="table table-borderless table-sm">
-      <!-- Publications no img -->
-
-      <!-- CHOIR Paper-->
-      <tr>
-        <td style="font-size: medium;">CHOIR: Collaborative Harmonization fOr Inference Robustness<br>
-          <b style="font-size: medium;">Xiangjue Dong, Cong Wang, <b><u>Maria Teleki</u></b>, Millenium Bismay, and James Caverlee</div></b><br>
-          <a>arXiv 2025<br></a>
-
-          <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2510.22475" role="button">Paper (arXiv)</a>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-choir" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-choir" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-          </div>
-        
-          <div class="collapse" id="abstract-text-choir">
-            <div class="card card-body z-depth-0" style="font-size: small;">
-              Persona-assigned Large Language Models (LLMs) can adopt diverse roles, enabling personalized and context-aware reasoning. However, even minor demographic perturbations in personas, such as simple pronoun changes, can alter reasoning trajectories, leading to divergent sets of correct answers. Instead of treating these variations as biases to be mitigated, we explore their potential as a constructive resource to improve reasoning robustness. We propose CHOIR (Collaborative Harmonization fOr Inference Robustness), a test-time framework that harmonizes multiple persona-conditioned reasoning signals into a unified prediction. CHOIR orchestrates a collaborative decoding process among counterfactual personas, dynamically balancing agreement and divergence in their reasoning paths. Experiments on various reasoning benchmarks demonstrate that CHOIR consistently enhances performance across demographics, model architectures, scales, and tasks - without additional training. Improvements reach up to 26.4% for individual demographic groups and 19.2% on average across five demographics. It remains effective even when base personas are suboptimal. By reframing persona variation as a constructive signal, CHOIR provides a scalable and generalizable approach to more reliable LLM reasoning.
-            </div>
-          </div>
-        
-          <div class="collapse" id="bib-text-choir">
-            <div class="card card-body z-depth-0">
-              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                @inproceedings{dong25_choir,<br>
-                  title     = {CHOIR: Collaborative Harmonization fOr Inference Robustness},<br>
-                  author    = {Xiangjue Dong and Cong Wang and Maria Teleki and Millennium Bismay and James Caverlee},<br>
-                  year      = {2025},<br>
-                  booktitle = {arXiv 2025}<br>
-                }
-              </code>
-            </div>
-          </div>
-        </td>
-        </tr>
-        <!-- End CHOIR -->
-
-    </table>
-  </div>
 </div>
 
 <!-- Future Vision
@@ -1069,6 +1085,9 @@
   "My vision is to shift conversational AI from treating human variability as 'noise' to leveraging it as a 'signal'—creating systems that are as resilient and adaptable as human listeners."
 </div> -->
 
+<!-- =========================
+     Media
+========================= -->
 <div class="more">
 <h2 id="media_id">Media</h2>
 <div class="table-responsive-sm">
@@ -1078,17 +1097,13 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
 <i>Audience: general public, social computing researchers, ML practitioners, and podcast creators.</i>
 </div>
 
+<!-- =========================
+     Education
+========================= -->
 <div class="education">
 <h2 id="education_id">Education</h2>
 <div class="table-responsive-sm">
 <table class="table table-borderless table-sm" id="edu_table"> 
-
-  <style>
-    #edu_table td {
-      padding: 1px; 
-      vertical-align: top;
-    }
-  </style> 
   <tr>
     <td style="width: 20%;"><i>(2022 - Present)</i></td>
     <td><b>PhD Computer Science at Texas A&M University</b></td>
@@ -1103,6 +1118,9 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
 </div>
 </div>
 
+<!-- =========================
+     Service
+========================= -->
 <div class="service">
   <h2 id="service_id">Service</h2>
   <div class="table-responsive-sm">
@@ -1164,17 +1182,13 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
   </div>
 
 
+<!-- =========================
+     Teaching
+========================= -->
 <div class="Teaching">
   <h2 id="teaching_id">Teaching</h2>
   <div class="table-responsive-sm">
   <table class="table table-borderless table-sm" id="talk_table"> 
-
-    <style>
-      #talk_table td {
-        padding: 1px; 
-        vertical-align: top;
-      }
-    </style> 
   
   <tr>
     <td style="width: 20%;"><i>(Spring 2026)</i></td>
@@ -1199,6 +1213,9 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
 
 
 
+  <!-- =========================
+       Mentoring
+  ========================= -->
   <div class="mentoring">
   <h2 id="mentoring_id">Mentoring</h2>
 
@@ -1215,7 +1232,7 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
   <br><br>
 
   <p style="font-family: 'Roboto', cursive; font-size: 14px; text-align: center; font-style: italic;">
-      <span class="pastel-orange">&#9733;</span> student was an author on a published paper; <span class="pastel-blue">&#9824;</span> student was an author on an arXiv paper; <span class="pastel-pink">&#9650;</span> student completed their thesis; <span class="pastel-purple diamond">&#9670;</span> student received course credit (i.e. CSCE 485, CSCE 691); <span class="pastel-green">&#9827;</span> student had no publications prior to mentorship.<br>
+      <span class="pastel-orange">&#9733;</span> student was an author on a published paper; <span class="pastel-blue">&#9824;</span> student was an author on a Preprint paper; <span class="pastel-pink">&#9650;</span> student completed their thesis; <span class="pastel-purple diamond">&#9670;</span> student received course credit (i.e. CSCE 485, CSCE 691); <span class="pastel-green">&#9827;</span> student had no publications prior to mentorship.<br>
   </p>
 
   <div class="table-responsive-sm">
@@ -1330,18 +1347,13 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
 </div>
 
 
+  <!-- =========================
+       Awards
+  ========================= -->
   <div class="education">
     <h2 id="awards_id">Awards</h2>
     <div class="table-responsive-sm">
     <table class="table table-borderless table-sm" style="border-spacing: 0; border-collapse: collapse;" id="award_table"> 
-
-      <style>
-        #award_table td {
-          padding: 1px; 
-          vertical-align: top;
-        }
-      </style>
-
       <tr>
         <td style="width: 20%;"><i>(2022-2026)</i></td>
         <td>Dr. Dionel Avilés ’53 and Dr. James Johnson ’67 Fellowship in Computer Science and Engineering</b></td>
@@ -1376,17 +1388,13 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
     </div>
     </div>
 
+<!-- =========================
+     Invited Talks
+========================= -->
 <div class="Invited Talks">
   <h2 id="invitedtalks_id">Invited Talks</h2>
   <div class="table-responsive-sm">
   <table class="table table-borderless table-sm" id="talk_table"> 
-
-    <style>
-      #talk_table td {
-        padding: 1px; 
-        vertical-align: top;
-      }
-    </style> 
 
   <tr>
     <td style="width: 20%;"><i>(Fall 2025)</i></td>
@@ -1416,6 +1424,9 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
   </div>
   </div>
 
+<!-- =========================
+     Experience
+========================= -->
 <div class="work">
 <h2 id="work_id">Experience</h2>
 <div class="table-responsive-sm">
@@ -1495,6 +1506,9 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
 </table>
 </div>
 
+<!-- =========================
+     More
+========================= -->
 <div class="more">
   <h2 id="more_id">More</h2>
   <div class="table-responsive-sm">
@@ -1532,14 +1546,10 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
 
 <!-- JavaScripts -->
 <!-- jQuery -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>-->
 <script src="./assets/jquery/dist/jquery.min.js"></script>
 
 <!-- Bootsrap & MDB scripts -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script> -->
 <script src="./assets/bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js"></script> 
-
-<!-- <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> -->
 <script src="./assets/MDB-Free_4.20.0/js/mdb.min.js"></script>
 
 </body>

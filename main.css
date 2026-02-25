@@ -198,17 +198,23 @@ hr {
 
 /* Compact, uniform publication buttons */
 .pub-list .button-cell .btn {
-  margin: 3;
+  margin: 0;
   font-size: 0.65rem;        /* small, clean text */
   font-weight: 385;         /* medium weight for readability */
-  padding: 2px 12px;        /* compact padding */
+  padding: 1px 10px;        /* slightly shorter and narrower buttons */
   border-radius: 4px;       /* subtle rounding */
   display: inline-flex;     
   align-items: center;      /* vertically center text */
   justify-content: center;  /* center horizontally */
-  height: 28px;             /* fixed uniform height */
+  height: 23px;             /* fixed uniform height */
   line-height: 1.2;         /* keeps text snug */
   box-sizing: border-box;
+}
+
+.pub-list div.button-cell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 
@@ -621,4 +627,175 @@ html.transition *:after {
   border-left: 5px solid var(--global-theme-color);
   padding: 8px;
 }
+
+/* Consolidated table cell rules moved out of inline styles in index.html */
+#edu_table td,
+#talk_table td,
+#award_table td {
+  padding: 1px;
+  vertical-align: top;
+}
+
+.student-author-tag {
+  display: inline-block;
+  margin-left: 0.03rem;
+  padding: 0.03rem 0.28rem;
+  border: 1px solid #cdb65a;
+  border-radius: 4px;
+  background: #fff7c7;
+  color: #5a4a00;
+  font-size: 0.68em;
+  font-weight: 700;
+  line-height: 1.2;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.demo-tag {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0.04rem 0.34rem;
+  border: 1px solid #2f6fb4;
+  border-radius: 4px;
+  background: #dcecff;
+  color: #1f4f85;
+  font-size: 0.62em;
+  font-weight: 800;
+  line-height: 1.2;
+  vertical-align: middle;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.poster-tag {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0.04rem 0.34rem;
+  border: 1px solid #3a7dc4;
+  border-radius: 4px;
+  background: #e8f2ff;
+  color: #255b97;
+  font-size: 0.62em;
+  font-weight: 800;
+  line-height: 1.2;
+  vertical-align: middle;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.short-tag {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0.04rem 0.34rem;
+  border: 1px solid #4a86c8;
+  border-radius: 4px;
+  background: #eef5ff;
+  color: #2b629e;
+  font-size: 0.62em;
+  font-weight: 800;
+  line-height: 1.2;
+  vertical-align: middle;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.ug-first-author-tag {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0.04rem 0.34rem;
+  border: 1px solid #4b8aa8;
+  border-radius: 4px;
+  background: #e7f3fa;
+  color: #25566d;
+  font-size: 0.62em;
+  font-weight: 800;
+  line-height: 1.2;
+  vertical-align: middle;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+/* Optional size variants for publication rows (used in Model Behavior section) */
+.pub-list-sm td {
+  font-size: 0.92rem !important;
+  line-height: 1.35;
+}
+
+.pub-list-sm .btn {
+  font-size: 0.9rem;
+  padding: 0.35rem 0.65rem;
+}
+
+.pub-list-sm .button-cell {
+  margin-top: 0.15rem;
+}
+
+.pub-list-sm .pub-title-sm {
+  font-size: 1.04rem;
+  line-height: 1.2;
+}
+
+.pub-list td > b[style*="font-size: medium"] {
+  display: block;
+  font-size: 0.89rem !important;
+  line-height: 1.22 !important;
+  margin: 0 0 0.1rem 0;
+}
+
+.pub-list td > b[style*="font-size: medium"] * {
+  line-height: inherit;
+}
+
+.pub-list td > b[style*="font-size: medium"] + br {
+  display: none;
+}
+
+.pub-list td > b[style*="font-size: medium"] + a:not(.btn) {
+  display: inline-block;
+  margin-top: 0.02rem;
+}
+
+.pub-list td > a:not(.btn),
+.pub-list td > i > a {
+  font-weight: 500;
+}
+
+.pub-list td > a:not(.btn) ~ i {
+  font-style: normal;
+}
+
+.pub-list td > i[style*="font-size: medium"] {
+  font-size: 0.82rem !important;
+  display: block;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.pub-list td > i[style*="font-size: medium"] + br {
+  display: none;
+}
+
+.pub-list td > i.collab-line {
+  margin-top: 0.24rem;
+  margin-bottom: 0.03rem;
+}
+
+/* Give image-based publication entries a bit more space for text/buttons */
+.pub-list tr > td:first-child[style*="width: 35%"] {
+  width: 31% !important;
+}
+
+.pub-list tr > td:first-child img.preview {
+  width: 90% !important;
+}
+
+/* Make the LREC-COLING quantifying plot a bit shorter/smaller than other previews */
+.pub-list img.preview[src*="Quantifying.png"] {
+  width: 18% !important;
+  max-width: 180px !important;
+  height: auto !important;
+  display: block;
+  margin: -24px auto 0;
+}
+
 /*# sourceMappingURL=main.css.map */
