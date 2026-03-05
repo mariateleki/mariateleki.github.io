@@ -812,6 +812,14 @@ html.transition *:after {
   margin-top: -0.02rem;
 }
 
+i.presented-at,
+i.presented-at > a,
+.pub-list td > i.presented-at,
+.pub-list td > i.presented-at > a {
+  font-size: 0.74rem !important;
+  font-weight: 400 !important;
+}
+
 /* Give image-based publication entries a bit more space for text/buttons */
 .pub-list tr > td:first-child[style*="width: 35%"] {
   width: 31% !important;
