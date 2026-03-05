@@ -828,9 +828,13 @@ html.transition *:after {
   margin-left: -20px;
 }
 
+.pub-list tr > td:first-child img.preview[src*="dres-img.png"] {
+  width: 78% !important;
+}
+
 /* Make the LREC-COLING quantifying plot a bit shorter/smaller than other previews */
 .pub-list img.preview[src*="Quantifying.png"] {
-  width: 18% !important;
+  width: 30% !important;
   max-width: 180px !important;
   height: auto !important;
   display: block;
