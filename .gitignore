@@ -1,5 +1,8 @@
 # from: https://github.com/github/gitignore/blob/main/Global/macOS.gitignore
 
+later.txt
+later/*.png
+
 # General
 .DS_Store
 .AppleDouble
