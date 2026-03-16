@@ -57,7 +57,7 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1000px;
 }
 
 .pub-thrust {
@@ -355,7 +355,7 @@ blockquote {
 
 .profile {
   margin-right: 0rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   width: 100%;
 }
 .profile .address {
@@ -369,7 +369,7 @@ blockquote {
 }
 
 .profile img {
-  width: 85%;
+  width: 88%;
   display: block;
   margin: 0;
 }
@@ -384,7 +384,7 @@ blockquote {
 
 .profile .profile-links .profile-icons {
   display: grid;
-  grid-template-columns: repeat(5, max-content);
+  grid-template-columns: repeat(3, max-content);
   justify-content: center;
   column-gap: 0.45rem;
   row-gap: 0.25rem;
@@ -392,7 +392,7 @@ blockquote {
 
 .profile .profile-links .profile-icons a {
   line-height: 1;
-  font-size: 2.1rem !important;
+  font-size: 2.5rem !important;
 }
 
 .profile .profile-links .profile-email {
@@ -403,7 +403,7 @@ blockquote {
 
 @media (min-width: 576px) {
   .profile {
-    width: 28%;
+    width: 24%;
   }
   .profile .address p {
     display: block;
