@@ -57,7 +57,7 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 920px;
 }
 
 .pub-thrust {
@@ -231,8 +231,8 @@ hr {
 }
 
 .about-variability {
-  font-size: 1.08rem;
-  line-height: 1.45;
+  font-size: 0.94rem;
+  line-height: 1.35;
   overflow: hidden;
   padding-left: 1.5rem;
 }
@@ -413,7 +413,7 @@ blockquote {
 
 @media (min-width: 576px) {
   .profile {
-    width: 24%;
+    width: 27%;
   }
   .profile .address p {
     display: block;
