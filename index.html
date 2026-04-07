@@ -685,6 +685,44 @@
         </button>
       </td></tr>
       <tbody class="collapse" id="more-pubs-social">
+
+
+          <tr>
+            <td style="width: 35%; vertical-align: top;">
+              <img class="preview rounded z-depth-0" width="90%" src="./img/choir-diagram.png">
+            </td>
+            <td style="font-size: large;"><span class="pub-title-sm">CHOIR: Harmonizing Structured Prompt Diversity for Robust LLM Reasoning</span><br>
+              <b style="font-size: medium;">Xiangjue Dong, Cong Wang, <b><u>Maria Teleki</u></b>, Millennium Bismay, Ruihong Huang, and James Caverlee</b><br>
+              <a href="https://2026.aclweb.org/">ACL 2026</a><br>
+
+              <div class="button-cell">
+                <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/CHOIR.pdf" role="button">Paper</a>
+                <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2510.22475" role="button">Preprint</a>
+                <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-choir" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+                <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-choir" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+              </div>
+
+              <div class="collapse" id="abstract-text-choir">
+                <div class="card card-body z-depth-0" style="font-size: small;">
+                  Persona-assigned Large Language Models can adopt diverse roles, enabling personalized and context-aware reasoning. However, even minor demographic perturbations in personas -- such as simple pronoun swaps -- can alter reasoning trajectories, leading to divergent sets of correct answers on reasoning benchmarks. We explore the potential of these variations as a constructive resource to improve LLM reasoning performance. We propose CHOIR (Collaborative Harmonization fOr Inference Robustness), a test-time framework that harmonizes a set of demographically perturbed, persona-conditioned reasoning signals into a unified prediction. CHOIR orchestrates a collaborative decoding process among counterfactual personas -- perturbed in terms of gender, race, religion, disability, and age -- dynamically balancing agreement and divergence in their reasoning paths to improve performance. Experiments demonstrate that CHOIR consistently enhances LLM reasoning across model architectures, scales, and tasks. Improvements reach up to 20.1% for individual groups and 15.1% on average, and we show that CHOIR remains effective even when base personas are suboptimal.
+                </div>
+              </div>
+
+              <div class="collapse" id="bib-text-choir">
+                <div class="card card-body z-depth-0">
+                  <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                    @inproceedings{dong26_choir,<br>
+                      title     = {CHOIR: Harmonizing Structured Prompt Diversity for Robust LLM Reasoning},<br>
+                      author    = {Xiangjue Dong and Cong Wang and Maria Teleki and Millennium Bismay and Ruihong Huang and James Caverlee},<br>
+                      year      = {2026},<br>
+                      booktitle = {ACL 2026}<br>
+                    }
+                  </code>
+                </div>
+              </div>
+            </td>
+          </tr>
+      <!-- End Paper: CHOIR -->
       <!-- Paper: Voice Behind the Words -->
       <tr>
         <td style="width: 35%; vertical-align: top;">
@@ -806,42 +844,6 @@
         </td>
         </tr>
       <!-- End Paper: SocialPulse -->
-
-          <tr>
-            <td style="width: 35%; vertical-align: top;">
-              <img class="preview rounded z-depth-0" width="90%" src="./img/choir-diagram.png">
-            </td>
-            <td style="font-size: large;"><span class="pub-title-sm">CHOIR: Collaborative Harmonization fOr Inference Robustness</span><br>
-              <b style="font-size: medium;">Xiangjue Dong, Cong Wang, <b><u>Maria Teleki</u></b>, Millenium Bismay, and James Caverlee</b><br>
-              <a>Preprint 2025</a><br>
-
-              <div class="button-cell">
-                <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2510.22475" role="button">Paper (Preprint)</a>
-                <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-choir" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-                <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-choir" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-              </div>
-            
-              <div class="collapse" id="abstract-text-choir">
-                <div class="card card-body z-depth-0" style="font-size: small;">
-                  Persona-assigned Large Language Models (LLMs) can adopt diverse roles, enabling personalized and context-aware reasoning. However, even minor demographic perturbations in personas, such as simple pronoun changes, can alter reasoning trajectories, leading to divergent sets of correct answers. Instead of treating these variations as biases to be mitigated, we explore their potential as a constructive resource to improve reasoning robustness. We propose CHOIR (Collaborative Harmonization fOr Inference Robustness), a test-time framework that harmonizes multiple persona-conditioned reasoning signals into a unified prediction. CHOIR orchestrates a collaborative decoding process among counterfactual personas, dynamically balancing agreement and divergence in their reasoning paths. Experiments on various reasoning benchmarks demonstrate that CHOIR consistently enhances performance across demographics, model architectures, scales, and tasks - without additional training. Improvements reach up to 26.4% for individual demographic groups and 19.2% on average across five demographics. It remains effective even when base personas are suboptimal. By reframing persona variation as a constructive signal, CHOIR provides a scalable and generalizable approach to more reliable LLM reasoning.
-                </div>
-              </div>
-            
-              <div class="collapse" id="bib-text-choir">
-                <div class="card card-body z-depth-0">
-                  <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                    @inproceedings{dong25_choir,<br>
-                      title     = {CHOIR: Collaborative Harmonization fOr Inference Robustness},<br>
-                      author    = {Xiangjue Dong and Cong Wang and Maria Teleki and Millennium Bismay and James Caverlee},<br>
-                      year      = {2025},<br>
-                      booktitle = {arXiv 2025}<br>
-                    }
-                  </code>
-                </div>
-              </div>
-            </td>
-          </tr>
-      <!-- End Paper: CHOIR -->
         <!-- Paper: Co2PT -->
         <tr>
         <td style="width: 35%; vertical-align: top;">
@@ -1168,6 +1170,7 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
   <div class="experience-lines">
     <div class="experience-item">
       <div class="experience-head"><b>Spring 2026</b> | Teaching Assistant | <a href="https://catalog.tamu.edu/graduate/course-descriptions/csce/">Texas A&amp;M University, CSCE 676 Data Mining &amp; Analysis</a></div>
+      <div class="experience-body"><i>Redesigned the course with Prof. Caverlee — highlight: a live AI-powered phone interview over projects as the final.</i></div>
     </div>
 
     <div class="experience-item">

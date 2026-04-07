@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(pdftotext /Users/mariateleki/Desktop/mariateleki.github.io/pdf/CHOIR.pdf -)"
     ]
   }
 }
