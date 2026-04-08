@@ -3,7 +3,9 @@
     "allow": [
       "Bash(python3:*)",
       "Bash(pdftotext /Users/mariateleki/Desktop/mariateleki.github.io/pdf/CHOIR.pdf -)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)"
     ]
   }
 }
