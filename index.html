@@ -134,7 +134,7 @@
 
     <p><b style="font-size: 1.02em; font-weight: 450;">→ Person-Centered AI</b> <i>(<a href="https://ojs.aaai.org/index.php/ICWSM/article/view/35908/38062">ICWSM 25</a>, <a href="https://aclanthology.org/2025.findings-emnlp.750.pdf">EMNLP Findings 25</a>, <a href="https://dl.acm.org/doi/10.1145/3742414.3794737">IUI 26</a>)</i></p>
 
-    <p><b style="font-size: 1.02em; font-weight: 450;">→ Governable AI</b> <i>(<a href="https://mariateleki.github.io/pdf/PodChecker.pdf">Preprint 26</a>)</i></p>
+    <p><b style="font-size: 1.02em; font-weight: 450;">→ Governable AI</b> <i>(<a href="./pdf/2026WERrange.pdf">Preprint 26</a>)</i></p>
     <p>
       I hold the Avilés–Johnson Fellowship in Computer Science and Engineering and have been featured in invited talks and public media, including the <a href="https://pod.link/1277529273/episode/MThiNDkzNzgtYTRjMS00YjVjLTk4ZWQtMjJmNGZjNjBjYzlj?view=apps&sort=popularity">MASKulinity Podcast</a>. I will join Google DeepMind in Cambridge, MA as a Student Researcher this Summer!
     </p>
@@ -205,6 +205,45 @@
       </td>
       </tr>
       <!-- End Paper: Z-Scores -->
+
+      <!-- Paper: SpeechSpectrum -->
+      <tr>
+      <td style="width: 35%; vertical-align: top;">
+        <img class="preview rounded z-depth-0" width="95%" src="./img/speechspectrum.png">
+      </td>
+
+      <td class="button-cell" style="font-size: large;">SpeechSpectrum: A Linguistic Fidelity Spectrum for Accountable Speech-to-Text<br>
+        <b style="font-size: medium;">Anna Seo Gyeong Choi*, <b><u>Maria Teleki</u></b>*, Miguel del Rio, Corey Miller<sup>†</sup>, James Caverlee<sup>†</sup>, Allison Koenecke<sup>†</sup></b><br>
+        <i class="collab-line" style="font-size: medium;">Collaboration w/ Cornell University, RevAI</i><br>
+        <a href="">Preprint 2026</a><br>
+
+        <div class="button-cell">
+          <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/2026SpeechSpectrum.pdf" role="button">Paper</a>
+          <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-speechspectrum" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+          <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-speechspectrum" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+        </div>
+
+        <div class="collapse" id="abstract-text-speechspectrum">
+          <div class="card card-body z-depth-0" style="font-size: small;">
+            Speech-to-text (STT) systems are increasingly embedded in everyday technologies, yet they largely continue to treat transcription as a technical problem of accuracy, assuming a single "correct" representation of speech. This overlooks that speech can be transcribed in multiple legitimate ways, and that different contexts demand different balances of fidelity, conciseness, and emphasis. We contribute SpeechSpectrum, a framework reconceptualizing STT as cross-modal translation along a continuum of representational fidelity that makes these representational decisions explicit and user-controllable. Through theoretical analysis and empirical investigation, we show that existing STT systems already impose spectrum-based choices without user input, indicating the normative significance of who controls transcription outcomes. Our user study (N=52) demonstrates that granting users explicit control over transcript representation improves task support, while a comparative study shows that large language models fail to capture the diversity and context-sensitivity of human preferences. We derive implications and recommendations for building STT systems that prioritize user agency in representational decisions, and release open-source code – including the speechspectrum Python package – and a prototype to support future research. Our work positions control over transcription fidelity as a core site of user agency in speech technologies, and shows that system-imposed defaults constitute an accountability gap.
+          </div>
+        </div>
+
+        <div class="collapse" id="bib-text-speechspectrum">
+          <div class="card card-body z-depth-0">
+            <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+              @inproceedings{choi26_speechspectrum,<br>
+                title     = {SpeechSpectrum: A Linguistic Fidelity Spectrum for Accountable Speech-to-Text},<br>
+                author    = {Anna Seo Gyeong Choi and Maria Teleki and Miguel del Rio and James Caverlee and Corey Miller and Allison Koenecke},<br>
+                year      = {2026},<br>
+                booktitle = {Preprint}<br>
+              }
+            </code>
+          </div>
+        </div>
+      </td>
+      </tr>
+      <!-- End Paper: SpeechSpectrum -->
 
       <!-- Paper: DRES -->
       <tr>
@@ -697,6 +736,7 @@
 
               <div class="button-cell">
                 <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2510.22475" role="button">Preprint</a>
+                <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://www.linkedin.com/posts/mariateleki_acl2026-nlp-llm-activity-7447298001376698368-nlU0?utm_source=share&utm_medium=member_desktop&rcm=ACoAABPV8zcBXmoSZA9H1RIrbNpiTZ3iaQLlIE0" role="button" target="_blank">LinkedIn Explainer</a>
                 <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-choir" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
                 <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-choir" aria-expanded="false" aria-controls="collapseExample">Bib</button>
               </div>
@@ -921,6 +961,45 @@
     <table class="table table-borderless table-sm">
       <!-- Publications -->
 
+
+      <!-- Paper: WER Range -->
+      <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/werrange.png">
+        </td>
+
+        <td style="font-size: large;">Beyond Single Ground Truth: Reference Monism as Epistemic Injustice in ASR Evaluation<br>
+          <b style="font-size: medium;">Anna Seo Gyeong Choi, <b><u>Maria Teleki</u></b>, James Caverlee, Miguel del Rio<sup>†</sup>, Corey Miller<sup>†</sup>, Hoon Choi<sup>†</sup></b><br>
+          <i class="collab-line" style="font-size: medium;">Collaboration w/ Cornell University, RevAI, Kangwon National University</i><br>
+          <a href="">Preprint 2026</a><br>
+
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/2026WERrange.pdf" role="button">Paper</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-werrange" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-werrange" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+          </div>
+
+          <div class="collapse" id="abstract-text-werrange">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Automatic speech recognition (ASR) evaluation compares system output to ground truth transcripts, with Word Error Rate (WER) quantifying the distance between them. But ground truth transcripts are not discovered – they are produced by human annotators following conventions that encode normative assumptions about which speech features matter. Different conventions (verbatim, non-verbatim, legal) produce different transcripts of identical speech and judge the same ASR output differently. This paper argues that reference monism – enforcing a single transcription convention as ground truth – commits epistemic injustice. Speakers with aphasia, whose speech includes clinically meaningful disfluencies, are systematically disadvantaged when evaluated against "clean" references that treat those disfluencies as errors. The harm is not merely differential performance, but that evaluative infrastructure lacks interpretive resources to recognize their contributions as legitimate. We develop a philosophical framework introducing the hermeneutical gap, formalize Epistemic Injustice Distance (EID) to measure reference monism's cost, and demonstrate empirically using AphasiaBank that WER varies depending on which convention defines ground truth. We propose WER-Range: reporting performance across legitimate conventions rather than assuming a single correct answer.
+            </div>
+          </div>
+
+          <div class="collapse" id="bib-text-werrange">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{range-wer,<br>
+                  title     = {Beyond Single Ground Truth: Reference Monism as Epistemic Injustice in ASR Evaluation},<br>
+                  author    = {Anna Seo Gyeong Choi and Maria Teleki and James Caverlee and Miguel del Rio and Corey Miller and Hoon Choi},<br>
+                  year      = {2026},<br>
+                  booktitle = {Preprint}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <!-- End Paper: WER Range -->
 
       <!-- Paper: PodChecker -->
       <tr>
@@ -1169,7 +1248,7 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
   <div class="experience-lines">
     <div class="experience-item">
       <div class="experience-head"><b>Spring 2026</b> | Teaching Assistant | <a href="https://catalog.tamu.edu/graduate/course-descriptions/csce/">Texas A&amp;M University, CSCE 676 Data Mining &amp; Analysis</a></div>
-      <div class="experience-body"><i>Redesigned the course with Prof. Caverlee — highlight: a live AI-powered phone interview over projects as the final.</i></div>
+      <div class="experience-body">Redesigned the course with Prof. Caverlee — highlight: a live AI-powered phone interview over projects as the final.</div>
     </div>
 
     <div class="experience-item">
