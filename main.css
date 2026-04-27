@@ -419,6 +419,22 @@ blockquote {
     display: block;
   }
 }
+
+.subtitle-mobile { display: none; }
+
+@media (max-width: 575px) {
+  .profile {
+    float: none !important;
+    display: block;
+    width: fit-content;
+    margin: 0.8rem auto 1rem auto !important;
+  }
+  .profile img {
+    width: 180px;
+  }
+  .subtitle-desktop { display: none; }
+  .subtitle-mobile { display: block; }
+}
 .post-description {
   margin-bottom: 2rem;
   font-size: 0.875rem;
