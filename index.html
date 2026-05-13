@@ -164,11 +164,11 @@
     <p> <b style="font-size: 1.02em; font-weight: 450;">I develop benchmarks, audits, and measurement frameworks that enable AI systems — and the institutions that deploy them — to be accountable to the people they serve.</b>
     </p>
 
-    <p><b style="font-size: 1.02em; font-weight: 450;">→ Disfluency-Aware AI</b> <i>(<a href="https://arxiv.org/pdf/2509.20319">ICASSP 26</a>, <a href="https://mariateleki.github.io/pdf/HorrorComedy.pdf">INTERSPEECH 25</a>, <a href="https://mariateleki.github.io/pdf/dres.pdf">Preprint 26</a>)</i></p>
+    <p><b style="font-size: 1.02em; font-weight: 450;">→ Disfluency-Aware AI</b> <i>(<a href="https://arxiv.org/pdf/2509.20319">ICASSP 26</a>, <a href="https://mariateleki.github.io/pdf/HorrorComedy.pdf">INTERSPEECH 25</a>, <a href="https://mariateleki.github.io/pdf/2026SpeechSpectrum.pdf">Preprint 26</a>)</i></p>
 
     <p><b style="font-size: 1.02em; font-weight: 450;">→ Personalized AI</b> <i>(<a href="https://ojs.aaai.org/index.php/ICWSM/article/view/35908/38062">ICWSM 25</a>, <a href="https://aclanthology.org/2025.findings-emnlp.750.pdf">EMNLP Findings 25</a>)</i></p>
 
-    <p><b style="font-size: 1.02em; font-weight: 450;">→ Governable AI</b> <i>(<a href="./pdf/FAccT_26_ACAI.pdf">FAccT 26</a>, <a href="https://mariateleki.github.io/pdf/2026SpeechSpectrum.pdf">Preprint 26</a>)</i></p>
+    <p><b style="font-size: 1.02em; font-weight: 450;">→ Governable AI</b> <i>(<a href="./pdf/FAccT_26_ACAI.pdf">FAccT 26</a>)</i></p>
     <p>
       I hold the Avilés–Johnson Fellowship in Computer Science and Engineering and have been featured in invited talks and public media, including the <a href="https://pod.link/1277529273/episode/MThiNDkzNzgtYTRjMS00YjVjLTk4ZWQtMjJmNGZjNjBjYzlj?view=apps&sort=popularity">MASKulinity Podcast</a>.
     </p>
@@ -232,45 +232,6 @@
     <table class="table table-borderless table-sm">
       <!-- Publications -->
 
-      <!-- Paper: DRES -->
-      <tr>
-        <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="85%" src="./img/dres-img.png">
-        </td>
-      <td class="button-cell" style="font-size: large;">Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones<br>
-        <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Sai Janjur, Haoran Liu, Oliver Grabner, Ketan Verma, Thomas Docog, Xiangjue Dong, Lingfeng Shi, Cong Wang, Stephanie Birkelbach, Jason Kim, Yin Zhang, Éva Székely, James Caverlee</b><br>
-        <i class="collab-line" style="font-size: medium;">Collaboration w/ KTH Royal Institute of Technology</i><br>
-        <a href=".">Preprint 2026</a><br>
-
-        <div class="button-cell">
-          <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/dres.pdf" role="button">Paper</a>
-          <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-dres" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-          <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-dres" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-          <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/mariateleki/dres" role="button">Code</a>
-          <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Oliver-DRES-Poster.pdf" role="button">Poster</a>
-        </div>
-
-        <div class="collapse" id="abstract-text-dres">
-          <div class="card card-body z-depth-0" style="font-size: small;">
-            LLMs serve as the backbone in SpeechLLMs, yet their behavior on spontaneous conversational input remains poorly understood. Conversational speech contains pervasive disfluencies -- interjections, edits, and parentheticals -- that are rare in the written corpora used for pre-training. Because gold disfluency removal is a deletion-only task, it serves as a controlled probe to determine whether a model performs faithful structural repair or biased reinterpretation. Using the DRES evaluation framework, we evaluate proprietary and open-source LLMs across architectures and scales. We show that model performance clusters into stable precision-recall regimes reflecting distinct ``editing policies.'' Notably, reasoning models systematically over-delete fluent content, revealing a bias toward semantic abstraction over structural fidelity. While fine-tuning achieves SOTA results, it harms generalization. Our findings demonstrate that robustness to speech is shaped by specific training objectives.
-          </div>
-        </div>
-
-        <div class="collapse" id="bib-text-dres">
-          <div class="card card-body z-depth-0">
-            <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-              @inproceedings{teleki26_dres,<br>
-                title     = {Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones},<br>
-                author    = {Maria Teleki and Sai Janjur and Haoran Liu and Oliver Grabner and Ketan Verma and Thomas Docog and Xiangjue Dong and Lingfeng Shi and Cong Wang and Stephanie Birkelbach and Jason Kim and Yin Zhang and James Caverlee},<br>
-                year      = {2025},<br>
-              }
-            </code>
-          </div>
-        </div>
-      </td>
-      </tr>
-      <!-- End Paper: DRES -->
-
       <!-- Paper: SpeechSpectrum -->
       <tr>
       <td style="width: 35%; vertical-align: top;">
@@ -311,6 +272,45 @@
       </td>
       </tr>
       <!-- End Paper: SpeechSpectrum -->
+
+      <!-- Paper: DRES -->
+      <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="85%" src="./img/dres-img.png">
+        </td>
+      <td class="button-cell" style="font-size: large;">Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones<br>
+        <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Sai Janjur, Haoran Liu, Oliver Grabner, Ketan Verma, Thomas Docog, Xiangjue Dong, Lingfeng Shi, Cong Wang, Stephanie Birkelbach, Jason Kim, Yin Zhang, Éva Székely, James Caverlee</b><br>
+        <i class="collab-line" style="font-size: medium;">Collaboration w/ KTH Royal Institute of Technology</i><br>
+        <a href=".">Preprint 2026</a><br>
+
+        <div class="button-cell">
+          <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/dres.pdf" role="button">Paper</a>
+          <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-dres" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+          <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-dres" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+          <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://github.com/mariateleki/dres" role="button">Code</a>
+          <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/Oliver-DRES-Poster.pdf" role="button">Poster</a>
+        </div>
+
+        <div class="collapse" id="abstract-text-dres">
+          <div class="card card-body z-depth-0" style="font-size: small;">
+            LLMs serve as the backbone in SpeechLLMs, yet their behavior on spontaneous conversational input remains poorly understood. Conversational speech contains pervasive disfluencies -- interjections, edits, and parentheticals -- that are rare in the written corpora used for pre-training. Because gold disfluency removal is a deletion-only task, it serves as a controlled probe to determine whether a model performs faithful structural repair or biased reinterpretation. Using the DRES evaluation framework, we evaluate proprietary and open-source LLMs across architectures and scales. We show that model performance clusters into stable precision-recall regimes reflecting distinct ``editing policies.'' Notably, reasoning models systematically over-delete fluent content, revealing a bias toward semantic abstraction over structural fidelity. While fine-tuning achieves SOTA results, it harms generalization. Our findings demonstrate that robustness to speech is shaped by specific training objectives.
+          </div>
+        </div>
+
+        <div class="collapse" id="bib-text-dres">
+          <div class="card card-body z-depth-0">
+            <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+              @inproceedings{teleki26_dres,<br>
+                title     = {Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones},<br>
+                author    = {Maria Teleki and Sai Janjur and Haoran Liu and Oliver Grabner and Ketan Verma and Thomas Docog and Xiangjue Dong and Lingfeng Shi and Cong Wang and Stephanie Birkelbach and Jason Kim and Yin Zhang and James Caverlee},<br>
+                year      = {2025},<br>
+              }
+            </code>
+          </div>
+        </div>
+      </td>
+      </tr>
+      <!-- End Paper: DRES -->
 
       <!-- Paper: Z-Scores -->
       <tr>
