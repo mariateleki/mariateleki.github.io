@@ -99,6 +99,7 @@ body.sticky-bottom-footer {
 .pub-list table td {
   padding-top: 0.65rem;
   padding-bottom: 0.65rem;
+  font-size: 0.92rem !important;
 }
 
 
@@ -231,7 +232,7 @@ hr {
 }
 
 .about-variability {
-  font-size: 0.94rem;
+  font-size: 0.88rem;
   line-height: 1.35;
   overflow: hidden;
   padding-left: 0;
@@ -239,6 +240,7 @@ hr {
 
 .about-variability p {
   margin-bottom: 0.45rem;
+  font-size: 0.88rem;
 }
 
 .about-variability ul,
@@ -379,9 +381,13 @@ blockquote {
 }
 
 .profile img {
-  width: 225px;
+  width: 223px;
   display: block;
   margin: 0;
+}
+
+h1.post-title {
+  font-size: 2.6rem;
 }
 
 .profile .profile-links {
@@ -863,7 +869,7 @@ html.transition *:after {
 
 /* Optional size variants for publication rows (used in Model Behavior section) */
 .pub-list-sm td {
-  font-size: 0.92rem !important;
+  font-size: 0.88rem !important;
   line-height: 1.35;
 }
 
@@ -881,9 +887,13 @@ html.transition *:after {
   line-height: 1.2;
 }
 
+.pub-list td[style*="font-size: large"] {
+  font-size: 0.88rem !important;
+}
+
 .pub-list td > b[style*="font-size: medium"] {
   display: block;
-  font-size: 0.89rem !important;
+  font-size: 0.83rem !important;
   line-height: 1.22 !important;
   margin: 0 0 0.1rem 0;
 }
@@ -892,6 +902,7 @@ html.transition *:after {
   line-height: inherit;
 }
 
+/* Hide br after author block */
 .pub-list td > b[style*="font-size: medium"] + br {
   display: none;
 }
@@ -909,7 +920,7 @@ html.transition *:after {
 .pub-list td > a:not(.btn),
 .pub-list td > i:not(.collab-line),
 .pub-list td > i:not(.collab-line) > a {
-  font-size: 0.98rem;
+  font-size: 0.86rem;
   line-height: 1.15;
 }
 
@@ -925,6 +936,11 @@ html.transition *:after {
 }
 
 .pub-list td > i[style*="font-size: medium"] + br {
+  display: none;
+}
+
+/* Hide br after presented-at */
+.pub-list td > i.presented-at + br {
   display: none;
 }
 
@@ -963,18 +979,23 @@ i.presented-at > a,
 }
 
 .pub-list tr > td:first-child img.preview[src*="dres-img.png"] {
-  width: 95% !important;
+  width: 75% !important;
+  max-width: 1000px !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
 }
 
 .pub-list tr > td:first-child img.preview[src*="ConvRec2.png"] {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .pub-list tr > td:first-child img.preview[src*="interspeech_diagram.png"] {
-  width: 100% !important;
+  width: 90% !important;
   max-width: 1000px !important;
   height: auto !important;
-  margin-left: -15px;
+  display: block;
+  margin: 0 0 0 -10px;
 }
 
 .pub-list tr > td:first-child img.preview[src*="icwsm25_diagram.png"] {
@@ -1000,40 +1021,60 @@ i.presented-at > a,
   margin-top: 0.25rem;
 }
 
+/* Match body sections to intro text size */
+.service td, .service p, .service li, .service span:not(.btn):not(.tag),
+.teaching td, .teaching p, .teaching li,
+.awards td, .awards p, .awards li,
+.more td, .more p, .more li, .more span, .more a,
+.more .vision-callout, .more .vision-callout * {
+  font-size: 0.88rem !important;
+}
+
+/* Raw text in tables (not inside td) inherits from table element */
+.service > .table-responsive-sm > table,
+.more > .table-responsive-sm > table {
+  font-size: 0.88rem !important;
+}
+
+.service table td, .teaching table td, .awards table td {
+  font-size: 0.88rem !important;
+}
+
 .experience-item {
   margin-bottom: 0.9rem;
 }
 
 .experience-head {
-  font-size: 1rem;
+  font-size: 0.88rem !important;
   line-height: 1.35;
 }
 
 .experience-body {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   line-height: 1.45;
   margin-top: 0.15rem;
 }
 
 .mentoring {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   line-height: 1.4;
+  font-weight: 300 !important;
 }
 
 .mentoring * {
-  font-weight: 400 !important;
+  font-weight: 300 !important;
 }
 
 .mentoring table td,
 .mentoring table th {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .mentoring i,
 .mentoring i a,
 .mentoring i.presented-at,
 .mentoring i.presented-at a {
-  font-size: 0.92rem !important;
+  font-size: 0.88rem !important;
   font-weight: normal !important;
   font-style: normal !important;
 }
@@ -1046,7 +1087,7 @@ i.presented-at > a,
 
 .mentoring .mentoring-note,
 .mentoring .mentoring-note a {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: normal !important;
   font-style: normal !important;
 }
@@ -1056,39 +1097,38 @@ i.presented-at > a,
 }
 
 .mentoring .mentoring-group-title {
-  font-size: 0.92rem;
-  font-weight: 400;
+  font-size: 0.88rem;
+  font-weight: 300;
   margin-top: 0.9rem;
   margin-bottom: 0.18rem;
 }
 
 .mentoring .mentoring-entry {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   line-height: 1.35;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
 }
 
 .mentoring .mentoring-entry * {
-  font-weight: 400 !important;
+  font-weight: 300 !important;
 }
 
 .mentoring .mentoring-group-title,
 .mentoring .mentoring-group-title * {
-  font-weight: 400 !important;
+  font-weight: 300 !important;
 }
 
 .mentoring h2,
 .mentoring h2 * {
-  font-weight: 400 !important;
+  font-weight: 300 !important;
 }
 
 /* Make the LREC-COLING quantifying plot a bit shorter/smaller than other previews */
-.pub-list img.preview[src*="Quantifying.png"] {
-  width: 75% !important;
-  max-width: 1000px !important;
+.pub-list tr > td:first-child img.preview[src*="Quantifying.png"] {
+  width: 170px !important;
   height: auto !important;
   display: block;
-  margin: -24px auto 0;
+  margin: -12px auto 0;
 }
 
 /*# sourceMappingURL=main.css.map */
