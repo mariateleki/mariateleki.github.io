@@ -90,7 +90,7 @@
 
 <!-- Local Stylesheet -->
 <!--<link rel="stylesheet" href="./main.css"> -->
-<link rel="stylesheet" href="./main.css?v=1.6">
+<link rel="stylesheet" href="./main.css?v=1.7">
 
 
 </head>
@@ -235,14 +235,14 @@
 </h2>
 
 <div id="pub-filter-bar" style="margin: 0.6rem 0 1rem 0; display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;">
-  <span style="font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--global-text-color-light); margin-right: 0.2rem;">Filter:</span>
-  <button class="pub-filter-btn btn btn-light btn-sm z-depth-0 text-dark" data-filter="first-author" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">1st Author</button>
-  <button class="pub-filter-btn btn btn-light btn-sm z-depth-0 text-dark" data-filter="venue" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Poster / Short / Demo</button>
-  <button class="pub-filter-btn btn btn-light btn-sm z-depth-0 text-dark" data-filter="mentee" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Mentee Paper</button>
-  <button class="pub-filter-btn btn btn-light btn-sm z-depth-0 text-dark" data-filter="preprint" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Preprint</button>
-  <select id="pub-year-select" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; cursor: pointer; border: 1px solid #dee2e6; border-radius: 0.2rem; background-color: #f8f9fa; color: #212529; padding: 0.25rem 0.5rem; height: 31px;">
+  <button class="pub-filter-btn" data-filter="first-author">1st Author</button>
+  <button class="pub-filter-btn" data-filter="venue">Poster / Short / Demo</button>
+  <button class="pub-filter-btn" data-filter="mentee">Mentee Paper</button>
+  <button class="pub-filter-btn" data-filter="preprint">Preprint</button>
+  <select id="pub-year-select" class="pub-year-select">
     <option value="">Year</option>
   </select>
+  <button id="pub-filter-reset" class="pub-filter-reset" style="display: none;">✕ Reset</button>
 </div>
 
 <script>
@@ -340,26 +340,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   var activeFilters = new Set();
+  var resetBtn = document.getElementById("pub-filter-reset");
+
+  function updateResetVisibility() {
+    var anyActive = activeFilters.size > 0 || yearSelect.value !== "";
+    resetBtn.style.display = anyActive ? "" : "none";
+  }
 
   document.querySelectorAll(".pub-filter-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var f = this.dataset.filter;
       if (activeFilters.has(f)) {
         activeFilters.delete(f);
-        this.style.backgroundColor = "";
-        this.style.color = "";
-        this.style.borderColor = "";
+        this.classList.remove("is-active");
       } else {
         activeFilters.add(f);
-        this.style.backgroundColor = "var(--global-theme-color)";
-        this.style.color = "white";
-        this.style.borderColor = "var(--global-theme-color)";
+        this.classList.add("is-active");
       }
+      updateResetVisibility();
       applyFilters();
     });
   });
 
-  yearSelect.addEventListener("change", applyFilters);
+  yearSelect.addEventListener("change", function () {
+    yearSelect.classList.toggle("is-active", yearSelect.value !== "");
+    updateResetVisibility();
+    applyFilters();
+  });
+
+  resetBtn.addEventListener("click", function () {
+    activeFilters.clear();
+    document.querySelectorAll(".pub-filter-btn").forEach(function (btn) {
+      btn.classList.remove("is-active");
+    });
+    yearSelect.value = "";
+    yearSelect.classList.remove("is-active");
+    updateResetVisibility();
+    applyFilters();
+  });
 
   function applyFilters() {
     var selectedYear = yearSelect.value;

@@ -868,6 +868,85 @@ html.transition *:after {
   margin-right: 0;
 }
 
+.pub-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  padding: 0.28rem 0.6rem;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 4px;
+  background: white;
+  color: #aaa;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1.2;
+  transition: border-color 0.1s, color 0.1s, background 0.1s;
+}
+
+.pub-filter-btn:focus { outline: none; }
+
+.pub-filter-btn::before {
+  content: "☐";
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+.pub-filter-btn.is-active {
+  border-color: var(--global-theme-color);
+  background: #f0e8ff;
+  color: var(--global-theme-color);
+}
+
+.pub-filter-btn.is-active::before {
+  content: "☑";
+}
+
+.pub-year-select {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 4px;
+  background: white;
+  color: #aaa;
+  padding: 0.28rem 0.45rem;
+  height: auto;
+  transition: border-color 0.1s, color 0.1s, background 0.1s;
+}
+
+.pub-year-select.is-active {
+  border-color: var(--global-theme-color);
+  background: #f0e8ff;
+  color: var(--global-theme-color);
+}
+
+.pub-filter-reset {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  padding: 0.28rem 0.6rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 4px;
+  background: white;
+  color: #bbb;
+  cursor: pointer;
+  transition: border-color 0.1s, color 0.1s;
+}
+
+.pub-filter-reset:hover {
+  border-color: #aaa;
+  color: #666;
+}
+
+.pub-filter-reset:focus { outline: none; }
+
 .pub-tags-row {
   display: flex;
   flex-wrap: wrap;
