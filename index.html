@@ -262,12 +262,30 @@ document.addEventListener("DOMContentLoaded", function () {
     // Preprint
     if (row.querySelector(".preprint-tag")) tags.push("preprint");
 
-    // First author: Maria's <b><u>...</u></b> must be the very first child node (not preceded by any text)
+    // First author (sole or co-first with *)
     var authorEl = row.querySelector('b[style*="font-size: medium"]');
     if (authorEl) {
       var fc = authorEl.firstChild;
       if (fc && fc.nodeType === 1 && fc.tagName === "B" && fc.querySelector("u")) {
+        // Maria is literally first in the list
         tags.push("first-author");
+      } else {
+        // Co-first: Maria's name has * after it AND someone before her also has *
+        var mariaU = authorEl.querySelector("u");
+        if (mariaU) {
+          var mariaBEl = mariaU.parentElement;
+          var nextSib = mariaBEl.nextSibling;
+          var afterText = nextSib && nextSib.nodeType === 3 ? nextSib.nodeValue : "";
+          if (afterText.startsWith("*") || afterText.startsWith(",*")) {
+            var textBefore = "";
+            var cur = authorEl.firstChild;
+            while (cur && cur !== mariaBEl) {
+              textBefore += cur.nodeType === 3 ? cur.nodeValue : cur.textContent;
+              cur = cur.nextSibling;
+            }
+            if (textBefore.includes("*")) tags.push("first-author");
+          }
+        }
       }
     }
 
