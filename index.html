@@ -234,6 +234,105 @@
 <h2 id="publications_id" style="padding-top: 0; margin-bottom: 0;"><!--Publications & Preprints-->
 </h2>
 
+<div id="pub-filter-bar" style="margin: 0.6rem 0 1rem 0; display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;">
+  <span style="font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--global-text-color-light); margin-right: 0.2rem;">Filter:</span>
+  <button class="pub-filter-btn btn btn-light btn-sm z-depth-0 text-dark" data-filter="first-author" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">1st Author</button>
+  <button class="pub-filter-btn btn btn-light btn-sm z-depth-0 text-dark" data-filter="venue" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Poster / Short / Demo</button>
+  <button class="pub-filter-btn btn btn-light btn-sm z-depth-0 text-dark" data-filter="mentee" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Mentee Paper</button>
+  <button class="pub-filter-btn btn btn-light btn-sm z-depth-0 text-dark" data-filter="preprint" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Preprint</button>
+  <select id="pub-year-select" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; cursor: pointer; border: 1px solid #dee2e6; border-radius: 0.2rem; background-color: #f8f9fa; color: #212529; padding: 0.25rem 0.5rem; height: 31px;">
+    <option value="">Year</option>
+  </select>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Tag each paper row and detect year
+  var yearsFound = new Set();
+  document.querySelectorAll(".pub-list tr").forEach(function (row) {
+    if (!row.querySelector("td")) return;
+    var tags = [];
+
+    // Poster / Short / Demo
+    if (row.querySelector(".poster-tag, .short-tag, .demo-tag")) tags.push("venue");
+
+    // Mentee (undergrad first author)
+    if (row.querySelector(".ug-first-author-tag")) tags.push("mentee");
+
+    // Preprint
+    if (row.querySelector(".preprint-tag")) tags.push("preprint");
+
+    // First author: Maria's <b><u>...</u></b> must be the very first child node (not preceded by any text)
+    var authorEl = row.querySelector('b[style*="font-size: medium"]');
+    if (authorEl) {
+      var fc = authorEl.firstChild;
+      if (fc && fc.nodeType === 1 && fc.tagName === "B" && fc.querySelector("u")) {
+        tags.push("first-author");
+      }
+    }
+
+    row.dataset.pubTags = tags.join(" ");
+
+    // Year detection: scan anchor elements outside of bib collapse divs
+    var year = "";
+    row.querySelectorAll("a").forEach(function (a) {
+      if (year) return;
+      if (a.closest(".collapse")) return;
+      var combined = a.textContent + " " + (a.getAttribute("href") || "");
+      var m4 = combined.match(/\b(202[2-9])\b/);
+      if (m4) { year = m4[1]; return; }
+      // 2-digit year like "26" in "ICWSM 26" or "SocialLLM@ICWSM 26"
+      var m2 = a.textContent.match(/(?:^|[\s@])([2][3-9])\b/);
+      if (m2) year = "20" + m2[1];
+    });
+    row.dataset.pubYear = year;
+    if (year) yearsFound.add(year);
+  });
+
+  // Populate year dropdown with found years (descending)
+  var yearSelect = document.getElementById("pub-year-select");
+  Array.from(yearsFound).sort().reverse().forEach(function (y) {
+    var opt = document.createElement("option");
+    opt.value = y;
+    opt.textContent = y;
+    yearSelect.appendChild(opt);
+  });
+
+  var activeFilters = new Set();
+
+  document.querySelectorAll(".pub-filter-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var f = this.dataset.filter;
+      if (activeFilters.has(f)) {
+        activeFilters.delete(f);
+        this.style.backgroundColor = "";
+        this.style.color = "";
+        this.style.borderColor = "";
+      } else {
+        activeFilters.add(f);
+        this.style.backgroundColor = "var(--global-theme-color)";
+        this.style.color = "white";
+        this.style.borderColor = "var(--global-theme-color)";
+      }
+      applyFilters();
+    });
+  });
+
+  yearSelect.addEventListener("change", applyFilters);
+
+  function applyFilters() {
+    var selectedYear = yearSelect.value;
+    document.querySelectorAll(".pub-list tr").forEach(function (row) {
+      if (!row.dataset.pubTags && !row.querySelector("td")) return;
+      var rowTags = (row.dataset.pubTags || "").split(" ");
+      var btnMatch = activeFilters.size === 0 || [...activeFilters].some(function (f) { return rowTags.includes(f); });
+      var yearMatch = !selectedYear || (row.dataset.pubYear || "") === selectedYear;
+      row.style.display = (btnMatch && yearMatch) ? "" : "none";
+    });
+  }
+});
+</script>
+
 <!-- ----- Publications: Thrust 1 <span class="h3-inline-subtitle"><i>Toward AI That Handles Real Speech</i></span> -->
 <div class="pub-thrust thrust-1">
   <h3>Disfluency-Aware AI <span style="font-size: 0.55em; font-weight: 600; color: inherit; font-style: italic; margin-left: 0.4rem;">Is AI robust to how people naturally speak?</span></h3>
