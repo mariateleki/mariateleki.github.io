@@ -862,9 +862,32 @@ html.transition *:after {
 .short-tag,
 .ug-first-author-tag,
 .preprint-tag {
-  font-size: 0.76rem;
+  font-size: 0.65rem;
   line-height: 1.05;
-  padding: 0.06rem 0.32rem;
+  padding: 0.04rem 0.28rem;
+  margin-right: 0;
+}
+
+.pub-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.first-author-tag {
+  display: inline-block;
+  padding: 0.04rem 0.28rem;
+  border: 1px solid #c8a000;
+  border-radius: 4px;
+  background: #fff8c2;
+  color: #7a5c00;
+  font-size: 0.65rem;
+  font-weight: 800;
+  line-height: 1.05;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
 }
 
 /* Optional size variants for publication rows (used in Model Behavior section) */

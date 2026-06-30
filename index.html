@@ -289,6 +289,29 @@ document.addEventListener("DOMContentLoaded", function () {
     if (year) yearsFound.add(year);
   });
 
+  // Restructure: move tag spans above the title, inject yellow 1ST AUTHOR tag
+  document.querySelectorAll(".pub-list tr").forEach(function (row) {
+    var tds = row.querySelectorAll("td");
+    if (tds.length < 2) return;
+    var td = tds[1];
+    var tagSpans = Array.from(td.querySelectorAll(".preprint-tag, .short-tag, .poster-tag, .demo-tag, .ug-first-author-tag"));
+    var isFirstAuthor = (row.dataset.pubTags || "").split(" ").includes("first-author");
+    if (tagSpans.length === 0 && !isFirstAuthor) return;
+
+    var tagRow = document.createElement("div");
+    tagRow.className = "pub-tags-row";
+
+    if (isFirstAuthor) {
+      var faTag = document.createElement("span");
+      faTag.className = "first-author-tag";
+      faTag.textContent = "1st Author";
+      tagRow.appendChild(faTag);
+    }
+
+    tagSpans.forEach(function (span) { tagRow.appendChild(span); });
+    td.insertBefore(tagRow, td.firstChild);
+  });
+
   // Populate year dropdown with found years (descending)
   var yearSelect = document.getElementById("pub-year-select");
   Array.from(yearsFound).sort().reverse().forEach(function (y) {
