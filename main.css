@@ -61,17 +61,25 @@ body.sticky-bottom-footer {
 }
 
 .pub-thrust {
-  border: 2px solid #6D4C71; /* or your thrust-specific color */
-  border-radius: 12px;
-  padding: 1.4rem 1.8rem 0.1rem; /* slightly tighter bottom spacing */
-  margin-bottom: 1.4rem;
-  background-color: #fff; /* ensure a clean base */
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 1.6rem;
+  background-color: transparent;
+  scroll-margin-top: 70px;
+}
+
+.pub-thrust-intro {
+  background-color: #ebebeb;
+  border-radius: 8px;
+  padding: 1rem 1.3rem 1rem;
+  margin-bottom: 0.9rem;
 }
 
 .pub-thrust h3 {
   margin-top: 0;
-  margin-bottom: 0.75rem; /* space below the title */
-  font-size: 1.75rem; /* optional: slightly bigger */
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
 }
 
@@ -81,10 +89,44 @@ body.sticky-bottom-footer {
   margin-left: 0.35rem;
 }
 
+.pub-thrust-thread-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 0.1rem;
+}
+
+.pub-thrust-header-line {
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.pub-thrust-title {
+  display: inline;
+  font-size: 1.1rem !important;
+  font-weight: 700;
+}
+
+.pub-thrust-tagline {
+  display: inline;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: inherit;
+  font-weight: 400;
+}
+
+.pub-thrust-desc {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0 !important;
+}
+
 .pub-thrust p,
-.pub-thrust > div:not(.pub-list) {
+.pub-thrust > div:not(.pub-list):not(.pub-thrust-intro) {
   display: block;
-  margin-bottom: 1rem; /* space between description and table */
+  margin-bottom: 1rem;
   line-height: 1.5;
 }
 

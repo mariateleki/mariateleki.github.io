@@ -90,7 +90,7 @@
 
 <!-- Local Stylesheet -->
 <!--<link rel="stylesheet" href="./main.css"> -->
-<link rel="stylesheet" href="./main.css?v=1.7">
+<link rel="stylesheet" href="./main.css?v=1.9">
 
 
 </head>
@@ -162,11 +162,11 @@
     <p>I build <b style="font-weight: 600; background-color:#e8d5f5; padding:1px 2px;">Socially Robust AI</b> — methods, benchmarks, and audits for AI robustness in socially complex situations. My research spans <b style="font-weight: 600; color: inherit;">Speech AI</b> and <b style="font-weight: 600; color: inherit;">Computational Social Science</b>, across three threads:
     </p>
 
-    <p><b style="font-weight: 450;">→ Disfluency-Aware AI:</b> <i>Is AI robust to how people naturally speak?</i> <i>(<a href="https://arxiv.org/pdf/2509.20319">ICASSP 26</a>, <a href="https://mariateleki.github.io/pdf/HorrorComedy.pdf">INTERSPEECH 25</a>)</i></p>
+    <p><b style="font-weight: 450;">&emsp;<a href="#thrust-1">Disfluency-Aware AI</a>:</b> <i>Is AI robust to how people naturally speak?</i> <i>(<a href="https://arxiv.org/pdf/2509.20319">ICASSP 26</a>, <a href="https://mariateleki.github.io/pdf/HorrorComedy.pdf">INTERSPEECH 25</a>)</i></p>
 
-    <p><b style="font-weight: 450;">→ Personalized AI:</b> <i>Is AI robust to who people actually are?</i> <i>(<a href="https://ojs.aaai.org/index.php/ICWSM/article/view/35908/38062">ICWSM 25</a>, <a href="https://aclanthology.org/2025.findings-emnlp.750.pdf">EMNLP Findings 25</a>)</i></p>
+    <p><b style="font-weight: 450;">&emsp;<a href="#thrust-2">Personalized AI</a>:</b> <i>Is AI robust to who people actually are?</i> <i>(<a href="https://ojs.aaai.org/index.php/ICWSM/article/view/35908/38062">ICWSM 25</a>, <a href="https://aclanthology.org/2025.findings-emnlp.750.pdf">EMNLP Findings 25</a>)</i></p>
 
-    <p><b style="font-weight: 450;">→ Governable AI:</b> <i>Is AI robust within the societal structures it operates in?</i> <i>(<a href="./pdf/FAccT_26_ACAI.pdf">FAccT 26</a>)</i></p>
+    <p><b style="font-weight: 450;">&emsp;<a href="#thrust-3">Governable AI</a>:</b> <i>Is AI robust within the societal structures it operates in?</i> <i>(<a href="./pdf/FAccT_26_ACAI.pdf">FAccT 26</a>)</i></p>
     <p>
       I hold the Avilés–Johnson Fellowship in Computer Science and Engineering and have been featured in invited talks and public media, including the <a href="https://pod.link/1277529273/episode/MThiNDkzNzgtYTRjMS00YjVjLTk4ZWQtMjJmNGZjNjBjYzlj?view=apps&sort=popularity">MASKulinity Podcast</a>.
     </p>
@@ -397,9 +397,12 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <!-- ----- Publications: Thrust 1 <span class="h3-inline-subtitle"><i>Toward AI That Handles Real Speech</i></span> -->
-<div class="pub-thrust thrust-1">
-  <h3>Disfluency-Aware AI <span style="font-size: 0.55em; font-weight: 600; color: inherit; font-style: italic; margin-left: 0.4rem;">Is AI robust to how people naturally speak?</span></h3>
-  <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.4rem;">Real human speech is full of disfluency — pauses, repairs, and restarts — that current systems often treat as noise. I develop benchmarks and evaluation frameworks that model these patterns as structured signal, revealing robustness failures in conversational AI systems operating on real speech.</p>
+<div class="pub-thrust thrust-1" id="thrust-1">
+  <div class="pub-thrust-intro">
+    <div class="pub-thrust-thread-label">Thread 1</div>
+    <div class="pub-thrust-header-line"><h3 class="pub-thrust-title">Disfluency-Aware AI</h3>: <span class="pub-thrust-tagline">Is AI robust to how people naturally speak?</span></div>
+    <p class="pub-thrust-desc">Real human speech is full of disfluency — pauses, repairs, and restarts — that current systems often treat as noise. I develop benchmarks and evaluation frameworks that model these patterns as structured signal, revealing robustness failures in conversational AI systems operating on real speech.</p>
+  </div>
 
   <div class="pub-list pub-list-lg">
     <table class="table table-borderless table-sm">
@@ -820,9 +823,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <!-- ----- Publications: Thrust 2  <span class="h3-inline-subtitle"><i>Toward Robust, Representative AI Systems</i></span> -->
-<div class="pub-thrust thrust-2">
-  <h3>Personalized AI <span style="font-size: 0.55em; font-weight: 600; color: inherit; font-style: italic; margin-left: 0.4rem;">Is AI robust to who people actually are?</span></h3>
-   <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.4rem;">AI systems respond differently to different people — shaped by signals of who we are, like gender, accent, and voice, and signals of how we express ourselves, like creativity and discourse. Understanding these signals is what it takes to build personalized AI that serves every user.</p>
+<div class="pub-thrust thrust-2" id="thrust-2">
+  <div class="pub-thrust-intro">
+    <div class="pub-thrust-thread-label">Thread 2</div>
+    <div class="pub-thrust-header-line"><h3 class="pub-thrust-title">Personalized AI</h3>: <span class="pub-thrust-tagline">Is AI robust to who people actually are?</span></div>
+    <p class="pub-thrust-desc">AI systems respond differently to different people — shaped by signals of who we are, like gender, accent, and voice, and signals of how we express ourselves, like creativity and discourse. Understanding these signals is what it takes to build personalized AI that serves every user.</p>
+  </div>
 
   <div class="pub-list">
     <table class="table table-borderless table-sm">
@@ -1231,9 +1237,12 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
 <!-- ----- Publications: Thrust 3  <span class="h3-inline-subtitle"><i>Toward Accountable AI Systems</i></span> -->
-<div class="pub-thrust thrust-3">
-  <h3>Governable AI <span style="font-size: 0.55em; font-weight: 600; color: inherit; font-style: italic; margin-left: 0.4rem;">Is AI robust within the societal structures it operates in?</span></h3>
-   <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.4rem;">I study the infrastructures of power — governments, universities, and tech companies — that determine how AI systems are authorized, deployed, and contested. I develop audits and systems that reveal where accountability breaks down.</p>
+<div class="pub-thrust thrust-3" id="thrust-3">
+  <div class="pub-thrust-intro">
+    <div class="pub-thrust-thread-label">Thread 3</div>
+    <div class="pub-thrust-header-line"><h3 class="pub-thrust-title">Governable AI</h3>: <span class="pub-thrust-tagline">Is AI robust within the societal structures it operates in?</span></div>
+    <p class="pub-thrust-desc">I study the infrastructures of power — governments, universities, and tech companies — that determine how AI systems are authorized, deployed, and contested. I develop audits and systems that reveal where accountability breaks down.</p>
+  </div>
   <div class="pub-list">
     <table class="table table-borderless table-sm">
       <!-- Publications -->
@@ -1503,7 +1512,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="experience-lines">
   <div class="experience-item">
     <div class="experience-head"><b>Google DeepMind</b> | Student Researcher | Cambridge, MA | June - Sep '26</div>
-    <div class="experience-body">Working on Speech AI.</div>
+    <div class="experience-body">Working on Speech AI on the Frontier AI Team.</div>
   </div>
   
 
