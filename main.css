@@ -1293,4 +1293,32 @@ i.presented-at > a,
   margin: -12px auto 0;
 }
 
+.pub-list tr > td:first-child img.preview[src*="voice-words.png"] {
+  width: 75% !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
+
+.pub-list tr > td:first-child img.preview[src*="behavioral-traces-fig.png"] {
+  width: 75% !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
+
+.pub-list tr > td:first-child img.preview[src*="werrange.png"] {
+  width: 75% !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
+
+.pub-list tr > td:first-child img.preview[src*="ACAI1.png"] {
+  width: 75% !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=main.css.map */
