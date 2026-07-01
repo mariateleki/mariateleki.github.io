@@ -1324,19 +1324,19 @@ i.presented-at > a,
 @media (max-width: 576px) {
   .intro-flex {
     flex-direction: column;
+    align-items: center;
   }
   .intro-flex .profile {
     flex: 0 0 auto !important;
-    width: 100% !important;
-    max-height: 260px;
-    overflow: hidden;
+    width: 180px !important;
     margin-top: 0 !important;
   }
   .intro-flex .profile img {
-    width: 100% !important;
-    height: 260px !important;
+    width: 180px !important;
+    height: 180px !important;
     object-fit: cover;
     object-position: center top;
+    border-radius: 6px;
   }
 }
 
