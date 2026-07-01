@@ -234,8 +234,9 @@
 <h2 id="publications_id" style="padding-top: 0; margin-bottom: 0;">Publications</h2>
 
 <div id="pub-filter-bar" style="margin: 0.6rem 0 1rem 0; display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;">
-  <span style="font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #bbb; margin-right: 0.15rem;">Filters:</span>
+  <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #bbb; margin-right: 0.15rem;">Filters:</span>
   <button class="pub-filter-btn" data-filter="first-author">1st Author</button>
+  <button class="pub-filter-btn" data-filter="full-paper">Full Paper</button>
   <button class="pub-filter-btn" data-filter="venue">Poster / Short / Demo</button>
   <button class="pub-filter-btn" data-filter="mentee">Mentee Paper</button>
   <button class="pub-filter-btn" data-filter="preprint">Preprint</button>
@@ -255,6 +256,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Poster / Short / Demo
     if (row.querySelector(".poster-tag, .short-tag, .demo-tag")) tags.push("venue");
+
+    // Full paper: anything not tagged as poster/short/demo
+    if (!row.querySelector(".poster-tag, .short-tag, .demo-tag")) tags.push("full-paper");
 
     // Mentee (undergrad first author)
     if (row.querySelector(".ug-first-author-tag")) tags.push("mentee");
@@ -384,7 +388,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".pub-list tr").forEach(function (row) {
       if (!row.dataset.pubTags && !row.querySelector("td")) return;
       var rowTags = (row.dataset.pubTags || "").split(" ");
-      var btnMatch = activeFilters.size === 0 || [...activeFilters].some(function (f) { return rowTags.includes(f); });
+      var btnMatch = activeFilters.size === 0 || [...activeFilters].every(function (f) { return rowTags.includes(f); });
       var yearMatch = !selectedYear || (row.dataset.pubYear || "") === selectedYear;
       row.style.display = (btnMatch && yearMatch) ? "" : "none";
     });
@@ -676,7 +680,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <img class="preview rounded z-depth-0" width="95%" src="./img/survey2.png">
         </td>
         
-        <td style="font-size: large;">A Survey on LLM Inference-Time Self-Improvement<br>
+        <td style="font-size: large;"><span class="preprint-tag">PREPRINT</span>A Survey on LLM Inference-Time Self-Improvement<br>
           <b style="font-size: medium;">Xiangjue Dong,* <b><u>Maria Teleki</u></b>,* and James Caverlee</b><br>
           <a href="https://arxiv.org/abs/2412.14352">arXiv 2024</a><br>
           <div style="height:5px;"></div>
