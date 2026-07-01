@@ -1321,4 +1321,23 @@ i.presented-at > a,
   margin: 0 auto;
 }
 
+@media (max-width: 576px) {
+  .intro-flex {
+    flex-direction: column;
+  }
+  .intro-flex .profile {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-height: 260px;
+    overflow: hidden;
+    margin-top: 0 !important;
+  }
+  .intro-flex .profile img {
+    width: 100% !important;
+    height: 260px !important;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
