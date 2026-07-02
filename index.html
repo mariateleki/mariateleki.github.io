@@ -161,11 +161,11 @@
     <p><b style="font-weight: 500;">I build methods, benchmarks, and audits that improve AI robustness in socially complex situations.</b> My research spans <span style="font-weight: 400; background: #fff9cc; padding: 0 3px; border-radius: 2px;">Speech AI</span> and <span style="font-weight: 400; background: #fff9cc; padding: 0 3px; border-radius: 2px;">Computational Social Science</span>, across three threads:
     </p>
 
-    <p style="padding-left: 1.2em; margin-bottom: 0.4em;"><b style="font-weight: 450;"><a href="#thrust-1">Disfluency-Aware AI</a>:</b> <i>Is AI robust to how people naturally speak?</i> <span style="font-size: 0.88em; color: #999;">→ <a href="https://arxiv.org/pdf/2509.20319">ICASSP '26</a>, <a href="https://mariateleki.github.io/pdf/FAccT_26_ACAI.pdf">CSCW (in prep)</a>, <a href="https://mariateleki.github.io/pdf/HorrorComedy.pdf">INTERSPEECH '25</a>, <a href="https://www.isca-archive.org/interspeech_2024/teleki24_interspeech.pdf">INTERSPEECH '24</a>, <a href="https://aclanthology.org/2024.lrec-main.1175.pdf">LREC-COLING '24</a></span></p>
+    <p style="padding-left: 1.2em; margin-bottom: 0.4em;"><b style="font-weight: 450;"><a href="#thrust-1">Disfluency-Aware AI</a>:</b> <i>Is AI robust to how people naturally speak?</i> <span style="font-size: 0.88em; color: #999;">→ <a href="https://arxiv.org/pdf/2509.20319">ICASSP '26</a>, <a href="https://mariateleki.github.io/pdf/FAccT_26_ACAI.pdf">CSCW (in prep)</a>, <a href="https://arxiv.org/pdf/2605.07084">AIES (under sub.)</a>, <a href="https://mariateleki.github.io/pdf/HorrorComedy.pdf">INTERSPEECH '25</a>, <a href="https://www.isca-archive.org/interspeech_2024/teleki24_interspeech.pdf">INTERSPEECH '24</a>, <a href="https://aclanthology.org/2024.lrec-main.1175.pdf">LREC-COLING '24</a></span></p>
 
     <p style="padding-left: 1.2em; margin-bottom: 0.4em;"><b style="font-weight: 450;"><a href="#thrust-2">Personalized AI</a>:</b> <i>Is AI robust to who people actually are?</i> <span style="font-size: 0.88em; color: #999;">→ <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/35908/38062">ICWSM '25</a>, <a href="https://arxiv.org/pdf/2603.16941">INTERSPEECH '26</a>, <a href="https://aclanthology.org/2026.acl-long.2175.pdf">ACL '26</a></span></p>
 
-    <p style="padding-left: 1.2em; margin-bottom: 0.4em;"><b style="font-weight: 450;"><a href="#thrust-3">Governable AI</a>:</b> <i>Is AI robust within the societal structures it operates in?</i> <span style="font-size: 0.88em; color: #999;">→ <a href="./pdf/FAccT_26_ACAI.pdf">FAccT '26</a>, <a href="https://arxiv.org/pdf/2605.07084">AIES (under sub.)</a></span></p>
+    <p style="padding-left: 1.2em; margin-bottom: 0.4em;"><b style="font-weight: 450;"><a href="#thrust-3">Governable AI</a>:</b> <i>Is AI robust within the societal structures it operates in?</i> <span style="font-size: 0.88em; color: #999;">→ <a href="./pdf/FAccT_26_ACAI.pdf">FAccT '26</a></span></p>
     <p>
       I hold the Avilés–Johnson Fellowship in Computer Science and Engineering and have been featured in invited talks and public media, including the <a href="https://pod.link/1277529273/episode/MThiNDkzNzgtYTRjMS00YjVjLTk4ZWQtMjJmNGZjNjBjYzlj?view=apps&sort=popularity">MASKulinity Podcast</a>.
     </p>
@@ -488,6 +488,46 @@ document.addEventListener("DOMContentLoaded", function () {
       </td>
       </tr>
       <!-- End Paper: DRES -->
+
+      <!-- Paper: WER Range -->
+      <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/werrange.png">
+        </td>
+
+        <td style="font-size: large;"><span class="preprint-tag">PREPRINT</span>Beyond Single Ground Truth: Reference Monism as Epistemic Injustice in ASR Evaluation<br>
+          <b style="font-size: medium;">Anna Seo Gyeong Choi, <b><u>Maria Teleki</u></b>, James Caverlee, Miguel del Rio<sup>†</sup>, Corey Miller<sup>†</sup>, Hoon Choi<sup>†</sup></b><br>
+          <i class="collab-line" style="font-size: medium;">Collaboration w/ Cornell University, RevAI, Kangwon National University</i><br>
+          <i class="presented-at">Presented at <a href="https://ic2s2-2026.org/">IC2S2</a></i><br>
+          <div style="height:5px;"></div>
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2605.07084" role="button">Paper</a>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/2026IC2S2_WERrange.pdf" role="button">IC2S2 Abstract</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-werrange" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-werrange" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+          </div>
+
+          <div class="collapse" id="abstract-text-werrange">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Automatic speech recognition (ASR) evaluation compares system output to ground truth transcripts, with Word Error Rate (WER) quantifying the distance between them. But ground truth transcripts are not discovered – they are produced by human annotators following conventions that encode normative assumptions about which speech features matter. Different conventions (verbatim, non-verbatim, legal) produce different transcripts of identical speech and judge the same ASR output differently. This paper argues that reference monism – enforcing a single transcription convention as ground truth – commits epistemic injustice. Speakers with aphasia, whose speech includes clinically meaningful disfluencies, are systematically disadvantaged when evaluated against "clean" references that treat those disfluencies as errors. The harm is not merely differential performance, but that evaluative infrastructure lacks interpretive resources to recognize their contributions as legitimate. We develop a philosophical framework introducing the hermeneutical gap, formalize Epistemic Injustice Distance (EID) to measure reference monism's cost, and demonstrate empirically using AphasiaBank that WER varies depending on which convention defines ground truth. We propose WER-Range: reporting performance across legitimate conventions rather than assuming a single correct answer.
+            </div>
+          </div>
+
+          <div class="collapse" id="bib-text-werrange">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @inproceedings{range-wer,<br>
+                  title     = {Beyond Single Ground Truth: Reference Monism as Epistemic Injustice in ASR Evaluation},<br>
+                  author    = {Anna Seo Gyeong Choi and Maria Teleki and James Caverlee and Miguel del Rio and Corey Miller and Hoon Choi},<br>
+                  year      = {2026},<br>
+                  booktitle = {Preprint}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <!-- End Paper: WER Range -->
 
       <!-- Paper: Z-Scores -->
       <tr>
@@ -1296,46 +1336,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </td>
       </tr>
       <!-- End Paper: ACAI -->
-
-      <!-- Paper: WER Range -->
-      <tr>
-        <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="95%" src="./img/werrange.png">
-        </td>
-
-        <td style="font-size: large;"><span class="preprint-tag">PREPRINT</span>Beyond Single Ground Truth: Reference Monism as Epistemic Injustice in ASR Evaluation<br>
-          <b style="font-size: medium;">Anna Seo Gyeong Choi, <b><u>Maria Teleki</u></b>, James Caverlee, Miguel del Rio<sup>†</sup>, Corey Miller<sup>†</sup>, Hoon Choi<sup>†</sup></b><br>
-          <i class="collab-line" style="font-size: medium;">Collaboration w/ Cornell University, RevAI, Kangwon National University</i><br>
-          <i class="presented-at">Presented at <a href="https://ic2s2-2026.org/">IC2S2</a></i><br>
-          <div style="height:5px;"></div>
-          <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2605.07084" role="button">Paper</a>
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/2026IC2S2_WERrange.pdf" role="button">IC2S2 Abstract</a>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-werrange" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-werrange" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-          </div>
-
-          <div class="collapse" id="abstract-text-werrange">
-            <div class="card card-body z-depth-0" style="font-size: small;">
-              Automatic speech recognition (ASR) evaluation compares system output to ground truth transcripts, with Word Error Rate (WER) quantifying the distance between them. But ground truth transcripts are not discovered – they are produced by human annotators following conventions that encode normative assumptions about which speech features matter. Different conventions (verbatim, non-verbatim, legal) produce different transcripts of identical speech and judge the same ASR output differently. This paper argues that reference monism – enforcing a single transcription convention as ground truth – commits epistemic injustice. Speakers with aphasia, whose speech includes clinically meaningful disfluencies, are systematically disadvantaged when evaluated against "clean" references that treat those disfluencies as errors. The harm is not merely differential performance, but that evaluative infrastructure lacks interpretive resources to recognize their contributions as legitimate. We develop a philosophical framework introducing the hermeneutical gap, formalize Epistemic Injustice Distance (EID) to measure reference monism's cost, and demonstrate empirically using AphasiaBank that WER varies depending on which convention defines ground truth. We propose WER-Range: reporting performance across legitimate conventions rather than assuming a single correct answer.
-            </div>
-          </div>
-
-          <div class="collapse" id="bib-text-werrange">
-            <div class="card card-body z-depth-0">
-              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                @inproceedings{range-wer,<br>
-                  title     = {Beyond Single Ground Truth: Reference Monism as Epistemic Injustice in ASR Evaluation},<br>
-                  author    = {Anna Seo Gyeong Choi and Maria Teleki and James Caverlee and Miguel del Rio and Corey Miller and Hoon Choi},<br>
-                  year      = {2026},<br>
-                  booktitle = {Preprint}<br>
-                }
-              </code>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <!-- End Paper: WER Range -->
 
       <!-- Paper: When Behavioral Traces Mislead -->
       <tr>
