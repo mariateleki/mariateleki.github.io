@@ -1340,4 +1340,30 @@ i.presented-at > a,
   }
 }
 
+/* Venue name tooltips */
+[data-vtip] { position: relative; }
+[data-vtip]::after {
+  content: attr(data-vtip);
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(38,38,38,0.94);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.71rem;
+  max-width: 250px;
+  white-space: normal;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s;
+  z-index: 500;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.45;
+}
+[data-vtip]:hover::after { opacity: 1; }
+
 /*# sourceMappingURL=main.css.map */

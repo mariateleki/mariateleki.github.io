@@ -90,7 +90,7 @@
 
 <!-- Local Stylesheet -->
 <!--<link rel="stylesheet" href="./main.css"> -->
-<link rel="stylesheet" href="./main.css?v=2.6">
+<link rel="stylesheet" href="./main.css?v=2.7">
 
 
 </head>
@@ -1874,6 +1874,38 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
 <script src="./assets/bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js"></script> 
 <script src="./assets/MDB-Free_4.20.0/js/mdb.min.js"></script>
 <script src="./collaborators.js"></script>
+<script>
+(function() {
+  var venues = [
+    ['SocialLLM@ICWSM', 'The Workshop on Large Language Models for Social Reasoning and Simulation at the International AAAI Conference on Web and Social Media'],
+    ['MisD@ICWSM', 'The Workshop on Misinformation Detection in the Era of LLMs at the International AAAI Conference on Web and Social Media'],
+    ['EMNLP Findings', 'Findings of the Association for Computational Linguistics: EMNLP'],
+    ['LREC-COLING', 'The Joint International Conference on Computational Linguistics, Language Resources and Evaluation'],
+    ['INTERSPEECH', 'Conference of the International Speech Communication Association'],
+    ['ICASSP', 'IEEE International Conference on Acoustics, Speech and Signal Processing'],
+    ['ICWSM', 'The International AAAI Conference on Web and Social Media'],
+    ['FAccT', 'The ACM Conference on Fairness, Accountability, and Transparency'],
+    ['AAAI', 'The Annual AAAI Conference on Artificial Intelligence'],
+    ['CHI', 'The ACM CHI Conference on Human Factors in Computing Systems'],
+    ['IUI', 'The ACM Conference on Intelligent User Interfaces'],
+    ['ACL', 'The Annual Meeting of the Association for Computational Linguistics']
+  ];
+  var skip = ['Anthology', ' ARR', 'SICon', 'Proceedings', 'Paper ('];
+  document.querySelectorAll('a').forEach(function(a) {
+    var text = a.textContent.trim();
+    for (var s = 0; s < skip.length; s++) {
+      if (text.indexOf(skip[s]) !== -1) return;
+    }
+    for (var i = 0; i < venues.length; i++) {
+      var abbr = venues[i][0], full = venues[i][1];
+      if (text === abbr || (text.startsWith(abbr) && !/[a-zA-Z]/.test(text[abbr.length]))) {
+        a.setAttribute('data-vtip', full);
+        break;
+      }
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
