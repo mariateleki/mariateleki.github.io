@@ -1260,7 +1260,8 @@ i.presented-at > a,
 
 .mentoring .mentoring-group-title {
   font-size: 0.88rem;
-  font-weight: 300;
+  font-weight: 700 !important;
+  text-decoration: underline;
   margin-top: 0.9rem;
   margin-bottom: 0.18rem;
 }
@@ -1275,9 +1276,12 @@ i.presented-at > a,
   font-weight: 300 !important;
 }
 
-.mentoring .mentoring-group-title,
 .mentoring .mentoring-group-title * {
-  font-weight: 300 !important;
+  font-weight: 700 !important;
+}
+
+.mentoring .mentoring-entry > a {
+  font-weight: 700 !important;
 }
 
 .mentoring h2,
