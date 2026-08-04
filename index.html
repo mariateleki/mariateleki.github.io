@@ -161,7 +161,7 @@
     <p><b style="font-weight: 500;">I build methods, benchmarks, and audits that improve AI robustness in socially complex situations.</b> My research spans <span style="font-weight: 400; background: #fff9cc; padding: 0 3px; border-radius: 2px;">Speech AI</span> and <span style="font-weight: 400; background: #fff9cc; padding: 0 3px; border-radius: 2px;">Computational Social Science</span>, across three threads:
     </p>
 
-    <p style="padding-left: 1.2em; margin-bottom: 0.4em;"><b style="font-weight: 450;"><a href="#thrust-1">Disfluency-Aware AI</a>:</b> <i>Is AI robust to how people naturally speak?</i> <span style="font-size: 0.88em; color: #999;">→ <a href="https://arxiv.org/pdf/2509.20319">ICASSP '26</a>, <a href="https://mariateleki.github.io/pdf/FAccT_26_ACAI.pdf">Preprint</a>, <a href="https://arxiv.org/pdf/2605.07084">Preprint</a>, <a href="https://mariateleki.github.io/pdf/HorrorComedy.pdf">INTERSPEECH '25</a>, <a href="https://www.isca-archive.org/interspeech_2024/teleki24_interspeech.pdf">INTERSPEECH '24</a>, <a href="https://aclanthology.org/2024.lrec-main.1175.pdf">LREC-COLING '24</a></span></p>
+    <p style="padding-left: 1.2em; margin-bottom: 0.4em;"><b style="font-weight: 450;"><a href="#thrust-1">Disfluency-Aware AI</a>:</b> <i>Is AI robust to how people naturally speak?</i> <span style="font-size: 0.88em; color: #999;">→ <a href="https://arxiv.org/pdf/2509.20319">ICASSP '26</a>, <a href="https://arxiv.org/pdf/2608.02138">Preprint</a>, <a href="https://mariateleki.github.io/pdf/FAccT_26_ACAI.pdf">Preprint</a>, <a href="https://arxiv.org/pdf/2605.07084">Preprint</a>, <a href="https://mariateleki.github.io/pdf/HorrorComedy.pdf">INTERSPEECH '25</a>, <a href="https://www.isca-archive.org/interspeech_2024/teleki24_interspeech.pdf">INTERSPEECH '24</a>, <a href="https://aclanthology.org/2024.lrec-main.1175.pdf">LREC-COLING '24</a></span></p>
 
     <p style="padding-left: 1.2em; margin-bottom: 0.4em;"><b style="font-weight: 450;"><a href="#thrust-2">Personalized AI</a>:</b> <i>Is AI robust to who people actually are?</i> <span style="font-size: 0.88em; color: #999;">→ <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/35908/38062">ICWSM '25</a>, <a href="https://arxiv.org/pdf/2603.16941">INTERSPEECH '26</a>, <a href="https://aclanthology.org/2026.acl-long.2175.pdf">ACL '26</a>, <a href="./pdf/CrossCommunityAgenda.pdf">Preprint</a></span></p>
 
@@ -413,6 +413,41 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="pub-list pub-list-lg">
     <table class="table table-borderless table-sm">
       <!-- Publications -->
+
+      <!-- Paper: Uh-Mazing / Disfluencies in Speech Translation -->
+      <tr>
+        <td style="width: 35%; vertical-align: top;">
+        </td>
+        <td class="button-cell" style="font-size: large;"><span class="preprint-tag">PREPRINT</span>The Role of Disfluencies in Speech Translation<br>
+          <b style="font-size: medium;">Maike Züfle*, <b><u>Maria Teleki</u></b>*, Fabian Retkowski, Vilém Zouhar, Oliver Grabner, Alexander Waibel, James Caverlee, Jan Niehues</b><br>
+          <i class="collab-line" style="font-size: medium;">Collaboration w/ Karlsruhe Institute of Technology</i><br>
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2608.02138" role="button">Paper</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-uh-mazing" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-uh-mazing" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+          </div>
+
+          <div class="collapse" id="abstract-text-uh-mazing">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Current speech translation systems, including SpeechLLMs, are trained on cleaned text and tend to strip disfluencies like filled pauses and false starts rather than translate them. We show this comes at a cost: disfluencies carry meaning that gets lost when speech is cleaned up. To study this systematically, we introduce Uh-Mazing, a benchmark of human-translated, disfluency-annotated Switchboard speech covering English into eight target languages. Across these languages and several architectures, we find that false starts and self-repairs, not filled pauses or discourse markers, drive most of the translation-quality loss, and that models which fail to preserve a disfluency tend to omit it rather than mistranslate it. We show inference-time decoding can mitigate this without retraining, and release the benchmark and code.
+            </div>
+          </div>
+
+          <div class="collapse" id="bib-text-uh-mazing">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @article{zufle26_uh-mazing,<br>
+                  title  = {The Role of Disfluencies in Speech Translation},<br>
+                  author = {Maike Züfle and Maria Teleki and Fabian Retkowski and Vilém Zouhar and Oliver Grabner and Alexander Waibel and James Caverlee and Jan Niehues},<br>
+                  year   = {2026},<br>
+                  journal = {arXiv:2608.02138}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <!-- End Paper: Uh-Mazing / Disfluencies in Speech Translation -->
 
       <!-- Paper: SpeechSpectrum -->
       <tr>
@@ -1729,6 +1764,7 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
         <div class="mentoring-papers">
           <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="https://arxiv.org/pdf/2509.20319">Z-Scores: A Metric for Linguistically Assessing Disfluency Removal</a> <span class="mp-venue">ICASSP '26</span></div>
           <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="./pdf/dres.pdf">Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones</a> <span class="mp-venue">Preprint</span></div>
+          <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="https://arxiv.org/pdf/2608.02138">The Role of Disfluencies in Speech Translation</a> <span class="mp-venue">Preprint</span></div>
         </div>
       </div>
 
