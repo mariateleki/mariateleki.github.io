@@ -90,7 +90,7 @@
 
 <!-- Local Stylesheet -->
 <!--<link rel="stylesheet" href="./main.css"> -->
-<link rel="stylesheet" href="./main.css?v=3.5">
+<link rel="stylesheet" href="./main.css?v=3.6">
 
 
 </head>
@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var tds = row.querySelectorAll("td");
     if (tds.length < 2) return;
     var td = tds[1];
-    var tagSpans = Array.from(td.querySelectorAll(".preprint-tag, .short-tag, .poster-tag, .demo-tag, .ug-first-author-tag"));
+    var tagSpans = Array.from(td.querySelectorAll(".preprint-tag, .short-tag, .poster-tag, .demo-tag, .ug-first-author-tag, .co-first-author-tag"));
     var isFirstAuthor = (row.dataset.pubTags || "").split(" ").includes("first-author");
     if (tagSpans.length === 0 && !isFirstAuthor) return;
 
@@ -332,7 +332,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isFirstAuthor) {
       var faTag = document.createElement("span");
       faTag.className = "first-author-tag";
-      faTag.textContent = "1st Author";
+      faTag.textContent = "1ST AUTHOR";
       tagRow.appendChild(faTag);
     }
 
@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <img class="preview rounded z-depth-0" width="95%" src="./img/speechspec2.png">
       </td>
 
-      <td class="button-cell" style="font-size: large;"><span class="preprint-tag">PREPRINT</span>SpeechSpectrum: A Linguistic Fidelity Spectrum for Accountable Speech-to-Text<br>
+      <td class="button-cell" style="font-size: large;"><span class="co-first-author-tag">CO-1ST AUTHOR</span><span class="preprint-tag">PREPRINT</span>SpeechSpectrum: A Linguistic Fidelity Spectrum for Accountable Speech-to-Text<br>
         <b style="font-size: medium;">Anna Seo Gyeong Choi*, <b><u>Maria Teleki</u></b>*, Miguel del Rio, Corey Miller<sup>†</sup>, James Caverlee<sup>†</sup>,<br>Allison Koenecke<sup>†</sup></b><br>
         <i class="collab-line" style="font-size: medium;">Collaboration w/ Cornell University, RevAI</i><br>
         <i class="presented-at">Presented at <a href="https://ic2s2-2026.org/">IC2S2</a>, <a href="https://speechai4all.org/">SpeechAI4All@CHI '26</a></i><br>
@@ -460,7 +460,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <td style="width: 35%; vertical-align: top;">
           <img class="preview rounded z-depth-0" width="95%" src="./img/uhmazing.png">
         </td>
-        <td class="button-cell" style="font-size: large;"><span class="preprint-tag">PREPRINT</span>The Role of Disfluencies in Speech Translation<br>
+        <td class="button-cell" style="font-size: large;"><span class="co-first-author-tag">CO-1ST AUTHOR</span><span class="preprint-tag">PREPRINT</span>The Role of Disfluencies in Speech Translation<br>
           <b style="font-size: medium;">Maike Züfle*, <b><u>Maria Teleki</u></b>*, Fabian Retkowski, Vilém Zouhar, Oliver Grabner, Alexander Waibel, James Caverlee, Jan Niehues</b><br>
           <i class="collab-line" style="font-size: medium;">Collaboration w/ Karlsruhe Institute of Technology, ETH Zürich</i><br>
           <div style="height:5px;"></div>
@@ -922,7 +922,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <td style="width: 35%; vertical-align: top;">
           <img class="preview rounded z-depth-0" width="95%" src="./img/cross-community-2.png">
         </td>
-        <td style="font-size: large;"><span class="preprint-tag">PREPRINT</span>A Cross-Community Agenda for Speech AI<br>
+        <td style="font-size: large;"><span class="co-first-author-tag">CO-1ST AUTHOR</span><span class="preprint-tag">PREPRINT</span>A Cross-Community Agenda for Speech AI<br>
           <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Kimi V. Wenzel, Anna Seo Gyeong Choi, Tobias Weinberg, Shree Harsha Bokkahalli Satish, Stephanny Sanchez, Belu Ticona, Ariadna Sanchez, Yash Sonkar, Aarti Mathur, Christoph Minixhofer, Abraham Glasser, Raja Kushalnagar, James Caverlee, Minha Lee, Shaomei Wu, Alyssa Hillary Zisk, Éva Székely, Dylan Gaines, Angelika Seeschaaf Veres, Seray Ibrahim, Nicholas Cummins, Allison Koenecke</b><br>
           <i class="collab-line" style="font-size: medium; line-height: 1.35; display: block;">Collaboration w/ Carnegie Mellon University, Cornell University, Cornell Tech, KTH Royal Institute of Technology, University of Alberta, George Mason University, University of Edinburgh, IIIT Hyderabad, Chegg Inc., Deepgram, Gallaudet University, Eindhoven University of Technology, AImpower.org, AssistiveWare, Kennesaw State University, OCAD University, King's College London</i>
           <div class="button-cell">
@@ -1026,7 +1026,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <img class="preview rounded z-depth-0" width="95%" src="./img/story-survey.png">
         </td>
         
-        <td style="font-size: large;"><span style="font-size: 0.7rem; color: #c0392b; font-weight: 500; display: block; margin-bottom: -5px;">New! Extended Version</span>A Survey on LLMs for Story Generation<br>
+        <td style="font-size: large;"><span class="co-first-author-tag">CO-1ST AUTHOR</span><span style="font-size: 0.7rem; color: #c0392b; font-weight: 500; display: block; margin-bottom: -5px;">New! Extended Version</span>A Survey on LLMs for Story Generation<br>
           <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Xiangjue Dong, Peter Carragher, Vedangi Bengali, Tian Liu, Haoran Liu, Sai Tejas Janjur, Thomas Docog, Stephanie Birkelbach, Oliver Grabner, Cong Wang, Ting Liu, Yin Zhang, Frank Shipman, James Caverlee</b><br>
           <i class="collab-line" style="font-size: medium;">Collaboration w/ Carnegie Mellon University</i><br>
           <a href="https://2025.emnlp.org">EMNLP Findings 2025</a><br>

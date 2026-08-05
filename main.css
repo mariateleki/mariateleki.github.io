@@ -1014,6 +1014,20 @@ html.transition *:after {
   margin-bottom: 3px;
 }
 
+.co-first-author-tag {
+  display: inline-block;
+  padding: 0.04rem 0.28rem;
+  border: 1px solid #c8a000;
+  border-radius: 4px;
+  background: #fff8c2;
+  color: #7a5c00;
+  font-size: 0.65rem;
+  font-weight: 800;
+  line-height: 1.05;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
 .first-author-tag {
   display: inline-block;
   padding: 0.04rem 0.28rem;
