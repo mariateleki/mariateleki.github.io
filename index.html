@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var tagRow = document.createElement("div");
     tagRow.className = "pub-tags-row";
 
-    if (isFirstAuthor) {
+    if (isFirstAuthor && !td.querySelector(".co-first-author-tag")) {
       var faTag = document.createElement("span");
       faTag.className = "first-author-tag";
       faTag.textContent = "1ST AUTHOR";
