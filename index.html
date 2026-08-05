@@ -272,6 +272,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Preprint
     if (row.querySelector(".preprint-tag")) tags.push("preprint");
 
+    // Co-first author tag counts as first-author for filtering
+    if (row.querySelector(".co-first-author-tag")) tags.push("first-author");
+
     // First author (sole or co-first with *)
     var authorEl = row.querySelector('b[style*="font-size: medium"]');
     if (authorEl) {
