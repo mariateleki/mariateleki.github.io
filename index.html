@@ -90,9 +90,66 @@
 
 <!-- Local Stylesheet -->
 <!--<link rel="stylesheet" href="./main.css"> -->
-<link rel="stylesheet" href="./main.css?v=3.7">
+<link rel="stylesheet" href="./main.css?v=3.8">
 
 
+
+<!-- CV-style header layout (alternate) -->
+<style>
+  /* Layout only — typography stays the site's original Roboto. */
+  .cv-head { display: flex; align-items: center; gap: 1.7rem; margin: 0.2rem 0 0.7rem; }
+  .cv-avatar { flex: 0 0 170px; width: 170px; height: 170px; border-radius: 50%;
+               object-fit: cover; object-position: center top; display: block; }
+  .cv-id { min-width: 0; }
+  h1.post-title { margin: 0 0 0.15rem; }
+  .cv-tagline { margin: 0 0 0.6rem; font-size: 1.38rem; font-weight: 700; color: #9B6FD6;
+                letter-spacing: 0.09em; text-transform: uppercase; }
+  .cv-affil { margin: 0 0 0.6rem; }
+  .cv-icons { display: flex; align-items: center; gap: 0.55rem; font-size: 1.9rem; margin: 0; }
+  .cv-icons a i { color: var(--global-theme-color); }
+  .cv-icons a:hover i { opacity: 0.75; }
+
+  .cv-summary { margin-top: 1.3rem; }
+
+  /* ---- mentoring invitation ---- */
+  .mentor-invite { margin-bottom: 0.55rem; line-height: 1.6; }
+
+  /* ---- resource chips ---- */
+  .res-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.75rem; }
+  .res-chips a { display: inline-block; font-size: 0.8rem; line-height: 1.35;
+    padding: 0.22rem 0.72rem; border: 1px solid rgba(108,91,123,0.35); border-radius: 20px;
+    color: var(--global-theme-color); text-decoration: none; background: #fff; }
+  .res-chips a:hover { background: #6c5b7b14; border-color: var(--global-theme-color);
+    text-decoration: none; }
+
+  /* ---- top bar ---- */
+  #navbar { background-color: #fff; border-bottom: 1px solid rgba(0,0,0,0.10); }
+  #navbar .navbar-nav .nav-item .nav-link {
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.09em;
+    font-weight: 500; padding-left: 0.6rem; padding-right: 0.6rem;
+  }
+
+  /* ---- two-column page: news/travel sidebar + main content ---- */
+  .container { max-width: 1180px; }
+  /* stretch (not flex-start) so the divider rule runs the full page height */
+  .page-cols { display: flex; align-items: stretch; gap: 2.4rem; }
+  .side-col { flex: 0 0 232px; border-right: 1px solid rgba(0,0,0,0.13);
+              padding-right: 1.7rem; padding-top: 0.7rem; }
+  .main-col { flex: 1; min-width: 0; }
+  .side-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+                text-transform: uppercase; color: var(--global-theme-color); margin: 0 0 0.9rem; }
+  .side-label-next { margin-top: 2rem; }
+  .side-item { font-size: 0.86rem; line-height: 1.45; margin: 0 0 0.9rem; }
+  /* explicit weight: Bootstrap's b{bolder} resolves to 400 against this theme's 300 body */
+  .side-item b { font-weight: 500; }
+
+  @media (max-width: 800px) {
+    .page-cols { flex-direction: column; gap: 1.6rem; }
+    .side-col { flex: none; order: 2; width: 100%; border-right: none;
+                border-top: 1px solid rgba(0,0,0,0.13); padding-right: 0; padding-top: 1.3rem; }
+  }
+
+</style>
 </head>
 
 <!-- Body -->
@@ -102,7 +159,7 @@
 <header>
 
 <!-- Nav Bar -->
-<nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top z-depth-0"> <!-- change to bg-white to make it white again -->
+<nav id="navbar" class="navbar navbar-light navbar-expand-lg fixed-top z-depth-0"> <!-- change to bg-white to make it white again -->
   <div class="container">
     <!-- Toggler for Mobile -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -114,22 +171,18 @@
 
     <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto" style="font-size: medium;">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="#publications_id">Publications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education_id">Education</a></li>
         <li class="nav-item"><a class="nav-link" href="#work_id">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#service_id">Service</a></li>
+        <li class="nav-item"><a class="nav-link" href="#media_id">Media</a></li>
         <li class="nav-item"><a class="nav-link" href="#mentoring_id">Mentoring</a></li>
         <li class="nav-item"><a class="nav-link" href="#teaching_id">Teaching</a></li>
-        <li class="nav-item"><a class="nav-link" href="#service_id">Service</a></li>
-        <li class="nav-item"><a class="nav-link" href="./pdf/Maria_Teleki_CV.pdf" target="_blank">CV</a></li>
-        <li class="nav-item"><a class="nav-link" href="mailto:mariateleki@tamu.edu">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#awards_id">Awards</a></li>
+        <li class="nav-item"><a class="nav-link" href="#invitedtalks_id">Talks</a></li>
+        <li class="nav-item"><a class="nav-link" href="#more_id">More</a></li>
       </ul>
-      <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 2.2rem; margin-left: auto;">
-        <a href="https://scholar.google.com/citations?hl=en&user=aImLrNcAAAAJ" title="Google Scholar" rel="external nofollow noopener noreferrer" target="_blank"><i class="ai ai-google-scholar" style="color: var(--global-theme-color); font-size: 2.2rem;"></i></a>
-        <!-- <a href="https://github.com/mariateleki" title="GitHub" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-github" style="color: var(--global-theme-color);"></i></a> -->
-        <!-- <a href="./pdf/Maria_Teleki_CV.pdf" title="CV" rel="external nofollow noopener noreferrer" target="_blank"><i class="ai ai-cv-square" style="color: var(--global-theme-color);"></i></a> -->
-        <a href="https://www.linkedin.com/in/mariateleki" title="LinkedIn" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-linkedin" style="color: var(--global-theme-color);"></i></a>
-        <a href="https://www.instagram.com/maria.teleki.phd/" title="Instagram" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-instagram" style="color: var(--global-theme-color);"></i></a>
-      </div>
     </div>
   </div>
 </nav>
@@ -143,101 +196,100 @@
 ========================= -->
 <!-- about.html -->
 <div class="post">
-<header class="post-header">
-  <div>
-    <h1 style="margin: 0 0 0.1rem;" class="post-title">Maria Teleki</h1>
-    <p style="margin: -0.2rem 0 0; font-size: 1.2rem; font-weight: 700; color: #9B6FD6; letter-spacing: 0.09em; text-transform: uppercase;">Socially Robust AI</p>
+<div class="page-cols">
+  <aside class="side-col">
+    <p class="side-label">Talks &amp; Travel</p>
+    <p class="side-item"><b>Sep 23</b> Talk at George Mason University (Remote) — presenting <i>Socially Robust AI</i></p>
+    <p class="side-item"><b>Oct 15</b> Talk at <a href="https://the-contentious-politics-of-ai-network.github.io/monthly-talks.html">The Contentious Politics of AI Network</a> (Remote) — presenting <a href="./pdf/FAccT_26_ACAI.pdf">our FAccT paper</a></p>
+
+    <p class="side-label side-label-next">News</p>
+    <p class="side-item"><b>Jul 2026</b> Our preprint is out, <a href="./pdf/CrossCommunityAgenda.pdf"><i>A Cross-Community Agenda for Speech AI</i></a>, with 23 authors across 18 institutions!</p>
+    <p class="side-item"><b>Jun 2026</b> Paper accepted to INTERSPEECH — <a href="https://arxiv.org/pdf/2603.16941"><i>The Voice Behind the Words: Quantifying Intersectional Bias in SpeechLLMs</i></a></p>
+    <p class="side-item"><b>May 2026</b> We released an extended version of <a href="pdf/EXTENDED_A_Survey_on_LLMs_for_Story_Generation.pdf"><i>A Survey on LLMs for Story Generation</i></a></p>
+    <p class="side-item"><b>April 2026</b> Paper accepted to <a href="https://facctconference.org/2026/">FAccT</a> — <i>The Due Process Deficit: Auditing AI Governance in U.S. Higher Education</i></p>
+    <p class="side-item"><b>April 2026</b> Co-organized the <a href="https://speechai4all.org/">SpeechAI4All Workshop</a> @ CHI!</p>
+    <p class="side-item"><b>April 2026</b> 7 Papers accepted to <a href="https://ic2s2-2026.org/">IC2S2</a> — 3 orals + 4 posters!</p>
+    <p class="side-item"><b>April 2026</b> 2 mentee papers accepted to ICWSM workshops — congrats Stephanie and Anna!</p>
+    <p class="side-item"><b>Feb 2026</b> Interviewed on the <a href="https://www.maskulinitypod.com/season-5/ep8">MASKulinity Podcast</a> about our ICWSM '25 paper on gendered discourse in AI</p>
+    <p class="side-item"><b>Jan 2026</b> Paper accepted to <a href="https://dl.acm.org/doi/10.1145/3742414.3794737">IUI (Short)</a> w/ KTH — <i>Walk a Mile in My Voice</i></p>
+
+    <p class="side-item"><b>Aug 2025</b> Our work — <i>A Survey on LLMs for Story Generation</i> — was accepted to <a href="https://2025.emnlp.org">EMNLP Findings</a>!</p>
+    <p class="side-item"><b>May 2025</b> Our work — <i>I want a horror — comedy — movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance</i> — was accepted to <a href="https://www.interspeech2025.org/home">INTERSPEECH</a>!</p>
+    <p class="side-item"><b>April 2025</b> Our work — <a href="https://arxiv.org/pdf/2504.11431"><i>Masculine Defaults via Gendered Discourse in Podcasts and Large Language Models</i></a> — was accepted to <a href="https://sites.google.com/view/sicon2025">SICon@ACL</a>!</p>
+    <p class="side-item"><b>April 2025</b> Our work — <a href="https://arxiv.org/pdf/2504.11431"><i>Masculine Defaults via Gendered Discourse in Podcasts and Large Language Models</i></a> — was accepted to <a href="https://www.ic2s2-2025.org">IC2S2</a>!</p>
+    <p class="side-item"><b>April 2025</b> Had a great time giving a talk at <i><a href="https://www.cafetamu.com">C.A.F.E.</a></i> (<i><a href="./pdf/CAFE-Talk.pdf">link</a></i>) yesterday!</p>
+    <p class="side-item"><b>Mar 2025</b> Congats to Sai & Oliver for their great poster presentations at <i><a href="https://srw.tamu.edu/">A&M Student Research Week!</a></i></p>
+    <p class="side-item"><b>Feb 2025</b> Excited to guest lecture this week for CSCE 670 on <i>IR <a href="./pdf/week05-class06.pdf">Evaluation</a> and <a href="./pdf/week05-class07.pdf">Learning to Rank</a>!</i></p>
+    <p class="side-item"><b>Dec 2024</b> Our survey on <a href="https://arxiv.org/pdf/2412.14352"><i>LLM Inference-Time Self-Improvement</i></a> is up on arXiv!</p>
+    <p class="side-item"><b>Nov 2024</b> Our paper — <a href="https://arxiv.org/pdf/2504.11431"><i>Masculine Defaults via Gendered Discourse in Podcasts and Large Language Models</i></a> — was accepted to ICWSM 2025!</p>
+    <p class="side-item"><b>Oct 2024</b> Gave a talk at the <a href="https://vbma.biz">Texas Tech University - School of Veterinary Medicine VBMA Club</a>! Check it out here: <i><a href="./pdf/The Other AI.pdf">The Other AI: An Intuitive Understanding of Artificial Intelligence</a></i>.</p>
+    <p class="side-item"><b>June 2024</b> Our work was accepted to INTERSPEECH!</p>
+    <p class="side-item"><b>April 2024</b> Had a great time meeting and learning from so many awesome people at the <a href="https://cra.org/cra-wp/grad-cohort-for-women/">CRA-WP Grad Cohort for Women</a> in Minneapolis, MN!</p>
+    <p class="side-item"><b>Mar 2024</b> We had 2 papers accepted to LREC-COLING on disfluency and language modeling!</p>
+    <p class="side-label side-label-next">Past</p>
+    <p class="side-item"><b>Jul 28–31, 2026</b> <a href="https://ic2s2-2026.org/">IC2S2</a> in Burlington, Vermont — presented, 7 works accepted</p>
+    <p class="side-item"><b>Jun 25–28, 2026</b> <a href="https://facctconference.org/2026/">FAccT</a> in Montréal, Canada — presented <a href="./pdf/FAccT_26_ACAI.pdf">our paper</a></p>
+    <p class="side-item"><b>May 4–8, 2026</b> <a href="https://2026.ieeeicassp.org/">ICASSP</a> in Barcelona, Spain — presented <a href="https://arxiv.org/pdf/2509.20319">our paper</a></p>
+    <p class="side-item"><b>Apr 13–17, 2026</b> <a href="https://chi2026.acm.org/">CHI</a> in Barcelona, Spain — organized <a href="./pdf/Speech_AI_Workshop__CHI__26_.pdf">SpeechAI4All</a> workshop + presenting <a href="https://arxiv.org/pdf/2601.15575">our poster</a></p>
+    <p class="side-item"><b>Apr 3, 2026</b> Texas NLP Symposium at Texas A&amp;M University</p>
+    <p class="side-item"><b>Aug 17–21, 2025</b> <a href="https://www.interspeech2025.org/home">INTERSPEECH</a> in Rotterdam, Netherlands</p>
+    <p class="side-item"><b>Jul 27–Aug 1, 2025</b> ACL in Vienna, Austria — presented at <a href="https://sites.google.com/view/sicon2025">SICon</a></p>
+    <p class="side-item"><b>Jul 21–24, 2025</b> <a href="https://www.ic2s2-2025.org">IC2S2</a> in Norrköping, Sweden — presented <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/35908/38062">Masculine Defaults</a></p>
+    <p class="side-item"><b>Jun 23–26, 2025</b> ICWSM in Copenhagen, Denmark — presented <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/35908/38062">Masculine Defaults</a></p>
+    <p class="side-item"><b>May 22–24, 2024</b> <a href="https://lrec-coling-2024.org/">LREC-COLING</a> in Torino, Italy</p>
+  </aside>
+  <div class="main-col">
+<header class="cv-head">
+  <img class="cv-avatar" src="./img/MariaTeleki.png" alt="Maria Teleki">
+  <div class="cv-id">
+    <h1 class="post-title">Maria Teleki</h1>
+    <p class="cv-tagline">Socially Robust AI</p>
+    <p class="cv-affil">Howdy! I’m a PhD student in Computer Science at Texas A&amp;M University (defending Summer ‘27), advised by <a href="https://people.engr.tamu.edu/caverlee" rel="external nofollow noopener noreferrer" target="_blank">James Caverlee</a>. I’m currently at Google DeepMind as a Student Researcher.</p>
+    <p class="cv-icons">
+      <a href="mailto:mariateleki@tamu.edu" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://scholar.google.com/citations?hl=en&amp;user=aImLrNcAAAAJ" title="Google Scholar" rel="external nofollow noopener noreferrer" target="_blank"><i class="ai ai-google-scholar"></i></a>
+      <a href="https://www.linkedin.com/in/mariateleki" title="LinkedIn" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/maria.teleki.phd/" title="Instagram" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+    </p>
   </div>
 </header>
 
-<article style="margin-top: 0.4rem;">
-
-<div class="intro-flex" style="display: flex; gap: 1.1rem; align-items: stretch;">
-<div class="profile" style="flex: 0 0 218px; margin-top: 0.2rem;"><img src="./img/MariaTeleki.png" class="img-fluid rounded" width="auto" height="100%" style="width:100%; object-fit: cover; object-position: center top; display: block;" alt="Maria Teleki" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-</div>
-<div class="about-variability" style="flex: 1; min-width: 0; font-size: 1.02rem;">
-  <p>Howdy! I’m a PhD student in Computer Science at Texas A&amp;M University (graduating Summer ‘27), advised by <a href="https://people.engr.tamu.edu/caverlee" rel="external nofollow noopener noopener noreferrer" target="_blank">James Caverlee</a>. I’m currently at Google DeepMind as a Student Researcher.</p>
-
-    <p><b style="font-weight: 500;">I build methods, benchmarks, and audits that improve AI robustness in socially complex situations.</b> My research spans <span style="font-weight: 400; background: #fff9cc; padding: 0 3px; border-radius: 2px;">Speech AI</span> and <span style="font-weight: 400; background: #fff9cc; padding: 0 3px; border-radius: 2px;">Computational Social Science</span>, across three threads:
-    </p>
-
-    <p style="padding-left: 1.2em; margin-bottom: 0.4em;"><a href="#thrust-1" style="color: #444;">Disfluency-Aware AI</a>: <span style="color: #444;">Is AI robust to how people naturally speak?</span><br><span style="font-size: 0.88em; color: #999;">→ <a href="https://arxiv.org/pdf/2608.02138" style="color: #444;">Preprint</a>, <a href="https://mariateleki.github.io/pdf/FAccT_26_ACAI.pdf" style="color: #444;">Preprint</a>, <a href="https://arxiv.org/pdf/2605.07084" style="color: #444;">Preprint</a>, <a href="https://arxiv.org/pdf/2509.20319">ICASSP '26</a>, <a href="https://mariateleki.github.io/pdf/HorrorComedy.pdf">INTERSPEECH '25</a>, <a href="https://www.isca-archive.org/interspeech_2024/teleki24_interspeech.pdf">INTERSPEECH '24</a>, <a href="https://aclanthology.org/2024.lrec-main.1175.pdf">LREC-COLING '24</a></span></p>
-
-    <p style="padding-left: 1.2em; margin-bottom: 0.4em;"><a href="#thrust-2" style="color: #444;">Personalized AI</a>: <span style="color: #444;">Is AI robust to each person's uniqueness?</span><br><span style="font-size: 0.88em; color: #999;">→ <a href="./pdf/CrossCommunityAgenda.pdf">Preprint</a>, <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/35908/38062">ICWSM '25</a>, <a href="https://arxiv.org/pdf/2603.16941">INTERSPEECH '26</a>, <a href="https://aclanthology.org/2026.acl-long.2175.pdf">ACL '26</a></span></p>
-
-    <p style="padding-left: 1.2em; margin-bottom: 0.4em;"><a href="#thrust-3" style="color: #444;">Governable AI</a>: <span style="color: #444;">Is AI robust within the sociopolitical structures it operates in?</span><br><span style="font-size: 0.88em; color: #999;">→ <a href="./pdf/FAccT_26_ACAI.pdf">FAccT '26</a></span></p>
-    <p>
-      I hold the Avilés–Johnson Fellowship in Computer Science and Engineering and have been featured in invited talks and public media. I can be reached at <a href="mailto:mariateleki@tamu.edu"><code style="background: #ede0f7; border: none; font-size: 0.95em; padding: 1px 4px; border-radius: 3px; color: inherit;">mariateleki@tamu.edu</code></a>.
-    </p>
-
-
-  </div>
-</div>
+<article style="margin-top: 0.4rem; font-size: 1.02rem;">
 
 <!-- Job Market Banner -->
-<div style="margin-top: 0.9rem; margin-bottom: 0.2rem; background-color: #6c5b7b19; border-left: 3px solid var(--global-theme-color); border-radius: 0 6px 6px 0; padding: 0.65rem 1rem;">
-  <p style="margin: 0 0 0.15rem 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--global-text-color-light);">I'm on the job market!</p>
-  <p style="margin: 0; font-size: 0.88rem;">I'm seeking tenure-track faculty and research scientist positions starting Fall 2027. I'd love to connect — <a href="mailto:mariateleki@tamu.edu">email me</a> or grab my <a href="./pdf/Maria_Teleki_CV.pdf" target="_blank">CV</a>.</p>
-</div>
-
-<!-- News + Travel two-column -->
-  <div style="display: flex; gap: 1rem; margin-top: 0.8rem; margin-bottom: 1.6rem;">
-
-    <!-- News Box -->
-    <div style="flex: 1; display: flex; flex-direction: column; height: 160px; border-left: 3px solid var(--global-theme-color); background-color: #6c5b7b19; padding: 0.6rem 1rem; border-radius: 0 6px 6px 0;">
-      <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--global-text-color-light); margin-bottom: 0.4rem; flex-shrink: 0;">Recent News</p>
-      <div style="display: grid; grid-template-columns: max-content 1fr; column-gap: 1.1rem; row-gap: 0.4rem; font-size: 0.83rem; overflow-y: auto; flex: 1; align-content: start;">
-<span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">Jul 2026</span>
-        <span>Our preprint is out, <a href="./pdf/CrossCommunityAgenda.pdf"><i>A Cross-Community Agenda for Speech AI</i></a>, with 23 authors across 18 institutions!</span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">Jun 2026</span>
-        <span>Paper accepted to INTERSPEECH — <a href="https://arxiv.org/pdf/2603.16941"><i>The Voice Behind the Words: Quantifying Intersectional Bias in SpeechLLMs</i></a></span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">May 2026</span>
-        <span>We released an extended version of <a href="pdf/EXTENDED_A_Survey_on_LLMs_for_Story_Generation.pdf"><i>A Survey on LLMs for Story Generation</i></a></span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">April 2026</span>
-        <span>Paper accepted to <a href="https://facctconference.org/2026/">FAccT</a> — <i>The Due Process Deficit: Auditing AI Governance in U.S. Higher Education</i></span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">April 2026</span>
-        <span>Co-organized the <a href="https://speechai4all.org/">SpeechAI4All Workshop</a> @ CHI!</span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">April 2026</span>
-        <span>7 Papers accepted to <a href="https://ic2s2-2026.org/">IC2S2</a> — 3 orals + 4 posters!</span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">April 2026</span>
-        <span>2 mentee papers accepted to ICWSM workshops — congrats Stephanie and Anna!</span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">Feb 2026</span>
-        <span>Interviewed on the <a href="https://www.maskulinitypod.com/season-5/ep8">MASKulinity Podcast</a> about our ICWSM '25 paper on gendered discourse in AI</span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">Jan 2026</span>
-        <span>Paper accepted to <a href="https://dl.acm.org/doi/10.1145/3742414.3794737">IUI (Short)</a> w/ KTH — <i>Walk a Mile in My Voice</i></span>
-      </div>
-    </div>
-
-    <!-- Travel Box -->
-    <div style="flex: 1; display: flex; flex-direction: column; height: 160px; border-left: 3px solid var(--global-theme-color); background-color: #6c5b7b19; padding: 0.6rem 1rem; border-radius: 0 6px 6px 0;">
-      <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--global-text-color-light); margin-bottom: 0.4rem; flex-shrink: 0;">Talks &amp; Travel &nbsp;·&nbsp; <span style="text-transform: none; font-weight: 500; color: var(--global-text-color-light);">☕ Coffee chats welcome!</span></p>
-      <div style="display: grid; grid-template-columns: max-content 1fr; column-gap: 1.1rem; row-gap: 0.4rem; font-size: 0.83rem; overflow-y: auto; flex: 1; align-content: start;">
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">Current</span>
-        <span>Google DeepMind in <b>Cambridge, MA</b></span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">Jul 28–31</span>
-        <span><a href="https://ic2s2-2026.org/">IC2S2</a> in <b>Burlington, Vermont</b> — presenting, 7 works accepted</span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">Sep 23</span>
-        <span>Talk at George Mason University in <b>Fairfax, VA</b> — presenting Socially Robust AI</span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">Oct 15</span>
-        <span>Talk at <a href="https://the-contentious-politics-of-ai-network.github.io/monthly-talks.html">The Contentious Politics of AI Network</a> (Remote) — presenting <a href="./pdf/FAccT_26_ACAI.pdf">our FAccT paper</a></span>
-        <span style="grid-column: 1 / -1; font-style: italic; font-weight: 700; font-size: 0.85rem; margin-top: 0.4em; color: #555;">Past:</span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">Jun 25–28</span>
-        <span><a href="https://facctconference.org/2026/">FAccT</a> in <b>Montréal, Canada</b> — presenting <a href="./pdf/FAccT_26_ACAI.pdf">our paper</a></span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">May 4–8</span>
-        <span><a href="https://2026.ieeeicassp.org/">ICASSP</a> in <b>Barcelona, Spain</b> — presenting <a href="https://arxiv.org/pdf/2509.20319">our paper</a></span>
-        <span style="background: #6c5b7b22; color: var(--global-theme-color); font-size: 0.75rem; font-weight: 500; padding: 1px 7px; border-radius: 20px; white-space: nowrap; text-align: center; align-self: center;">Apr 13–17</span>
-        <span><a href="https://chi2026.acm.org/">CHI</a> in <b>Barcelona, Spain</b> — organizing <a href="./pdf/Speech_AI_Workshop__CHI__26_.pdf">SpeechAI4All</a> workshop + presenting <a href="https://arxiv.org/pdf/2601.15575">our poster</a></span>
-      </div>
-    </div>
-
+<div style="margin-top: 0.25rem; margin-bottom: 0.2rem; background-color: #fdf6dd; border-left: 5px solid #e0b93f; border-radius: 0 6px 6px 0; padding: 0.65rem 1rem;">
+  <p style="margin: 0 0 0.25rem 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #8a6510;">I'm on the job market!</p>
+  <p style="margin: 0 0 0.5rem 0; font-size: 0.88rem;">I'm seeking assistant professor and research scientist positions starting Fall 2027. I'd love to connect!</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+    <a href="mailto:mariateleki@tamu.edu" style="display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.7rem; background: #eec84a; border-radius: 20px; color: #4a3708; text-decoration: none; white-space: nowrap;">Email Me</a>
+    <a href="./pdf/Maria_Teleki_CV.pdf" target="_blank" style="display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.7rem; background: #eec84a; border-radius: 20px; color: #4a3708; text-decoration: none; white-space: nowrap;">CV</a>
+    <a href="./pdf/Maria_Teleki_Research_Statement.pdf" target="_blank" style="display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.7rem; background: #eec84a; border-radius: 20px; color: #4a3708; text-decoration: none; white-space: nowrap;">Research Statement</a>
+    <a href="./pdf/Maria_Teleki_Teaching_Statement.pdf" target="_blank" style="display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.7rem; background: #eec84a; border-radius: 20px; color: #4a3708; text-decoration: none; white-space: nowrap;">Teaching Statement</a>
+    <a href="./pdf/Maria_Teleki_Sample_Syllabus.pdf" target="_blank" style="display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.7rem; background: #eec84a; border-radius: 20px; color: #4a3708; text-decoration: none; white-space: nowrap;">Sample Syllabus</a>
   </div>
+</div>
+
+<div class="cv-summary">
+  
+
+    <p><b style="font-weight: 500;">I build methods, benchmarks, and audits that improve AI robustness in socially complex situations.</b> My research spans <span style="font-weight: 400; background: #ede0f7; padding: 0 3px; border-radius: 2px;">Speech AI</span> and <span style="font-weight: 400; background: #ede0f7; padding: 0 3px; border-radius: 2px;">Computational Social Science</span>, across three threads:
+    </p>
+
+    <p class="cv-thread" style="padding-left: 1.2em; margin-bottom: 0.4em;"><a href="#thrust-1" style="color: #444;">Disfluency-Aware AI</a>: <span style="color: #444;">Is AI robust to how people naturally speak?</span><br><span style="font-size: 0.88em; color: #999;">→ <a href="https://arxiv.org/pdf/2608.02138" style="color: #444;">Preprint</a>, <a href="https://mariateleki.github.io/pdf/FAccT_26_ACAI.pdf" style="color: #444;">Preprint</a>, <a href="https://arxiv.org/pdf/2605.07084" style="color: #444;">Preprint</a>, <a href="https://arxiv.org/pdf/2509.20319">ICASSP '26</a>, <a href="https://mariateleki.github.io/pdf/HorrorComedy.pdf">INTERSPEECH '25</a>, <a href="https://www.isca-archive.org/interspeech_2024/teleki24_interspeech.pdf">INTERSPEECH '24</a>, <a href="https://aclanthology.org/2024.lrec-main.1175.pdf">LREC-COLING '24</a></span></p>
+
+    <p class="cv-thread" style="padding-left: 1.2em; margin-bottom: 0.4em;"><a href="#thrust-2" style="color: #444;">Personalized AI</a>: <span style="color: #444;">Is AI robust to each person's uniqueness?</span><br><span style="font-size: 0.88em; color: #999;">→ <a href="./pdf/CrossCommunityAgenda.pdf">Preprint</a>, <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/35908/38062">ICWSM '25</a>, <a href="https://arxiv.org/pdf/2603.16941">INTERSPEECH '26</a>, <a href="https://aclanthology.org/2026.acl-long.2175.pdf">ACL '26</a></span></p>
+
+    <p class="cv-thread" style="padding-left: 1.2em; margin-bottom: 0.4em;"><a href="#thrust-3" style="color: #444;">Governable AI</a>: <span style="color: #444;">Is AI robust within the sociopolitical structures it operates in?</span><br><span style="font-size: 0.88em; color: #999;">→ <a href="./pdf/FAccT_26_ACAI.pdf">FAccT '26</a></span></p>
+
+    <p style="margin-top: 0.75rem; margin-bottom: 0;">I hold the Avilés–Johnson Fellowship in Computer Science and Engineering. I regularly give invited talks in industry and academia, and my work has been covered in public media.</p>
 
 </div>
+
 
 <!-- =========================
      Publications
 ========================= -->
-<h2 id="publications_id" style="padding-top: 0; margin-bottom: 0;">Publications</h2>
+<h2 id="publications_id" style="padding-top: 1.7rem; margin-bottom: 0;">Publications</h2>
 
 <div id="pub-filter-bar" style="margin: 0.6rem 0 1rem 0; display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;">
   <span style="font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #bbb; margin-right: 0.15rem;">Filters:</span>
@@ -1695,11 +1747,12 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
   <div class="mentoring" style="font-weight: 300 !important;">
     <h2 id="mentoring_id" style="font-weight: 300 !important;">Mentoring</h2>
 
-    <span style="color: var(--global-theme-color);">
-      Whether you have prior research experience or are just starting out, I have a few spots each semester to mentor and collaborate with students who have a passion for learning, a growth mindset, and who want to contribute to impactful projects. <a href="https://docs.google.com/document/d/1LOUolnCP81nSUVsfjiJK77yuVLFLLaR0s1bD-jrrX94/edit?usp=sharing">[Here is information on how I work with mentees]</a>— if you're interested, send me an email at <a href="mailto:mariateleki@tamu.edu">mariateleki@tamu.edu</a>
-    </span>
-
-    <br>
+    <p class="mentor-invite">
+      Whether you have prior research experience or are just starting out, I have a few spots each semester to mentor and collaborate with students who have a passion for learning, a growth mindset, and who want to contribute to impactful projects.
+    </p>
+    <p class="mentor-invite" style="margin-bottom: 1.1rem;">
+      If you're interested, send me an email at <a href="mailto:mariateleki@tamu.edu">mariateleki@tamu.edu</a>.
+    </p>
 
     <p style="font-size: 0.82rem; text-align: center; font-weight: 300; color: #555;">
       <span class="pastel-orange">&#9733;</span> student was an author on a published paper;
@@ -1955,18 +2008,17 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
 ========================= -->
 <div class="more">
   <h2 id="more_id">More</h2>
-  <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.6rem;">
-    <span style="font-weight: 500;">Resources</span><br>
-    <a href="https://docs.google.com/document/d/1e5te4kDEMg7DfPSrMqeTTPDcOIm5AcomM1PdRTnArfI/edit?usp=sharing">&nbsp;[Review Response Worksheet]</a>
-    <a href="https://docs.google.com/document/d/1LOUolnCP81nSUVsfjiJK77yuVLFLLaR0s1bD-jrrX94/edit?usp=sharing">&nbsp;[Working With Collaborators]</a>
-    <a href="https://koenecke.infosci.cornell.edu/files/CornellINFO7905_Koenecke_SP2025.pdf">&nbsp;[PhD Professionalization by Allison Koenecke]</a>
-    <a href="https://github.com/pliang279/awesome-phd-advice">&nbsp;[PhD Advice]</a>
-    <a href="https://medium.com/@mariatelekiresearch/prompting-best-practices-8ae9ae452d0d">&nbsp;[Prompting Best Practices]</a>
-    <a href="https://shomir.net/advice.html">&nbsp;[Shomir Wilson's Advice]</a>
-    <a href="https://sparc.cra.org/students/">&nbsp;[SPARC Advice]</a>
-    <a href="https://medium.com/@mariatelekiresearch/hey-maria-how-can-i-learn-about-ai-0ae0e56f744b">&nbsp;[Hey Maria, How Can I Learn About AI?]</a><br>
-    I'm happy to chat about grad school applications &amp; my experience — <a href="mailto:mariateleki@tamu.edu">send me an email!</a>
-  </p>
+  <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.35rem;"><span style="font-weight: 500;">Resources</span></p>
+  <div class="res-chips">
+    <a href="https://docs.google.com/document/d/1e5te4kDEMg7DfPSrMqeTTPDcOIm5AcomM1PdRTnArfI/edit?usp=sharing">Review Response Worksheet</a>
+    <a href="https://koenecke.infosci.cornell.edu/files/CornellINFO7905_Koenecke_SP2025.pdf">PhD Professionalization by Allison Koenecke</a>
+    <a href="https://github.com/pliang279/awesome-phd-advice">PhD Advice</a>
+    <a href="https://medium.com/@mariatelekiresearch/prompting-best-practices-8ae9ae452d0d">Prompting Best Practices</a>
+    <a href="https://shomir.net/advice.html">Shomir Wilson's Advice</a>
+    <a href="https://sparc.cra.org/students/">SPARC Advice</a>
+    <a href="https://medium.com/@mariatelekiresearch/hey-maria-how-can-i-learn-about-ai-0ae0e56f744b">Hey Maria, How Can I Learn About AI?</a>
+  </div>
+  <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 0.6rem;">I'm happy to chat about grad school applications &amp; my experience — <a href="mailto:mariateleki@tamu.edu">send me an email!</a></p>
   <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 0;">
     <span style="font-weight: 500;">Outside the lab 🐶</span><br>
     I spend my time outside work with our very good boy, Apollo 🐶 <a href="img/apollo-smile.png">&nbsp;[Smiling]</a> <a href="img/apollo-david-sunflower.jpeg">&nbsp;[Sunflowers]</a> <a href="img/apollo-generated1.png">&nbsp;[Generated-1]</a>, traveling 🌎 <a href="img/hawaii-volcano.jpeg">&nbsp;[On top of volcano in Hawaii]</a> <a href="img/wyoming.jpeg">&nbsp;[Casper, Wyoming]</a> <a href="img/apollo-pinetrees.png">&nbsp;[Bastrop, Texas]</a>, doing CrossFit 🏋️‍♀️, and watching New Girl 👓 and Parks &amp; Rec 🪴. Fun fact: I have a midnight blue belt in <a href="https://www.tsdmgk.com/post/mi-guk-kwan-news-january-2022">Tang Soo Do Mi Guk Kwon</a>! 🥋 We use the "midnight blue belt" (instead of "black belt") to symbolize that you can never be perfect, and you are never done learning.
@@ -1974,6 +2026,9 @@ Invited interview on <a href="https://ojs.aaai.org/index.php/ICWSM/article/view/
   
 
 </article>
+  </div><!-- /main-col -->
+</div><!-- /page-cols -->
+</div><!-- /post -->
 
 <!-- Footer -->    
 <footer class="fixed-bottom bg-dark text-white">
