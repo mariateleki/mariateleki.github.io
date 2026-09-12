@@ -1,6 +1,8 @@
 # from: https://github.com/github/gitignore/blob/main/Global/macOS.gitignore
 
 later.txt
+# consulting page — on ice until late 2027
+consulting-draft.html
 later/*.png
 
 # General
