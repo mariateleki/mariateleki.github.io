@@ -139,6 +139,8 @@
   .talk-btn i { margin-right: 0.3rem; }
   .talk-quote { align-self: center; margin: 0; padding: 0.2rem 0 0.2rem 1rem; border-left: 3px solid rgba(0,0,0,0.12);
                 font-size: 1.02rem; font-style: italic; line-height: 1.55; color: #444; }
+  .talk-quote-card { align-self: stretch; margin: 0.8rem 0 0; padding: 0.7rem 0.9rem; font-size: 0.9rem; line-height: 1.5;
+                    border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; background: var(--tint); }
   .talk-quote-by { display: block; margin-top: 0.45rem; font-style: normal; font-size: 0.84rem; color: #777; }
   .talk-quote-context { display: block; margin-top: 0.35rem; font-style: normal; font-size: 0.8rem;
                         line-height: 1.45; color: #999; }
@@ -276,6 +278,24 @@
 
   <div class="talks">
 
+    <div class="talk talk-featured t-industry">
+      <img class="talk-photo" src="./img/IPT-pic.jpg" alt="Maria Teleki giving her Accountable AI talk to a full room at IPT Global">
+      <div class="talk-main">
+        <span class="talk-tag">For organizations adopting AI</span>
+        <p class="talk-title">Accountable AI</p>
+        <p class="talk-desc">Move too fast and you skip the guardrails; move too slow and you miss the upside. This talk is about the middle: where AI strengthens a process, and when to keep a human-in-the-loop.</p>
+        <blockquote class="talk-quote">
+          “Grateful to Maria for a talk that actually changed how we're thinking, not just what we're thinking about.”
+          <span class="talk-quote-by">— Alyssa Franklin, CEO, IPT Global</span>
+          <span class="talk-quote-context">IPT Global builds safety-critical software that verifies oil and gas well integrity, where a missed failure can mean a blowout.</span>
+        </blockquote>
+        <div class="talk-foot talk-foot-row">
+          <span class="talk-given">Given at <a href="https://iptglobal.com/">IPT Global</a></span>
+          <a class="talk-btn" href="./pdf/IPTTalk.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Slides</a>
+        </div>
+      </div>
+    </div>
+
     <div class="talk t-academic">
       <span class="talk-tag">Research audiences</span>
       <p class="talk-title">Socially Robust AI</p>
@@ -302,27 +322,13 @@
       <img class="talk-img" src="./img/cafe-talk.jpg?v=4" alt="Maria Teleki presenting a slide on gender bias in language models at C.A.F.E.">
       <p class="talk-title">How Does AI Work? &amp; My Research</p>
       <p class="talk-desc">A friendly walk through how language models work, plus what a PhD in this area actually looks like day to day. I love doing these for student groups.</p>
+      <blockquote class="talk-quote talk-quote-card">
+        “Maria is extremely passionate about her research and about introducing graduate school to others. She is very motivated to help other people and cares about others success.”
+        <span class="talk-quote-by">— Alyssa Garabedian, Vice President, C.A.F.E.</span>
+      </blockquote>
       <div class="talk-foot">
         <span class="talk-given">Given at <a href="https://www.cafetamu.com">C.A.F.E.</a>, Texas A&amp;M's Club of Aggie Female Engineers</span>
         <a class="talk-btn" href="./pdf/CAFE-Talk.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Slides</a>
-      </div>
-    </div>
-
-    <div class="talk talk-featured t-industry">
-      <img class="talk-photo" src="./img/IPT-pic.jpg" alt="Maria Teleki giving her Accountable AI talk to a full room at IPT Global">
-      <div class="talk-main">
-        <span class="talk-tag">For organizations adopting AI</span>
-        <p class="talk-title">Accountable AI</p>
-        <p class="talk-desc">Move too fast and you skip the guardrails; move too slow and you miss the upside. This talk is about the middle: where AI strengthens a process, and when to keep a human-in-the-loop.</p>
-        <blockquote class="talk-quote">
-          “Grateful to Maria for a talk that actually changed how we're thinking, not just what we're thinking about.”
-          <span class="talk-quote-by">— Alyssa Franklin, CEO, IPT Global</span>
-          <span class="talk-quote-context">IPT Global builds safety-critical software that verifies oil and gas well integrity, where a missed failure can mean a blowout.</span>
-        </blockquote>
-        <div class="talk-foot talk-foot-row">
-          <span class="talk-given">Given at <a href="https://iptglobal.com/">IPT Global</a></span>
-          <a class="talk-btn" href="./pdf/IPTTalk.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Slides</a>
-        </div>
       </div>
     </div>
 
