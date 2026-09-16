@@ -95,7 +95,15 @@
   a.chip:hover { opacity: 0.85; text-decoration: none; }
 
   /* ---- talk cards ---- */
-  .talks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; align-items: stretch; }
+  .talks { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; align-items: stretch; }
+  .talks > .talk { grid-column: span 2; }
+  .talks > .talk.talk-featured { grid-column: 1 / -1; }
+  .talk-featured.talk-featured-flip { grid-template-columns: 2fr 1fr; }
+  .talk-featured.talk-featured-slim { grid-template-columns: 1fr 2fr; }
+  .talk-featured.talk-featured-wide-photo { grid-template-columns: 1fr 1.25fr; }
+  .talk-featured-flip .talk-photo { order: 2; }
+  .quote-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 1rem; }
+  .quote-pair .talk-quote { margin: 0 !important; }
   .talks-3 { grid-template-columns: repeat(3, 1fr); }
   .talks-2 { grid-template-columns: repeat(2, 1fr); }
   .talks-4 { grid-template-columns: repeat(4, 1fr); }
@@ -195,11 +203,16 @@
   @media (max-width: 600px) { .svc { gap: 0.8rem; } .svc-num { font-size: 1rem; min-width: 1.7rem; } }
 
   @media (max-width: 1000px) {
-    .talks, .talks-3, .talks-4 { grid-template-columns: repeat(2, 1fr); }
+    .talks-3, .talks-4 { grid-template-columns: repeat(2, 1fr); }
+    .quote-pair { grid-template-columns: 1fr; }
+    .talks > .talk { grid-column: span 3; }
   }
   @media (max-width: 800px) {
     .hosts, .talks, .talks-3, .talks-2, .talks-4, .talk-featured { grid-template-columns: 1fr; }
     .talk-photo { min-height: 0; height: 210px; }
+    .talks > .talk, .talks > .talk.talk-featured { grid-column: 1 / -1; }
+    .talk-featured-flip .talk-photo { order: 0; }
+    .talk-featured.talk-featured-flip, .talk-featured.talk-featured-slim, .talk-featured.talk-featured-wide-photo { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -278,24 +291,6 @@
 
   <div class="talks">
 
-    <div class="talk talk-featured t-industry">
-      <img class="talk-photo" src="./img/IPT-pic.jpg" alt="Maria Teleki giving her Accountable AI talk to a full room at IPT Global">
-      <div class="talk-main">
-        <span class="talk-tag">For organizations adopting AI</span>
-        <p class="talk-title">Accountable AI</p>
-        <p class="talk-desc">Move too fast and you skip the guardrails; move too slow and you miss the upside. This talk is about the middle: where AI strengthens a process, and when to keep a human-in-the-loop.</p>
-        <blockquote class="talk-quote">
-          “Grateful to Maria for a talk that actually changed how we're thinking, not just what we're thinking about.”
-          <span class="talk-quote-by">— Alyssa Franklin, CEO, IPT Global</span>
-          <span class="talk-quote-context">IPT Global builds safety-critical software that verifies oil and gas well integrity, where a missed failure can mean a blowout.</span>
-        </blockquote>
-        <div class="talk-foot talk-foot-row">
-          <span class="talk-given">Given at <a href="https://iptglobal.com/">IPT Global</a></span>
-          <a class="talk-btn" href="./pdf/IPTTalk.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Slides</a>
-        </div>
-      </div>
-    </div>
-
     <div class="talk t-academic">
       <span class="talk-tag">Research audiences</span>
       <p class="talk-title">Socially Robust AI</p>
@@ -303,32 +298,6 @@
       <div class="talk-foot">
         <span class="talk-given">Upcoming at <a href="https://cs.gmu.edu/">George Mason University</a></span>
         <a class="talk-btn" href="./index.html#publications_id"><i class="fas fa-file-lines"></i>Papers</a>
-      </div>
-    </div>
-
-    <div class="talk t-neutral">
-      <span class="talk-tag">All audiences</span>
-      <img class="talk-img" src="./img/otherai-talk.jpg?v=1" alt="Maria Teleki presenting a slide explaining vector distance in 2D">
-      <p class="talk-title">The Other AI: An Intuitive Understanding of AI</p>
-      <p class="talk-desc">How do tools like ChatGPT actually work? A no-background-needed tour of what these systems can and can't do.</p>
-      <div class="talk-foot">
-        <span class="talk-given">Given at <a href="https://vbma.biz">Texas Tech School of Veterinary Medicine, VBMA Club</a></span>
-        <a class="talk-btn" href="./pdf/The%20Other%20AI.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Slides</a>
-      </div>
-    </div>
-
-    <div class="talk t-outreach">
-      <span class="talk-tag">Students &amp; outreach</span>
-      <img class="talk-img" src="./img/cafe-talk.jpg?v=4" alt="Maria Teleki presenting a slide on gender bias in language models at C.A.F.E.">
-      <p class="talk-title">How Does AI Work? &amp; My Research</p>
-      <p class="talk-desc">A friendly walk through how language models work, plus what a PhD in this area actually looks like day to day. I love doing these for student groups.</p>
-      <blockquote class="talk-quote talk-quote-card">
-        “Maria is extremely passionate about her research and about introducing graduate school to others. She is very motivated to help other people and cares about others success.”
-        <span class="talk-quote-by">— Alyssa Garabedian, Vice President, C.A.F.E.</span>
-      </blockquote>
-      <div class="talk-foot">
-        <span class="talk-given">Given at <a href="https://www.cafetamu.com">C.A.F.E.</a>, Texas A&amp;M's Club of Aggie Female Engineers</span>
-        <a class="talk-btn" href="./pdf/CAFE-Talk.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Slides</a>
       </div>
     </div>
 
@@ -349,6 +318,60 @@
       <div class="talk-foot">
         <span class="talk-given talk-given-img"><img class="talk-thumb" src="./img/maskulinity.png" alt="MASKulinity Podcast cover art">I talked about this on the MASKulinity Podcast</span>
         <a class="talk-btn" href="https://pod.link/1277529273/episode/MThiNDkzNzgtYTRjMS00YjVjLTk4ZWQtMjJmNGZjNjBjYzlj?view=apps&amp;sort=popularity" target="_blank"><i class="fas fa-headphones"></i>Listen</a>
+      </div>
+    </div>
+
+    <div class="talk talk-featured t-industry">
+      <img class="talk-photo" src="./img/IPT-pic.jpg" alt="Maria Teleki giving her Accountable AI talk to a full room at IPT Global">
+      <div class="talk-main">
+        <span class="talk-tag">For organizations adopting AI</span>
+        <p class="talk-title">Accountable AI</p>
+        <p class="talk-desc">Move too fast and you skip the guardrails; move too slow and you miss the upside. This talk is about the middle: where AI strengthens a process, and when to keep a human-in-the-loop.</p>
+        <blockquote class="talk-quote">
+          “Grateful to Maria for a talk that actually changed how we're thinking, not just what we're thinking about.”
+          <span class="talk-quote-by">— Alyssa Franklin, CEO, IPT Global</span>
+          <span class="talk-quote-context">IPT Global builds safety-critical software that verifies oil and gas well integrity, where a missed failure can mean a blowout.</span>
+        </blockquote>
+        <div class="talk-foot talk-foot-row">
+          <span class="talk-given">Given at <a href="https://iptglobal.com/">IPT Global</a></span>
+          <a class="talk-btn" href="./pdf/IPTTalk.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Slides</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="talk talk-featured talk-featured-flip talk-featured-wide-photo t-neutral">
+      <img class="talk-photo" style="object-position: left center; min-height: 230px;" src="./img/otherai-talk.jpg?v=1" alt="Maria Teleki presenting a slide explaining vector distance in 2D">
+      <div class="talk-main">
+        <span class="talk-tag">All audiences</span>
+        <p class="talk-title">The Other AI: An Intuitive Understanding of AI</p>
+        <p class="talk-desc">How do tools like ChatGPT actually work? A no-background-needed tour of what these systems can and can't do.</p>
+        <div class="talk-foot talk-foot-row">
+          <span class="talk-given">Given at <a href="https://vbma.biz">Texas Tech School of Veterinary Medicine, VBMA Club</a></span>
+          <a class="talk-btn" href="./pdf/The%20Other%20AI.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Slides</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="talk talk-featured talk-featured-slim t-outreach">
+      <img class="talk-photo" style="object-position: 42% center;" src="./img/cafe-talk.jpg?v=5" alt="Maria Teleki presenting a slide on gender bias in language models at C.A.F.E.">
+      <div class="talk-main">
+        <span class="talk-tag">Students &amp; outreach</span>
+        <p class="talk-title">How Does AI Work? &amp; My Research</p>
+        <p class="talk-desc">A friendly walk through how language models work, plus what a PhD in this area actually looks like day to day. I love doing these for student groups.</p>
+        <div class="quote-pair">
+          <blockquote class="talk-quote talk-quote-card">
+            “She was very approachable and amazing at detailing her work and explaining it in a way that anyone could understand. I have personally worked very little with AI and understanding how it works, so her talk was very informative and one of the most memorable we've had.”
+            <span class="talk-quote-by">— Vivian Combs, President, C.A.F.E.</span>
+          </blockquote>
+          <blockquote class="talk-quote talk-quote-card">
+            “Maria is extremely passionate about her research and about introducing graduate school to others. She is very motivated to help other people and cares about others success.”
+            <span class="talk-quote-by">— Alyssa Garabedian, Vice President, C.A.F.E.</span>
+          </blockquote>
+        </div>
+        <div class="talk-foot talk-foot-row">
+          <span class="talk-given">Given at <a href="https://www.cafetamu.com">C.A.F.E.</a>, Texas A&amp;M's Club of Aggie Female Engineers</span>
+          <a class="talk-btn" href="./pdf/CAFE-Talk.pdf" target="_blank"><i class="fas fa-file-pdf"></i>Slides</a>
+        </div>
       </div>
     </div>
   </div>
