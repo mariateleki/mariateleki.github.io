@@ -275,7 +275,7 @@
   <div class="cv-id">
     <h1 class="post-title">Maria Teleki</h1>
     <p class="cv-tagline">Socially Robust AI</p>
-    <p class="cv-affil">Howdy! I’m a PhD Candidate in Computer Science at Texas A&amp;M University (defending Summer ‘27), advised by <a href="https://people.engr.tamu.edu/caverlee" rel="external nofollow noopener noreferrer" target="_blank">James Caverlee</a>. I’m currently at Google DeepMind as a Student Researcher.</p>
+    <p class="cv-affil">Howdy! I’m a PhD Candidate in Computer Science and Avilés–Johnson Fellow at Texas A&amp;M University, advised by <a href="https://people.engr.tamu.edu/caverlee" rel="external nofollow noopener noreferrer" target="_blank">James Caverlee</a>. This past summer, I worked at Google DeepMind.</p>
     <p class="cv-icons">
       <a href="mailto:mariateleki@tamu.edu" title="Email"><i class="fas fa-envelope"></i></a>
       <a href="https://scholar.google.com/citations?hl=en&amp;user=aImLrNcAAAAJ" title="Google Scholar" rel="external nofollow noopener noreferrer" target="_blank"><i class="ai ai-google-scholar"></i></a>
@@ -302,7 +302,7 @@
 <div class="cv-summary">
   
 
-    <p><b style="font-weight: 500;">I build methods, benchmarks, and audits that improve AI robustness in socially complex situations.</b> My research spans <span style="font-weight: 400; background: #ede0f7; padding: 0 3px; border-radius: 2px;">Speech AI</span> and <span style="font-weight: 400; background: #ede0f7; padding: 0 3px; border-radius: 2px;">Computational Social Science</span>, spanning three layers of social context — how a person speaks, who they are, and the structures around them:
+    <p><b style="font-weight: 500;">I build methods, benchmarks, and audits that improve AI robustness in socially complex situations.</b> My research spans <span style="font-weight: 400; background: #ede0f7; padding: 0 3px; border-radius: 2px;">Speech AI</span> and <span style="font-weight: 400; background: #ede0f7; padding: 0 3px; border-radius: 2px;">Computational Social Science</span>, across three layers of social context:
     </p>
 
     <p class="cv-thread" style="padding-left: 1.2em; margin-bottom: 0.4em;"><a href="#thrust-1" style="color: #444;">Disfluency-Aware AI</a>: <span style="color: #444;">Is AI robust to how people naturally speak?</span><br><span style="font-size: 0.88em; color: #999;">→ <a href="https://arxiv.org/pdf/2509.20319">ICASSP '26</a>, <a href="https://mariateleki.github.io/pdf/HorrorComedy.pdf">INTERSPEECH '25</a>, <a href="https://www.isca-archive.org/interspeech_2024/teleki24_interspeech.pdf">INTERSPEECH '24</a>, <a href="https://aclanthology.org/2024.lrec-main.1175.pdf">LREC-COLING '24</a></span></p>
@@ -311,7 +311,7 @@
 
     <p class="cv-thread" style="padding-left: 1.2em; margin-bottom: 0.4em;"><a href="#thrust-3" style="color: #444;">Governable AI</a>: <span style="color: #444;">Is AI robust within the sociopolitical structures it operates in?</span><br><span style="font-size: 0.88em; color: #999;">→ <a href="./pdf/FAccT_26_ACAI.pdf">FAccT '26</a></span></p>
 
-    <p style="margin-top: 0.75rem; margin-bottom: 0;">I hold the Avilés–Johnson Fellowship in Computer Science and Engineering. I regularly give invited talks in industry and academia, and my work has been covered in public media.</p>
+    <p style="margin-top: 0.75rem; margin-bottom: 0;">I regularly give invited talks in industry and academia, and my work has been covered in public media.</p>
 
 </div>
 
@@ -490,7 +490,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- ----- Publications: Thrust 1 <span class="h3-inline-subtitle"><i>Toward AI That Handles Real Speech</i></span> -->
 <div class="pub-thrust thrust-1" id="thrust-1">
   <div class="pub-thrust-intro">
-    <div class="pub-thrust-thread-label">Thread 1</div>
+    <div class="pub-thrust-thread-label">Layer 1</div>
     <div class="pub-thrust-header-line"><h3 class="pub-thrust-title">Disfluency-Aware AI</h3>: <span class="pub-thrust-tagline">Is AI robust to how people naturally speak?</span></div>
     <p class="pub-thrust-desc">Real human speech is full of disfluency — pauses, repairs, and restarts — that current systems often treat as noise. I develop benchmarks and evaluation frameworks that model these patterns as structured signal, revealing robustness failures in conversational AI systems operating on real speech.</p>
   </div>
@@ -498,6 +498,43 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="pub-list pub-list-lg">
     <table class="table table-borderless table-sm">
       <!-- Publications -->
+
+      <!-- Paper: Uh-Mazing / Disfluencies in Speech Translation -->
+      <tr>
+        <td style="width: 35%; vertical-align: top;">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/uhmazing.png">
+        </td>
+        <td class="button-cell" style="font-size: large;"><span class="co-first-author-tag">CO-1ST AUTHOR</span><span class="preprint-tag">PREPRINT</span>The Role of Disfluencies in Speech Translation<br>
+          <b style="font-size: medium;"><b><u>Maria Teleki</u></b>*, Maike Züfle*, Fabian Retkowski, Vilém Zouhar, Oliver Grabner, Alexander Waibel, James Caverlee, Jan Niehues</b><br>
+          <i class="collab-line" style="font-size: medium;">Collaboration w/ Karlsruhe Institute of Technology, ETH Zürich</i><br>
+          <div style="height:5px;"></div>
+          <div class="button-cell">
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2608.02138" role="button">Paper</a>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-uh-mazing" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
+            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-uh-mazing" aria-expanded="false" aria-controls="collapseExample">Bib</button>
+          </div>
+
+          <div class="collapse" id="abstract-text-uh-mazing">
+            <div class="card card-body z-depth-0" style="font-size: small;">
+              Current speech translation systems, including SpeechLLMs, are trained on cleaned text and tend to strip disfluencies like filled pauses and false starts rather than translate them. We show this comes at a cost: disfluencies carry meaning that gets lost when speech is cleaned up. To study this systematically, we introduce Uh-Mazing, a benchmark of human-translated, disfluency-annotated Switchboard speech covering English into eight target languages. Across these languages and several architectures, we find that false starts and self-repairs, not filled pauses or discourse markers, drive most of the translation-quality loss, and that models which fail to preserve a disfluency tend to omit it rather than mistranslate it. We show inference-time decoding can mitigate this without retraining, and release the benchmark and code.
+            </div>
+          </div>
+
+          <div class="collapse" id="bib-text-uh-mazing">
+            <div class="card card-body z-depth-0">
+              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                @article{zufle26_uh-mazing,<br>
+                  title  = {The Role of Disfluencies in Speech Translation},<br>
+                  author = {Maike Züfle and Maria Teleki and Fabian Retkowski and Vilém Zouhar and Oliver Grabner and Alexander Waibel and James Caverlee and Jan Niehues},<br>
+                  year   = {2026},<br>
+                  journal = {arXiv:2608.02138}<br>
+                }
+              </code>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <!-- End Paper: Uh-Mazing / Disfluencies in Speech Translation -->
 
       <!-- Paper: SpeechSpectrum -->
       <tr>
@@ -540,42 +577,20 @@ document.addEventListener("DOMContentLoaded", function () {
       </tr>
       <!-- End Paper: SpeechSpectrum -->
 
-      <!-- Paper: Uh-Mazing / Disfluencies in Speech Translation -->
+      <!-- Paper: Cross-Community Agenda for Speech AI -->
       <tr>
         <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="95%" src="./img/uhmazing.png">
+          <img class="preview rounded z-depth-0" width="95%" src="./img/cross-community-2.png">
         </td>
-        <td class="button-cell" style="font-size: large;"><span class="co-first-author-tag">CO-1ST AUTHOR</span><span class="preprint-tag">PREPRINT</span>The Role of Disfluencies in Speech Translation<br>
-          <b style="font-size: medium;"><b><u>Maria Teleki</u></b>*, Maike Züfle*, Fabian Retkowski, Vilém Zouhar, Oliver Grabner, Alexander Waibel, James Caverlee, Jan Niehues</b><br>
-          <i class="collab-line" style="font-size: medium;">Collaboration w/ Karlsruhe Institute of Technology, ETH Zürich</i><br>
-          <div style="height:5px;"></div>
+        <td style="font-size: large;"><span class="co-first-author-tag">CO-1ST AUTHOR</span><span class="preprint-tag">PREPRINT</span>A Cross-Community Agenda for Speech AI<br>
+          <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Kimi V. Wenzel, Anna Seo Gyeong Choi, Tobias Weinberg, Shree Harsha Bokkahalli Satish, Stephanny Sanchez, Belu Ticona, Ariadna Sanchez, Yash Sonkar, Aarti Mathur, Christoph Minixhofer, Abraham Glasser, Raja Kushalnagar, James Caverlee, Minha Lee, Shaomei Wu, Alyssa Hillary Zisk, Éva Székely, Dylan Gaines, Angelika Seeschaaf Veres, Seray Ibrahim, Nicholas Cummins, Allison Koenecke</b><br>
+          <i class="collab-line" style="font-size: medium; line-height: 1.35; display: block;">Collaboration w/ Carnegie Mellon University, Cornell University, Cornell Tech, KTH Royal Institute of Technology, University of Alberta, George Mason University, University of Edinburgh, IIIT Hyderabad, Chegg Inc., Deepgram, Gallaudet University, Eindhoven University of Technology, AImpower.org, AssistiveWare, Kennesaw State University, OCAD University, King's College London</i>
           <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://arxiv.org/pdf/2608.02138" role="button">Paper</a>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-text-uh-mazing" aria-expanded="false" aria-controls="collapseExample">Abstract</button>
-            <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-text-uh-mazing" aria-expanded="false" aria-controls="collapseExample">Bib</button>
-          </div>
-
-          <div class="collapse" id="abstract-text-uh-mazing">
-            <div class="card card-body z-depth-0" style="font-size: small;">
-              Current speech translation systems, including SpeechLLMs, are trained on cleaned text and tend to strip disfluencies like filled pauses and false starts rather than translate them. We show this comes at a cost: disfluencies carry meaning that gets lost when speech is cleaned up. To study this systematically, we introduce Uh-Mazing, a benchmark of human-translated, disfluency-annotated Switchboard speech covering English into eight target languages. Across these languages and several architectures, we find that false starts and self-repairs, not filled pauses or discourse markers, drive most of the translation-quality loss, and that models which fail to preserve a disfluency tend to omit it rather than mistranslate it. We show inference-time decoding can mitigate this without retraining, and release the benchmark and code.
-            </div>
-          </div>
-
-          <div class="collapse" id="bib-text-uh-mazing">
-            <div class="card card-body z-depth-0">
-              <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                @article{zufle26_uh-mazing,<br>
-                  title  = {The Role of Disfluencies in Speech Translation},<br>
-                  author = {Maike Züfle and Maria Teleki and Fabian Retkowski and Vilém Zouhar and Oliver Grabner and Alexander Waibel and James Caverlee and Jan Niehues},<br>
-                  year   = {2026},<br>
-                  journal = {arXiv:2608.02138}<br>
-                }
-              </code>
-            </div>
+            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/CrossCommunityAgenda.pdf" role="button">Paper</a>
           </div>
         </td>
       </tr>
-      <!-- End Paper: Uh-Mazing / Disfluencies in Speech Translation -->
+      <!-- End Paper: Cross-Community Agenda for Speech AI -->
 
       <!-- Paper: DRES -->
       <tr>
@@ -993,7 +1008,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- ----- Publications: Thrust 2  <span class="h3-inline-subtitle"><i>Toward Robust, Representative AI Systems</i></span> -->
 <div class="pub-thrust thrust-2" id="thrust-2">
   <div class="pub-thrust-intro">
-    <div class="pub-thrust-thread-label">Thread 2</div>
+    <div class="pub-thrust-thread-label">Layer 2</div>
     <div class="pub-thrust-header-line"><h3 class="pub-thrust-title">Personalized AI</h3>: <span class="pub-thrust-tagline">Is AI robust to each person's uniqueness?</span></div>
     <p class="pub-thrust-desc">AI systems respond differently to different people — shaped by signals of who we are, like gender, accent, and voice, and signals of how we express ourselves, like creativity and discourse. Understanding these signals is what it takes to build personalized AI that serves every user.</p>
   </div>
@@ -1002,20 +1017,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <table class="table table-borderless table-sm">
       <!-- Publications -->
 
-      <!-- Paper: Cross-Community Agenda for Speech AI -->
-      <tr>
-        <td style="width: 35%; vertical-align: top;">
-          <img class="preview rounded z-depth-0" width="95%" src="./img/cross-community-2.png">
-        </td>
-        <td style="font-size: large;"><span class="co-first-author-tag">CO-1ST AUTHOR</span><span class="preprint-tag">PREPRINT</span>A Cross-Community Agenda for Speech AI<br>
-          <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Kimi V. Wenzel, Anna Seo Gyeong Choi, Tobias Weinberg, Shree Harsha Bokkahalli Satish, Stephanny Sanchez, Belu Ticona, Ariadna Sanchez, Yash Sonkar, Aarti Mathur, Christoph Minixhofer, Abraham Glasser, Raja Kushalnagar, James Caverlee, Minha Lee, Shaomei Wu, Alyssa Hillary Zisk, Éva Székely, Dylan Gaines, Angelika Seeschaaf Veres, Seray Ibrahim, Nicholas Cummins, Allison Koenecke</b><br>
-          <i class="collab-line" style="font-size: medium; line-height: 1.35; display: block;">Collaboration w/ Carnegie Mellon University, Cornell University, Cornell Tech, KTH Royal Institute of Technology, University of Alberta, George Mason University, University of Edinburgh, IIIT Hyderabad, Chegg Inc., Deepgram, Gallaudet University, Eindhoven University of Technology, AImpower.org, AssistiveWare, Kennesaw State University, OCAD University, King's College London</i>
-          <div class="button-cell">
-            <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/CrossCommunityAgenda.pdf" role="button">Paper</a>
-          </div>
-        </td>
-      </tr>
-      <!-- End Paper: Cross-Community Agenda for Speech AI -->
 
       <!-- Paper: Gendered Discourse -->
       <tr>
@@ -1318,45 +1319,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </tr>
       <!-- End Paper: SocialPulse -->
 
-          <!-- Paper: AI in the Loop -->
-          <tr>
-            <td style="width: 35%; vertical-align: top;"><img class="preview rounded z-depth-0" width="90%" src="./img/aiintheloop2.png" style="margin-top: 12px;"></td>
-            <td style="font-size: large;"><span class="demo-tag">DEMO</span><span class="pub-title-sm">AI in the Loop: A Multimodal Assistant for Real-Time Lecture Comprehension</span><br>
-              <b style="font-size: medium;">Amanda Lacy, <b><u>Maria Teleki</u></b>, Esau Hutcherson, Jobin Varughese, Jun Kwon, Frank Shipman, Tracy Hammond</b><br>
-              <a href="https://learningatscale.acm.org/las2026/">L@S 2026</a><br>
-              <div class="button-cell">
-                <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/L_S_Demo_AIinTheLoop.pdf" role="button">Paper</a>
-                <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-aiintheloop" aria-expanded="false" aria-controls="abstract-aiintheloop">Abstract</button>
-                <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-aiintheloop" aria-expanded="false" aria-controls="bib-aiintheloop">Bib</button>
-                <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://www.linkedin.com/posts/mariateleki_ai-in-the-loop-a-multimodal-assistant-for-activity-7460236175551791105-4aGS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABPV8zcBXmoSZA9H1RIrbNpiTZ3iaQLlIE0" role="button">LinkedIn Explainer</a>
-              </div>
-              <div class="collapse" id="abstract-aiintheloop">
-                <div class="card card-body z-depth-0" style="font-size: small;">
-                  Synchronous learning environments often present a bandwidth problem where high-density visual and auditory information is lost due to fast-paced delivery or inaccessible presentation methods. We present AI in the Loop, a multimodal assistant that supports real-time lecture comprehension by integrating live speech recognition, slide content extraction, and an LLM-powered question answering interface. The system allows students to query lecture content in natural language during class, receiving contextually grounded responses drawn from both spoken audio and displayed slides. Our demo showcases the system in a live classroom setting, highlighting its potential to reduce cognitive load and support diverse learners.
-                </div>
-              </div>
-              <div class="collapse" id="bib-aiintheloop">
-                <div class="card card-body z-depth-0">
-                  <code class="language-plaintext highlighter-rouge" style="font-size: small;">
-                    @inproceedings{lacy-etal-2026-aiintheloop,<br>
-                      title = "{AI} in the Loop: A Multimodal Assistant for Real-Time Lecture Comprehension",<br>
-                      author = "Lacy, Amanda and<br>
-                        Teleki, Maria and<br>
-                        Hutcherson, Esau and<br>
-                        Varughese, Jobin and<br>
-                        Kwon, Jun and<br>
-                        Shipman, Frank and<br>
-                        Hammond, Tracy",<br>
-                      booktitle = "Proceedings of the Thirteenth ACM Conference on Learning at Scale",<br>
-                      year = "2026",<br>
-                    }
-                  </code>
-                </div>
-              </div>
-            </td>
-          </tr>
-          <!-- End Paper: AI in the Loop -->
-
         <!-- Paper: Co2PT -->
         <tr>
         <td style="width: 35%; vertical-align: top;">
@@ -1429,7 +1391,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- ----- Publications: Thrust 3  <span class="h3-inline-subtitle"><i>Toward Accountable AI Systems</i></span> -->
 <div class="pub-thrust thrust-3" id="thrust-3">
   <div class="pub-thrust-intro">
-    <div class="pub-thrust-thread-label">Thread 3</div>
+    <div class="pub-thrust-thread-label">Layer 3</div>
     <div class="pub-thrust-header-line"><h3 class="pub-thrust-title">Governable AI</h3>: <span class="pub-thrust-tagline">Is AI robust within the sociopolitical structures it operates in?</span></div>
     <p class="pub-thrust-desc">I study the infrastructures of power — governments, universities, and tech companies — that determine how AI systems are authorized, deployed, and contested. I develop audits and systems that reveal where accountability breaks down.</p>
   </div>
@@ -1507,6 +1469,45 @@ document.addEventListener("DOMContentLoaded", function () {
         </td>
       </tr>
       <!-- End Paper: When Behavioral Traces Mislead -->
+
+          <!-- Paper: AI in the Loop -->
+          <tr>
+            <td style="width: 35%; vertical-align: top;"><img class="preview rounded z-depth-0" width="90%" src="./img/aiintheloop2.png" style="margin-top: 12px;"></td>
+            <td style="font-size: large;"><span class="demo-tag">DEMO</span><span class="pub-title-sm">AI in the Loop: A Multimodal Assistant for Real-Time Lecture Comprehension</span><br>
+              <b style="font-size: medium;">Amanda Lacy, <b><u>Maria Teleki</u></b>, Esau Hutcherson, Jobin Varughese, Jun Kwon, Frank Shipman, Tracy Hammond</b><br>
+              <a href="https://learningatscale.acm.org/las2026/">L@S 2026</a><br>
+              <div class="button-cell">
+                <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="./pdf/L_S_Demo_AIinTheLoop.pdf" role="button">Paper</a>
+                <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#abstract-aiintheloop" aria-expanded="false" aria-controls="abstract-aiintheloop">Abstract</button>
+                <button class="btn btn-light btn-sm z-depth-0 text-dark" type="button" data-toggle="collapse" data-target="#bib-aiintheloop" aria-expanded="false" aria-controls="bib-aiintheloop">Bib</button>
+                <a class="btn btn-light btn-sm z-depth-0 text-dark" style="text-decoration: none;" href="https://www.linkedin.com/posts/mariateleki_ai-in-the-loop-a-multimodal-assistant-for-activity-7460236175551791105-4aGS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABPV8zcBXmoSZA9H1RIrbNpiTZ3iaQLlIE0" role="button">LinkedIn Explainer</a>
+              </div>
+              <div class="collapse" id="abstract-aiintheloop">
+                <div class="card card-body z-depth-0" style="font-size: small;">
+                  Synchronous learning environments often present a bandwidth problem where high-density visual and auditory information is lost due to fast-paced delivery or inaccessible presentation methods. We present AI in the Loop, a multimodal assistant that supports real-time lecture comprehension by integrating live speech recognition, slide content extraction, and an LLM-powered question answering interface. The system allows students to query lecture content in natural language during class, receiving contextually grounded responses drawn from both spoken audio and displayed slides. Our demo showcases the system in a live classroom setting, highlighting its potential to reduce cognitive load and support diverse learners.
+                </div>
+              </div>
+              <div class="collapse" id="bib-aiintheloop">
+                <div class="card card-body z-depth-0">
+                  <code class="language-plaintext highlighter-rouge" style="font-size: small;">
+                    @inproceedings{lacy-etal-2026-aiintheloop,<br>
+                      title = "{AI} in the Loop: A Multimodal Assistant for Real-Time Lecture Comprehension",<br>
+                      author = "Lacy, Amanda and<br>
+                        Teleki, Maria and<br>
+                        Hutcherson, Esau and<br>
+                        Varughese, Jobin and<br>
+                        Kwon, Jun and<br>
+                        Shipman, Frank and<br>
+                        Hammond, Tracy",<br>
+                      booktitle = "Proceedings of the Thirteenth ACM Conference on Learning at Scale",<br>
+                      year = "2026",<br>
+                    }
+                  </code>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!-- End Paper: AI in the Loop -->
 
 
 
@@ -1662,7 +1663,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="experience-lines">
   <div class="experience-item">
     <div class="experience-head"><b>Google DeepMind</b> | Student Researcher | Cambridge, MA | June - Sep '26</div>
-    <div class="experience-body">Working on Speech AI on the Frontier AI Team.</div>
+    <div class="experience-body">Worked on Speech AI on the Frontier AI Team.</div>
   </div>
   
 
