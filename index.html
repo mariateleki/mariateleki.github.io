@@ -105,7 +105,7 @@
   .cv-tagline { margin: 0 0 0.6rem; font-size: 1.38rem; font-weight: 700; color: #9B6FD6;
                 letter-spacing: 0.09em; text-transform: uppercase; }
   .cv-affil { margin: 0 0 0.6rem; }
-  .cv-icons { display: flex; align-items: center; gap: 0.55rem; font-size: 1.9rem; margin: 0; }
+  .cv-icons { display: flex; align-items: center; flex-wrap: wrap; gap: 0.55rem; font-size: 1.9rem; margin: 0; }
   .cv-icons a i { color: var(--global-theme-color); }
   .cv-icons a:hover i { opacity: 0.75; }
 
@@ -161,15 +161,20 @@
                border-radius: 10px; background: #fcfbfd; margin-bottom: 0.7rem; }
   .pl-box-title { font-size: 0.92rem; font-weight: 600 !important; color: #4a3a60;
                   margin: 0 0 0.4rem; }
-  .pipe-chart { display: grid; grid-template-columns: 0.95fr 1fr 1fr 1fr 1.2fr;
-                column-gap: 0.5rem; row-gap: 0.3rem; align-items: stretch; }
-  .pl-io { display: flex; align-items: center; justify-content: center; text-align: center;
-           padding: 0.6rem 0.5rem; border-radius: 8px; background: #ececef; color: #4a4a52;
-           font-size: 0.86rem; line-height: 1.25; }
-  .pl-box { display: flex; align-items: center; justify-content: center;
-            padding: 0.5rem 0.6rem; border-radius: 8px; background: #d8c9ec;
-            color: #4a3a60; font-weight: 700; font-size: 0.95rem; }
-  .pl-lane-label { font-size: 0.72rem; color: #999; letter-spacing: 0.04em; align-self: end; }
+  /* tracks match the diagram image: box, gap, box, gap, ... measured from the PNG */
+  .pipe-chart { display: grid;
+                grid-template-columns: 211fr 168fr 247fr 6fr 247fr 7fr 186fr 147fr 291fr;
+                column-gap: 0; row-gap: 0.3rem; align-items: stretch; }
+  .pl-diagram { display: block; width: 100%; height: auto; margin-bottom: 0.1rem; }
+  /* the downstream track is only ~19% of the chart, so give the chart a floor
+     width and let it scroll when the column is narrow: the bars stay aligned to
+     the diagram and every label stays readable */
+  .pipe-box:has(.pipe-chart) { overflow-x: auto; }
+  .pipe-chart { min-width: 38rem; }
+  /* let a long label wrap at spaces in a narrow track (never mid-word);
+     the base rule pins flex-shrink to 0, so the label is re-flexed here */
+  .pipe-chart .pl-bar { white-space: normal; line-height: 1.2; }
+  .pipe-chart .pl-bar .pl-bar-label { flex: 1 1 auto; min-width: 0; }
   .pl-bar { display: flex; align-items: center; padding: 0.22rem 0.45rem; border-radius: 4px;
             background: #cdd8f0; color: #2f3a56 !important; font-size: 0.78rem; font-weight: 500;
             line-height: 1.3; text-decoration: none; min-height: 1.6rem; overflow: hidden;
@@ -209,11 +214,9 @@
   .pl-panel .button-cell { margin-top: 0.4rem; }
   .pl-panel img.preview { display: none; }
   @media (max-width: 700px) {
-    .pipe-chart { grid-template-columns: 0.9fr 1fr 1fr 1fr 1.1fr; padding: 0.6rem; column-gap: 0.25rem; }
-    .pl-box { font-size: 0.8rem; padding: 0.4rem 0.2rem; }
-    .pl-io { font-size: 0.74rem; padding: 0.4rem 0.2rem; }
+    .pipe-chart { padding: 0.6rem; }
     .pl-bar { font-size: 0.68rem; padding: 0.18rem 0.3rem; }
-    .pipe-chart { grid-template-columns: 0.9fr 1fr 1fr 1fr 1.1fr; }
+    .cv-icons { font-size: 1.6rem; gap: 0.45rem; }
     .pipe-box { padding: 0.65rem; }
   }
   .pub-group-head { font-size: 0.86rem; font-weight: 600 !important; color: #555;
@@ -424,7 +427,7 @@
 
     <p style="margin-bottom: 0.55rem;">Beyond speech, I also have interests in education and AI governance, persona modeling, and storytelling.</p>
 
-    <p style="margin-bottom: 0;">I&rsquo;m a PhD Candidate in Computer Science and Avil&eacute;s&ndash;Johnson Fellow at Texas A&amp;M University, advised by <a href="https://people.engr.tamu.edu/caverlee" rel="external nofollow noopener noreferrer" target="_blank">James Caverlee</a>, and a regular organizer of <a href="https://sites.google.com/andrew.cmu.edu/speech-ai-for-all/home">Speech AI for All</a>. This past summer I was a Student Researcher on the Frontier AI team at Google DeepMind, working on social reasoning for speech.</p>
+    <p style="margin-bottom: 0;">I&rsquo;m a PhD Candidate in Computer Science and Avil&eacute;s&ndash;Johnson Fellow at Texas A&amp;M University, advised by <a href="https://people.engr.tamu.edu/caverlee" rel="external nofollow noopener noreferrer" target="_blank">James Caverlee</a>, and a regular organizer of <a href="https://sites.google.com/andrew.cmu.edu/speech-ai-for-all/home">Speech AI for All</a>. This past summer I was a Student Researcher on the Frontier AI team at Google DeepMind.</p>
 
 </div>
 
@@ -440,31 +443,24 @@
   <div class="pipe-box">
     <p class="pl-box-title">Across the Speech Pipeline</p>
   <div class="pipe-chart">
-      <span class="pl-lane-label" style="grid-column: 2 / 5; grid-row: 1;">End-to-end</span>
-      <div class="pl-io" style="grid-column: 1; grid-row: 1 / 5;">Speech<br>signal</div>
-      <div class="pl-box" style="grid-column: 2 / 5; grid-row: 2;">SpeechLLM</div>
-      <div class="pl-io" style="grid-column: 5; grid-row: 1 / 5;">Downstream<br>Tasks</div>
-      <span class="pl-lane-label" style="grid-column: 2 / 5; grid-row: 3;">Cascade</span>
-      <div class="pl-box" style="grid-column: 2; grid-row: 4;">ASR</div>
-      <div class="pl-box" style="grid-column: 3; grid-row: 4;">LLM</div>
-      <div class="pl-box" style="grid-column: 4; grid-row: 4;">TTS</div>
-      <a class="pl-bar pl-bar-preprint" style="grid-column: 1 / 6; grid-row: 5;" href="#pub-1" title="A Cross-Community Agenda for Speech AI"><span class="pl-bar-label">Preprint</span><span class="pl-collab">with 18 institutions</span></a>
-      <a class="pl-bar pl-bar-preprint" style="grid-column: 1 / 3; grid-row: 6;" href="#pub-6" title="SpeechSpectrum: A Linguistic Fidelity Spectrum for Accountable Speech-to-Text"><span class="pl-bar-label">Preprint</span><span class="pl-collab">with Cornell &amp; RevAI</span></a>
-      <a class="pl-bar pl-bar-preprint" style="grid-column: 1 / 3; grid-row: 7;" href="#pub-7" title="Beyond Single Ground Truth: Reference Monism as Epistemic Injustice in ASR Evaluation"><span class="pl-bar-label">Preprint</span><span class="pl-collab">with Cornell, RevAI &amp; Kangwon</span></a>
-      <a class="pl-bar" style="grid-column: 1 / 3; grid-row: 8;" href="#pub-8" title="Comparing ASR Systems in the Context of Speech Disfluencies"><span class="pl-bar-label">INTERSPEECH &rsquo;24</span></a>
-      <a class="pl-bar" style="grid-column: 2 / 4; grid-row: 9;" href="#pub-3" title="Z-Scores: A Metric for Linguistically Assessing Disfluency Removal"><span class="pl-bar-label">ICASSP &rsquo;26</span></a>
-      <a class="pl-bar" style="grid-column: 2 / 4; grid-row: 10;" href="#pub-5" title="Masculine Defaults via Gendered Discourse in Podcasts and Large Language Models"><span class="pl-bar-label">ICWSM &rsquo;25</span></a>
-      <a class="pl-bar pl-bar-preprint" style="grid-column: 2 / 5; grid-row: 11;" href="#pub-9" title="Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones"><span class="pl-bar-label">Preprint</span><span class="pl-collab">with KTH</span></a>
-      <a class="pl-bar" style="grid-column: 2 / 5; grid-row: 12;" href="#pub-10" title="The Voice Behind the Words: Quantifying Intersectional Bias in SpeechLLMs"><span class="pl-bar-label">INTERSPEECH &rsquo;26</span><span class="pl-collab">with KTH &amp; Edinburgh</span></a>
-      <a class="pl-bar" style="grid-column: 2 / 6; grid-row: 13;" href="#pub-2" title="The Role of Disfluencies in Speech Translation"><span class="pl-bar-label">TACL &rsquo;26</span><span class="pl-collab">with KIT &amp; ETH Z&uuml;rich</span></a>
-      <a class="pl-bar pl-bar-preprint" style="grid-column: 3 / 4; grid-row: 14;" href="#pub-12" title="A Survey on LLM Inference-Time Self-Improvement"><span class="pl-bar-label">Preprint</span></a>
-      <a class="pl-bar" style="grid-column: 3 / 6; grid-row: 15;" href="#pub-11" title="DACL: Disfluency Augmented Curriculum Learning for Fluent Text Generation"><span class="pl-bar-label">LREC-COLING &rsquo;24</span></a>
-      <a class="pl-bar" style="grid-column: 3 / 6; grid-row: 16;" href="#pub-13" title="&quot;Walk a Mile in My Voice&quot;: Voice Conversion Shapes Trust, Attribution, and Empathy in Human–AI Speech Interactions"><span class="pl-bar-label">IUI Short &rsquo;26</span><span class="pl-collab">with KTH &amp; Edinburgh</span></a>
-      <a class="pl-bar" style="grid-column: 5 / 6; grid-row: 17;" href="#pub-4" title="I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance"><span class="pl-bar-label">INTERSPEECH &rsquo;25</span></a>
-      <a class="pl-bar" style="grid-column: 5 / 6; grid-row: 18;" href="#pub-14" title="Quantifying the Impact of Disfluency on Spoken Content Summarization"><span class="pl-bar-label">LREC-COLING &rsquo;24</span></a>
-      <a class="pl-bar" style="grid-column: 5 / 6; grid-row: 19;" href="#pub-15" title="Howdy Y’all: An Alexa TaskBot"><span class="pl-bar-label">Alexa Prize Demo &rsquo;22</span></a>
-      <a class="pl-bar" style="grid-column: 5 / 6; grid-row: 20;" href="#pub-16" title="AI in the Loop: A Multimodal Assistant for Real-Time Lecture Comprehension"><span class="pl-bar-label">L@S Demo &rsquo;26</span></a>
-      <a class="pl-bar" style="grid-column: 5 / 6; grid-row: 21;" href="#pub-17" title="PodChecker: An Interpretable Fact-Checking Companion for Podcasts"><span class="pl-bar-label">MisD@ICWSM Demo &rsquo;26</span><span class="pl-collab">with Carnegie Mellon</span></a>
+      <img class="pl-diagram" style="grid-column: 1 / -1; grid-row: 1;" src="./img/pipeline-diagram.png" alt="Speech pipeline: a speech signal feeds either an end-to-end SpeechLLM or a cascade of ASR, LLM and TTS, and both lead to downstream tasks.">
+      <a class="pl-bar pl-bar-preprint" style="grid-column: 1 / 10; grid-row: 2;" href="#pub-1" title="A Cross-Community Agenda for Speech AI"><span class="pl-bar-label">Preprint</span><span class="pl-collab">with 18 institutions</span></a>
+      <a class="pl-bar pl-bar-preprint" style="grid-column: 1 / 4; grid-row: 3;" href="#pub-6" title="SpeechSpectrum: A Linguistic Fidelity Spectrum for Accountable Speech-to-Text"><span class="pl-bar-label">Preprint</span><span class="pl-collab">with Cornell &amp; RevAI</span></a>
+      <a class="pl-bar pl-bar-preprint" style="grid-column: 1 / 4; grid-row: 4;" href="#pub-7" title="Beyond Single Ground Truth: Reference Monism as Epistemic Injustice in ASR Evaluation"><span class="pl-bar-label">Preprint</span><span class="pl-collab">with Cornell, RevAI &amp; Kangwon</span></a>
+      <a class="pl-bar" style="grid-column: 1 / 4; grid-row: 5;" href="#pub-8" title="Comparing ASR Systems in the Context of Speech Disfluencies"><span class="pl-bar-label">INTERSPEECH &rsquo;24</span></a>
+      <a class="pl-bar" style="grid-column: 3 / 6; grid-row: 6;" href="#pub-3" title="Z-Scores: A Metric for Linguistically Assessing Disfluency Removal"><span class="pl-bar-label">ICASSP &rsquo;26</span></a>
+      <a class="pl-bar" style="grid-column: 3 / 6; grid-row: 7;" href="#pub-5" title="Masculine Defaults via Gendered Discourse in Podcasts and Large Language Models"><span class="pl-bar-label">ICWSM &rsquo;25</span></a>
+      <a class="pl-bar pl-bar-preprint" style="grid-column: 3 / 8; grid-row: 8;" href="#pub-9" title="Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones"><span class="pl-bar-label">Preprint</span><span class="pl-collab">with KTH</span></a>
+      <a class="pl-bar" style="grid-column: 3 / 8; grid-row: 9;" href="#pub-10" title="The Voice Behind the Words: Quantifying Intersectional Bias in SpeechLLMs"><span class="pl-bar-label">INTERSPEECH &rsquo;26</span><span class="pl-collab">with KTH &amp; Edinburgh</span></a>
+      <a class="pl-bar" style="grid-column: 3 / 10; grid-row: 10;" href="#pub-2" title="The Role of Disfluencies in Speech Translation"><span class="pl-bar-label">TACL &rsquo;26</span><span class="pl-collab">with KIT &amp; ETH Z&uuml;rich</span></a>
+      <a class="pl-bar pl-bar-preprint" style="grid-column: 5 / 6; grid-row: 11;" href="#pub-12" title="A Survey on LLM Inference-Time Self-Improvement"><span class="pl-bar-label">Preprint</span></a>
+      <a class="pl-bar" style="grid-column: 5 / 10; grid-row: 12;" href="#pub-11" title="DACL: Disfluency Augmented Curriculum Learning for Fluent Text Generation"><span class="pl-bar-label">LREC-COLING &rsquo;24</span></a>
+      <a class="pl-bar" style="grid-column: 5 / 10; grid-row: 13;" href="#pub-13" title="&quot;Walk a Mile in My Voice&quot;: Voice Conversion Shapes Trust, Attribution, and Empathy in Human–AI Speech Interactions"><span class="pl-bar-label">IUI Short &rsquo;26</span><span class="pl-collab">with KTH &amp; Edinburgh</span></a>
+      <a class="pl-bar" style="grid-column: 9 / 10; grid-row: 14;" href="#pub-4" title="I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance"><span class="pl-bar-label">INTERSPEECH &rsquo;25</span></a>
+      <a class="pl-bar" style="grid-column: 9 / 10; grid-row: 15;" href="#pub-14" title="Quantifying the Impact of Disfluency on Spoken Content Summarization"><span class="pl-bar-label">LREC-COLING &rsquo;24</span></a>
+      <a class="pl-bar" style="grid-column: 9 / 10; grid-row: 16;" href="#pub-15" title="Howdy Y’all: An Alexa TaskBot"><span class="pl-bar-label">Alexa Prize Demo &rsquo;22</span></a>
+      <a class="pl-bar" style="grid-column: 9 / 10; grid-row: 17;" href="#pub-16" title="AI in the Loop: A Multimodal Assistant for Real-Time Lecture Comprehension"><span class="pl-bar-label">L@S Demo &rsquo;26</span></a>
+      <a class="pl-bar" style="grid-column: 9 / 10; grid-row: 18;" href="#pub-17" title="PodChecker: An Interpretable Fact-Checking Companion for Podcasts"><span class="pl-bar-label">MisD@ICWSM Demo &rsquo;26</span><span class="pl-collab">with Carnegie Mellon</span></a>
   </div>
   </div>
 </div>
@@ -1543,7 +1539,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <h2 id="work_id">Experience</h2>
 <div class="experience-lines exp-compact">
   <div class="experience-item">
-    <div class="experience-head"><b>Google DeepMind</b> | Student Researcher | Cambridge, MA | June - Sep '26</div>
+    <div class="experience-head"><b>Google DeepMind</b> | Student Researcher | Cambridge, MA | June - Sep '26 | Social reasoning for speech.</div>
   </div>
   
 
@@ -1980,7 +1976,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function relayout() {
-    var r = 5;                      // rows 1-4 are the diagram
+    var r = 2;                      // row 1 is the diagram image
     items.forEach(function (it) {
       it.bar.style.gridRow = r;
       if (it.collab) it.collab.style.gridRow = r;
