@@ -221,7 +221,8 @@
 
   .cv-bullets { padding-left: 1.15em; margin: 0 0 0.55rem; }
   .cv-bullets li { margin-bottom: 0.3rem; line-height: 1.55; }
-  .cv-keywords { margin: 0 0 0.55rem; font-size: 0.86rem; color: #999; line-height: 1.5; }
+  .cv-kw-lead { margin: 0 0 0.2rem; font-size: 0.84rem; font-weight: 600; color: #5a4a70; letter-spacing: 0.01em; line-height: 1.45; }
+  .cv-kw-rest { margin: 0 0 0.55rem; font-size: 0.76rem; color: #9b9ba3; line-height: 1.5; }
   .subhead { font-size: 0.8rem; font-weight: 700 !important; letter-spacing: 0.12em; text-transform: uppercase;
              color: var(--global-theme-color); margin: 1.5rem 0 0.7rem; padding-bottom: 0.3rem;
              border-bottom: 1px solid rgba(108,91,123,0.25); }
@@ -381,13 +382,16 @@
   <div class="cv-id">
     <h1 class="post-title">Maria Teleki</h1>
     <p class="cv-tagline">Socially Robust AI</p>
-    <p class="cv-keywords">speech AI / computational social science / SpeechLLMs / LLMs / ASR / disfluencies / persona modeling / evaluation / AI audits / AI governance / social reasoning</p>
+    <p class="cv-kw-lead">speech AI &middot; computational social science &middot; AI governance</p>
+    <p class="cv-kw-rest">SpeechLLMs &middot; LLMs &middot; ASR &middot; disfluencies &middot; persona modeling &middot; evaluation &middot; AI audits &middot; social reasoning</p>
 
     <p class="cv-icons">
       <a href="mailto:mariateleki@tamu.edu" title="Email"><i class="fas fa-envelope"></i></a>
       <a href="https://scholar.google.com/citations?hl=en&amp;user=aImLrNcAAAAJ" title="Google Scholar" rel="external nofollow noopener noreferrer" target="_blank"><i class="ai ai-google-scholar"></i></a>
       <a href="https://www.linkedin.com/in/mariateleki" title="LinkedIn" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://www.instagram.com/maria.teleki.phd/" title="Instagram" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/mariateleki" title="GitHub" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://dblp.org/pid/359/3074.html" title="DBLP" rel="external nofollow noopener noreferrer" target="_blank"><i class="ai ai-dblp"></i></a>
     </p>
   </div>
 </header>
@@ -415,7 +419,7 @@
 
     <ul class="cv-bullets">
       <li>Robustness to natural speech — SpeechLLM robustness to disfluencies, disfluency-aware speech translation, transcription conventions and ASR on aphasic speech and in the legal domain</li>
-      <li>Robustness to each person&rsquo;s uniqueness — what would it take to represent someone as specifically as they really are? I build richer person models from speech, institutional context, and power</li>
+      <li>Robustness to each person&rsquo;s uniqueness — what would it take to really represent someone, beyond a few high-level attributes (gender, race, etc.)? I build richer person models from speech, institutional context, and power</li>
     </ul>
 
     <p style="margin-bottom: 0.55rem;">Beyond speech, I also have interests in education and AI governance, persona modeling, and storytelling.</p>
@@ -453,10 +457,10 @@
       <a class="pl-bar pl-bar-preprint" style="grid-column: 2 / 5; grid-row: 11;" href="#pub-9" title="Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones"><span class="pl-bar-label">Preprint</span><span class="pl-collab">with KTH</span></a>
       <a class="pl-bar" style="grid-column: 2 / 5; grid-row: 12;" href="#pub-10" title="The Voice Behind the Words: Quantifying Intersectional Bias in SpeechLLMs"><span class="pl-bar-label">INTERSPEECH &rsquo;26</span><span class="pl-collab">with KTH &amp; Edinburgh</span></a>
       <a class="pl-bar" style="grid-column: 2 / 6; grid-row: 13;" href="#pub-2" title="The Role of Disfluencies in Speech Translation"><span class="pl-bar-label">TACL &rsquo;26</span><span class="pl-collab">with KIT &amp; ETH Z&uuml;rich</span></a>
-      <a class="pl-bar" style="grid-column: 2 / 6; grid-row: 14;" href="#pub-4" title="I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance"><span class="pl-bar-label">INTERSPEECH &rsquo;25</span></a>
-      <a class="pl-bar pl-bar-preprint" style="grid-column: 3 / 4; grid-row: 15;" href="#pub-12" title="A Survey on LLM Inference-Time Self-Improvement"><span class="pl-bar-label">Preprint</span></a>
-      <a class="pl-bar" style="grid-column: 3 / 6; grid-row: 16;" href="#pub-11" title="DACL: Disfluency Augmented Curriculum Learning for Fluent Text Generation"><span class="pl-bar-label">LREC-COLING &rsquo;24</span></a>
-      <a class="pl-bar" style="grid-column: 4 / 6; grid-row: 17;" href="#pub-13" title="&quot;Walk a Mile in My Voice&quot;: Voice Conversion Shapes Trust, Attribution, and Empathy in Human–AI Speech Interactions"><span class="pl-bar-label">IUI Short &rsquo;26</span><span class="pl-collab">with KTH &amp; Edinburgh</span></a>
+      <a class="pl-bar pl-bar-preprint" style="grid-column: 3 / 4; grid-row: 14;" href="#pub-12" title="A Survey on LLM Inference-Time Self-Improvement"><span class="pl-bar-label">Preprint</span></a>
+      <a class="pl-bar" style="grid-column: 3 / 6; grid-row: 15;" href="#pub-11" title="DACL: Disfluency Augmented Curriculum Learning for Fluent Text Generation"><span class="pl-bar-label">LREC-COLING &rsquo;24</span></a>
+      <a class="pl-bar" style="grid-column: 3 / 6; grid-row: 16;" href="#pub-13" title="&quot;Walk a Mile in My Voice&quot;: Voice Conversion Shapes Trust, Attribution, and Empathy in Human–AI Speech Interactions"><span class="pl-bar-label">IUI Short &rsquo;26</span><span class="pl-collab">with KTH &amp; Edinburgh</span></a>
+      <a class="pl-bar" style="grid-column: 5 / 6; grid-row: 17;" href="#pub-4" title="I want a horror -- comedy -- movie: Slips-of-the-Tongue Impact Conversational Recommender System Performance"><span class="pl-bar-label">INTERSPEECH &rsquo;25</span></a>
       <a class="pl-bar" style="grid-column: 5 / 6; grid-row: 18;" href="#pub-14" title="Quantifying the Impact of Disfluency on Spoken Content Summarization"><span class="pl-bar-label">LREC-COLING &rsquo;24</span></a>
       <a class="pl-bar" style="grid-column: 5 / 6; grid-row: 19;" href="#pub-15" title="Howdy Y’all: An Alexa TaskBot"><span class="pl-bar-label">Alexa Prize Demo &rsquo;22</span></a>
       <a class="pl-bar" style="grid-column: 5 / 6; grid-row: 20;" href="#pub-16" title="AI in the Loop: A Multimodal Assistant for Real-Time Lecture Comprehension"><span class="pl-bar-label">L@S Demo &rsquo;26</span></a>
@@ -1519,16 +1523,14 @@ document.addEventListener("DOMContentLoaded", function () {
 ========================= -->
 <div class="education">
 <h2 id="education_id">Education</h2>
-<div class="experience-lines">
+<div class="experience-lines exp-compact">
   
   <div class="experience-item">
-    <div class="experience-head"><b>2022 – Present</b> | <b>PhD Computer Science at Texas A&amp;M University</b></div>
-    <div class="experience-body">Advised by <a href="https://people.engr.tamu.edu/caverlee" rel="external nofollow noopener noreferrer" target="_blank">James Caverlee</a>.</div>
+    <div class="experience-head"><b>2022 – Present</b> | <b>PhD Computer Science at Texas A&amp;M University</b>. Advised by <a href="https://people.engr.tamu.edu/caverlee" rel="external nofollow noopener noreferrer" target="_blank">James Caverlee</a>.</div>
   </div>
 
   <div class="experience-item">
-    <div class="experience-head"><b>2017 – 2022</b> | <b>B.S. Computer Science at Texas A&amp;M University</b></div>
-    <div class="experience-body"><i>Summa Cum Laude.</i> Emphasis in Electrical Engineering. Minor in Math.</div>
+    <div class="experience-head"><b>2017 – 2022</b> | <b>B.S. Computer Science at Texas A&amp;M University</b>. <i>Summa Cum Laude.</i> Emphasis in Electrical Engineering. Minor in Math.</div>
   </div>
   
 </div>
