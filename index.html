@@ -175,6 +175,8 @@
      the base rule pins flex-shrink to 0, so the label is re-flexed here */
   .pipe-chart .pl-bar { white-space: normal; line-height: 1.2; }
   .pipe-chart .pl-bar .pl-bar-label { flex: 1 1 auto; min-width: 0; }
+  /* in a narrow track, wrap the label rather than cut the collaborator short */
+  .pipe-chart .pl-bar .pl-collab { flex: 0 0 auto; }
   .pl-bar { display: flex; align-items: center; padding: 0.22rem 0.45rem; border-radius: 4px;
             background: #cdd8f0; color: #2f3a56 !important; font-size: 0.78rem; font-weight: 500;
             line-height: 1.3; text-decoration: none; min-height: 1.6rem; overflow: hidden;
@@ -464,7 +466,7 @@
       <a class="pl-bar" style="grid-column: 9 / 10; grid-row: 15;" href="#pub-14" title="Quantifying the Impact of Disfluency on Spoken Content Summarization"><span class="pl-bar-label">LREC-COLING &rsquo;24</span></a>
       <a class="pl-bar" style="grid-column: 9 / 10; grid-row: 16;" href="#pub-15" title="Howdy Y’all: An Alexa TaskBot"><span class="pl-bar-label">Alexa Prize Demo &rsquo;22</span></a>
       <a class="pl-bar" style="grid-column: 9 / 10; grid-row: 17;" href="#pub-16" title="AI in the Loop: A Multimodal Assistant for Real-Time Lecture Comprehension"><span class="pl-bar-label">L@S Demo &rsquo;26</span></a>
-      <a class="pl-bar" style="grid-column: 9 / 10; grid-row: 18;" href="#pub-17" title="PodChecker: An Interpretable Fact-Checking Companion for Podcasts"><span class="pl-bar-label">MisD@ICWSM Demo &rsquo;26</span><span class="pl-collab">with Carnegie Mellon</span></a>
+      <a class="pl-bar" style="grid-column: 9 / 10; grid-row: 18;" href="#pub-17" title="PodChecker: An Interpretable Fact-Checking Companion for Podcasts"><span class="pl-bar-label">MisD@ICWSM Demo &rsquo;26</span><span class="pl-collab">with CMU</span></a>
   </div>
   </div>
 </div>
