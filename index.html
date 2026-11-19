@@ -196,7 +196,10 @@
   .pub-group-blurb { font-size: 0.88rem; line-height: 1.5; color: #444;
                      margin: 0 0 0.5rem; max-width: 46rem; }
   .pl-group { display: grid; grid-template-columns: 1fr; row-gap: 0.18rem; margin: 0; line-height: 1; }
-  .pl-group .pl-bar { max-width: 27rem; }
+  /* a long venue label wraps instead of widening the group past its column */
+  .pl-group .pl-bar { max-width: min(27rem, 100%); white-space: normal; line-height: 1.2; }
+  .pl-group .pl-bar .pl-bar-label { flex: 1 1 auto; min-width: 0; }
+  .pl-group .pl-bar .pl-collab { flex: 0 0 auto; }
   .pl-group .pl-panel { margin: 0.1rem 0 0.4rem; }
   .pl-bar.is-open { background: #9aaede; color: #fff !important; }
   .pl-bar::after { content: ""; }
@@ -1308,7 +1311,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <p class="pub-group-blurb">I measure how a speaker&rsquo;s identity changes a model&rsquo;s output: accent and gender in SpeechLLMs, masculine defaults in podcast discourse and LLM embeddings, and the narratives LLMs generate. I also build persona-based methods that make model reasoning more robust.</p>
     <div class="pl-group">      <div class="pl-row"><a class="pl-bar" href="#oth-5" title="CHOIR: Harmonizing Structured Persona Diversity for Robust Collaborative LLM Reasoning"><span class="pl-bar-label">ACL ’26</span></a></div>
       <div class="pl-row"><a class="pl-bar" href="#oth-6" title="SocialPulse: An Open-Source Subreddit Sensemaking Toolkit"><span class="pl-bar-label">SocialLLM@ICWSM Short ’26</span><span class="pl-collab">with Carnegie Mellon &amp; Revionics</span></a></div>
-      <div class="pl-row"><a class="pl-bar" href="#oth-8" title="A Survey on LLMs for Story Generation"><span class="pl-bar-label">EMNLP Findings ’25</span><span class="pl-collab">with Carnegie Mellon</span></a></div>
+      <div class="pl-row"><a class="pl-bar" href="#oth-8" title="A Survey on LLMs for Story Generation"><span class="pl-bar-label">EMNLP Findings ’25 + TIST ’26 (Extended Version)</span><span class="pl-collab">with Carnegie Mellon</span></a></div>
 
       <div class="pl-row"><a class="pl-bar" href="#oth-4" title="Co2PT: Mitigating Bias in Pre-trained Language Models through Counterfactual Contrastive Prompt Tuning"><span class="pl-bar-label">EMNLP Findings ’23</span><span class="pl-collab">with George Mason</span></a></div>
 
@@ -1432,7 +1435,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <td style="font-size: large;"><span class="co-first-author-tag">CO-1ST AUTHOR</span><span style="font-size: 0.7rem; color: #c0392b; font-weight: 500; display: block; margin-bottom: -5px;">New! Extended Version</span>A Survey on LLMs for Story Generation<br>
           <b style="font-size: medium;"><b><u>Maria Teleki</u></b>, Xiangjue Dong, Peter Carragher, Vedangi Bengali, Tian Liu, Haoran Liu, Sai Tejas Janjur, Thomas Docog, Stephanie Birkelbach, Oliver Grabner, Cong Wang, Ting Liu, Yin Zhang, Frank Shipman, James Caverlee</b><br>
           <i class="collab-line" style="font-size: medium;">Collaboration w/ Carnegie Mellon University</i><br>
-          <a href="https://2025.emnlp.org">EMNLP Findings 2025</a><br>
+          <a href="https://2025.emnlp.org">EMNLP Findings 2025</a> + TIST 2026 (Extended Version)<br>
 
           <div class="button-cell">
             <a class="btn btn-sm z-depth-0" style="text-decoration: none; background-color: #fde8e8; color: #922b21; border: 1px solid #e8a8a8;" href="pdf/EXTENDED_A_Survey_on_LLMs_for_Story_Generation.pdf" role="button">Extended Paper</a>
@@ -1692,7 +1695,7 @@ document.addEventListener("DOMContentLoaded", function () {
         [<span class="pastel-orange">&#9733;</span><span class="pastel-blue">&#9824;</span><span class="pastel-green">&#9827;</span>] <span class="mentee-deg">M.S. CS</span>
         – <span class="mentoring-note">🥇1st Place Award at <a href="https://srw.tamu.edu/awards/">SRW</a>, First Employment at NVIDIA</span>
         <div class="mentoring-papers">
-          <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="pdf/A_Survey_on_LLMs_for_Story_Generation.pdf">A Survey on LLMs for Story Generation</a> <span class="mp-venue">EMNLP Findings '25</span></div>
+          <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="pdf/A_Survey_on_LLMs_for_Story_Generation.pdf">A Survey on LLMs for Story Generation</a> <span class="mp-venue">EMNLP Findings '25 + TIST '26 (Extended Version)</span></div>
           <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="https://arxiv.org/pdf/2509.20319">Z-Scores: A Metric for Linguistically Assessing Disfluency Removal</a> <span class="mp-venue">ICASSP '26</span></div>
           <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="./pdf/dres.pdf">Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones</a> <span class="mp-venue">Preprint</span></div>
         </div>
@@ -1703,7 +1706,7 @@ document.addEventListener("DOMContentLoaded", function () {
         [<span class="pastel-orange">&#9733;</span><span class="pastel-blue">&#9824;</span><span class="pastel-green">&#9827;</span>] <span class="mentee-deg">M.S. Stat</span>
         – <span class="mentoring-note">Presented at <a href="https://texas-nlp.github.io/2026/index.html#">TX NLP</a></span>
         <div class="mentoring-papers">
-          <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="pdf/A_Survey_on_LLMs_for_Story_Generation.pdf">A Survey on LLMs for Story Generation</a> <span class="mp-venue">EMNLP Findings '25</span></div>
+          <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="pdf/A_Survey_on_LLMs_for_Story_Generation.pdf">A Survey on LLMs for Story Generation</a> <span class="mp-venue">EMNLP Findings '25 + TIST '26 (Extended Version)</span></div>
           <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="https://aclanthology.org/2026.acl-long.2175/">CHOIR: Harmonizing Structured Persona Diversity for Robust Collaborative LLM Reasoning</a> <span class="mp-venue">ACL '26</span></div>
           <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="https://arxiv.org/pdf/2509.20319">Z-Scores: A Metric for Linguistically Assessing Disfluency Removal</a> <span class="mp-venue">ICASSP '26</span></div>
           <div class="mp-item mp-contrib"><span class="mp-badge">co-author</span> <a href="./pdf/dres.pdf">Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones</a> <span class="mp-venue">Preprint</span></div>
@@ -1931,6 +1934,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ['L@S', 'The ACM Learning @ Scale Conference'],
     ['CSCW', 'The ACM Conference on Computer-Supported Cooperative Work and Social Computing'],
     ['TACL', 'Transactions of the Association for Computational Linguistics'],
+    ['TIST', 'ACM Transactions on Intelligent Systems and Technology'],
     ['AIES', 'The AAAI/ACM Conference on AI, Ethics, and Society']
   ];
   var skip = ['Anthology', ' ARR', 'SICon', 'Proceedings', 'Paper ('];
